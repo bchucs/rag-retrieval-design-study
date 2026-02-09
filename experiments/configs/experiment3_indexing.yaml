@@ -1,0 +1,22 @@
+# Experiment 3: Indexing strategy variations
+# Tests: flat vs IVF index with different cluster sizes
+
+experiments:
+  - name: "flat_index"
+    indexing:
+      index_type: "flat"
+
+  - name: "ivf_50_clusters"
+    indexing:
+      index_type: "ivf"
+      n_clusters: 50
+
+  - name: "ivf_100_clusters"
+    indexing:
+      index_type: "ivf"
+      n_clusters: 100
+
+  - name: "ivf_200_clusters"
+    indexing:
+      index_type: "ivf"
+      n_clusters: 200

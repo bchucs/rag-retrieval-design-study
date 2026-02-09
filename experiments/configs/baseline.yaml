@@ -1,0 +1,40 @@
+# Baseline configuration for RAG experiments
+# Step 1 baseline: chunk_size=512, no overlap, top_k=5, flat index
+
+experiment_name: "baseline"
+
+# Data configuration
+data:
+  corpus: "arxiv_cs"
+  data_dir: "data/raw"
+
+# Chunking configuration
+chunking:
+  chunk_size: 512  # tokens
+  overlap: 0  # tokens
+
+# Embedding configuration (fixed across all experiments)
+embedding:
+  model_name: "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"  # Optimized for Q&A over documents
+  batch_size: 32
+
+# Indexing configuration
+indexing:
+  index_type: "flat"  # "flat" or "ivf"
+  n_clusters: null  # only for ivf
+
+# Retrieval configuration
+retrieval:
+  top_k: 5
+  distance_threshold: null  # no cutoff
+
+# Generation configuration (fixed across all experiments)
+generation:
+  model_name: "gpt-4o-mini"
+  temperature: 0.0
+  max_tokens: 500
+
+# Evaluation configuration
+evaluation:
+  questions_file: "data/questions/eval_questions.json"
+  output_dir: "results"

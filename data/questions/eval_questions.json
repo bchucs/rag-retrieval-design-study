@@ -1,0 +1,462 @@
+[
+  {
+    "question": "What is the main innovation introduced by the Share approach in the context of continual learning?",
+    "answer": "The Share approach introduces a novel method for parameter-efficient continual finetuning by learning and dynamically updating a single, shared low-rank subspace. This enables seamless adaptation across multiple tasks and modalities while minimizing catastrophic interference.",
+    "doc_id": "2602.06043v1",
+    "gold_doc_ids": [
+      "2602.06043v1"
+    ],
+    "title": "Shared LoRA Subspaces for almost Strict Continual Learning",
+    "question_id": "q_000"
+  },
+  {
+    "question": "How does the Share model achieve memory and parameter efficiency compared to traditional LoRA methods?",
+    "answer": "The Share model achieves up to 100x parameter reduction and 281x memory savings over traditional LoRA methods. It consolidates knowledge from multiple tasks into a single evolving subspace, allowing for scalable, asynchronous continual learning.",
+    "doc_id": "2602.06043v1",
+    "gold_doc_ids": [
+      "2602.06043v1"
+    ],
+    "title": "Shared LoRA Subspaces for almost Strict Continual Learning",
+    "question_id": "q_001"
+  },
+  {
+    "question": "What is the primary function of DyTopo in multi-agent systems?",
+    "answer": "DyTopo functions as a manager-guided framework that reconstructs a sparse directed communication graph at each round, allowing agents to communicate based on the manager's round goal. It facilitates semantic matching of lightweight natural-language query and offer descriptors to optimize communication.",
+    "doc_id": "2602.06039v1",
+    "gold_doc_ids": [
+      "2602.06039v1"
+    ],
+    "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching",
+    "question_id": "q_002"
+  },
+  {
+    "question": "How does DyTopo compare to the strongest baseline in terms of performance?",
+    "answer": "DyTopo consistently outperforms the strongest baseline by an average of +6.2 across code generation and mathematical reasoning benchmarks. This indicates a significant improvement in accuracy when using DyTopo.",
+    "doc_id": "2602.06039v1",
+    "gold_doc_ids": [
+      "2602.06039v1"
+    ],
+    "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching",
+    "question_id": "q_003"
+  },
+  {
+    "question": "What is the main problem that CommCP aims to address in the context of multi-agent systems?",
+    "answer": "CommCP aims to address the information-gathering process in a fully cooperative setting, formalized as the multi-agent multi-task Embodied Question Answering (MM-EQA) problem. This problem involves effective communication among multiple heterogeneous robots to coordinate efforts without redundancy.",
+    "doc_id": "2602.06038v1",
+    "gold_doc_ids": [
+      "2602.06038v1"
+    ],
+    "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
+    "question_id": "q_004"
+  },
+  {
+    "question": "What methodology does CommCP employ to enhance communication reliability among robots?",
+    "answer": "CommCP employs a novel LLM-based decentralized communication framework that utilizes conformal prediction to calibrate the generated messages. This approach minimizes receiver distractions and enhances the reliability of communication.",
+    "doc_id": "2602.06038v1",
+    "gold_doc_ids": [
+      "2602.06038v1"
+    ],
+    "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
+    "question_id": "q_005"
+  },
+  {
+    "question": "What is the main purpose of the BudgetMem framework in the context of LLM agents?",
+    "answer": "The BudgetMem framework is designed for explicit, query-aware performance-cost control in runtime memory utilization for Large Language Model agents. It structures memory processing into a set of modules with three budget tiers to balance task performance and memory construction cost.",
+    "doc_id": "2602.06025v1",
+    "gold_doc_ids": [
+      "2602.06025v1"
+    ],
+    "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+    "question_id": "q_006"
+  },
+  {
+    "question": "How does BudgetMem achieve memory processing and what strategies are studied for budget tiers?",
+    "answer": "BudgetMem uses a lightweight router for budget-tier routing across memory modules and is implemented as a compact neural policy trained with reinforcement learning. The study investigates three strategies for budget tiers: implementation (method complexity), reasoning (inference behavior), and capacity (module model size).",
+    "doc_id": "2602.06025v1",
+    "gold_doc_ids": [
+      "2602.06025v1"
+    ],
+    "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+    "question_id": "q_007"
+  },
+  {
+    "question": "What is the main purpose of developing the data-driven discrete-event simulator (DES) described in the abstract?",
+    "answer": "The main purpose of developing the DES is to model shooter movement and in-region actions as stochastic processes learned from participant behavior in VR studies, enabling scalable evaluation and learning of intervention strategies that are infeasible to train directly with human subjects.",
+    "doc_id": "2602.06023v1",
+    "gold_doc_ids": [
+      "2602.06023v1"
+    ],
+    "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+    "question_id": "q_008"
+  },
+  {
+    "question": "What limitations in evaluating interventions in VR does the research aim to address?",
+    "answer": "The research aims to address the limitations of recruiting new participant cohorts for each condition, which makes large-scale or iterative evaluation difficult, particularly when learning effective intervention strategies that typically require many training episodes.",
+    "doc_id": "2602.06023v1",
+    "gold_doc_ids": [
+      "2602.06023v1"
+    ],
+    "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+    "question_id": "q_009"
+  },
+  {
+    "question": "What improvements in accuracy and expected calibration error (ECE) does CORAL achieve on average when evaluated across three 7B-parameter models?",
+    "answer": "CORAL consistently improves accuracy by 10% and expected calibration error (ECE) by 50% on average when evaluated across three 7B-parameter models.",
+    "doc_id": "2602.06022v1",
+    "gold_doc_ids": [
+      "2602.06022v1"
+    ],
+    "title": "Correctness-Optimized Residual Activation Lens (CORAL): Transferrable and Calibration-Aware Inference-Time Steering",
+    "question_id": "q_010"
+  },
+  {
+    "question": "What is the average accuracy improvement and expected calibration error (ECE) improvement when CORAL is applied to the complete published test sets of four held-out benchmarks?",
+    "answer": "When applied to the complete published test sets of four held-out benchmarks, CORAL achieves an average accuracy improvement of 14% and a 49% improvement in expected calibration error (ECE).",
+    "doc_id": "2602.06022v1",
+    "gold_doc_ids": [
+      "2602.06022v1"
+    ],
+    "title": "Correctness-Optimized Residual Activation Lens (CORAL): Transferrable and Calibration-Aware Inference-Time Steering",
+    "question_id": "q_011"
+  },
+  {
+    "question": "What is the main limitation of the absolute pointwise scoring standard in visual generation evaluations?",
+    "answer": "The main limitation of the absolute pointwise scoring standard is its stochastic inconsistency and poor alignment with human perception. This leads to unreliable evaluation outcomes across visual generation tasks.",
+    "doc_id": "2602.06013v1",
+    "gold_doc_ids": [
+      "2602.06013v1"
+    ],
+    "title": "GenArena: How Can We Achieve Human-Aligned Evaluation for Visual Generation Tasks?",
+    "question_id": "q_012"
+  },
+  {
+    "question": "What performance improvement does GenArena achieve in evaluation accuracy compared to pointwise methods?",
+    "answer": "GenArena boosts evaluation accuracy by over 20% compared to pointwise methods. It also achieves a Spearman correlation of 0.86 with the LMArena leaderboard, which is significantly higher than the 0.36 correlation of pointwise methods.",
+    "doc_id": "2602.06013v1",
+    "gold_doc_ids": [
+      "2602.06013v1"
+    ],
+    "title": "GenArena: How Can We Achieve Human-Aligned Evaluation for Visual Generation Tasks?",
+    "question_id": "q_013"
+  },
+  {
+    "question": "What is the main purpose of the AgenticPay framework?",
+    "answer": "The main purpose of the AgenticPay framework is to serve as a benchmark and simulation framework for multi-agent buyer-seller negotiation driven by natural language. It aims to evaluate language-mediated economic interactions among multiple agents in a principled manner.",
+    "doc_id": "2602.06008v1",
+    "gold_doc_ids": [
+      "2602.06008v1"
+    ],
+    "title": "AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions",
+    "question_id": "q_014"
+  },
+  {
+    "question": "How many tasks does the AgenticPay framework support?",
+    "answer": "The AgenticPay framework supports a diverse suite of over 110 tasks, which range from bilateral bargaining to many-to-many markets. It also includes structured action extraction and metrics for evaluating negotiation performance.",
+    "doc_id": "2602.06008v1",
+    "gold_doc_ids": [
+      "2602.06008v1"
+    ],
+    "title": "AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions",
+    "question_id": "q_015"
+  },
+  {
+    "question": "What two attention-based pooling methods are proposed in the research for reducing the dimensionality of Whisper representations?",
+    "answer": "The two attention-based pooling methods proposed are Multi-head Attentive Average Pooling and QKV Pooling. These methods are designed to efficiently reduce the dimensionality while preserving emotional features.",
+    "doc_id": "2602.06000v1",
+    "gold_doc_ids": [
+      "2602.06000v1"
+    ],
+    "title": "Speech Emotion Recognition Leveraging OpenAI's Whisper Representations and Attentive Pooling Methods",
+    "question_id": "q_016"
+  },
+  {
+    "question": "Which datasets were used for experimenting with the Speech Emotion Recognition using Whisper representations?",
+    "answer": "The experiments were conducted on the IEMOCAP dataset for English and the ShEMO dataset for Persian. The study utilized Whisper Tiny and Small models for these experiments.",
+    "doc_id": "2602.06000v1",
+    "gold_doc_ids": [
+      "2602.06000v1"
+    ],
+    "title": "Speech Emotion Recognition Leveraging OpenAI's Whisper Representations and Attentive Pooling Methods",
+    "question_id": "q_017"
+  },
+  {
+    "question": "What are Diamond Maps and what advantage do they provide in the context of reward alignment?",
+    "answer": "Diamond Maps are stochastic flow map models designed for efficient and accurate alignment to arbitrary rewards at inference time. They amortize many simulation steps into a single-step sampler while preserving the stochasticity required for optimal reward alignment.",
+    "doc_id": "2602.05993v1",
+    "gold_doc_ids": [
+      "2602.05993v1"
+    ],
+    "title": "Diamond Maps: Efficient Reward Alignment via Stochastic Flow Maps",
+    "question_id": "q_018"
+  },
+  {
+    "question": "How do Diamond Maps compare to existing methods in terms of reward alignment performance and scalability?",
+    "answer": "Diamond Maps achieve stronger reward alignment performance and scale better than existing methods, as shown in the experiments conducted in the research.",
+    "doc_id": "2602.05993v1",
+    "gold_doc_ids": [
+      "2602.05993v1"
+    ],
+    "title": "Diamond Maps: Efficient Reward Alignment via Stochastic Flow Maps",
+    "question_id": "q_019"
+  },
+  {
+    "question": "What is the purpose of the RISE-Video benchmark?",
+    "answer": "The purpose of the RISE-Video benchmark is to evaluate the capacity of generative video models to internalize and reason over implicit world rules, shifting the focus from visual aesthetics to cognitive reasoning. It serves as a structured testbed for probing model intelligence across various dimensions.",
+    "doc_id": "2602.05986v1",
+    "gold_doc_ids": [
+      "2602.05986v1"
+    ],
+    "title": "RISE-Video: Can Video Generators Decode Implicit World Rules?",
+    "question_id": "q_020"
+  },
+  {
+    "question": "How many human-annotated samples does RISE-Video comprise, and how many categories do they span?",
+    "answer": "RISE-Video comprises 467 meticulously human-annotated samples that span eight rigorous categories. This allows for a diverse evaluation of generative video models.",
+    "doc_id": "2602.05986v1",
+    "gold_doc_ids": [
+      "2602.05986v1"
+    ],
+    "title": "RISE-Video: Can Video Generators Decode Implicit World Rules?",
+    "question_id": "q_021"
+  },
+  {
+    "question": "What model does the paper introduce to improve motorway traffic forecasting?",
+    "answer": "The paper introduces the Geographically-aware Transformer-based Traffic Forecasting (GATTF) model, which utilizes the geographical relationships between distributed sensors to enhance forecasting accuracy.",
+    "doc_id": "2602.05983v1",
+    "gold_doc_ids": [
+      "2602.05983v1"
+    ],
+    "title": "Geographically-aware Transformer-based Traffic Forecasting for Urban Motorway Digital Twins",
+    "question_id": "q_022"
+  },
+  {
+    "question": "What type of data was used to evaluate the GATTF model?",
+    "answer": "The GATTF model was evaluated using real-time data from the Geneva motorway network in Switzerland.",
+    "doc_id": "2602.05983v1",
+    "gold_doc_ids": [
+      "2602.05983v1"
+    ],
+    "title": "Geographically-aware Transformer-based Traffic Forecasting for Urban Motorway Digital Twins",
+    "question_id": "q_023"
+  },
+  {
+    "question": "What is the primary purpose of the Clifford Kolmogorov-Arnold Network (ClKAN)?",
+    "answer": "The primary purpose of ClKAN is to serve as a flexible and efficient architecture for function approximation in arbitrary Clifford algebra spaces.",
+    "doc_id": "2602.05977v1",
+    "gold_doc_ids": [
+      "2602.05977v1"
+    ],
+    "title": "Clifford Kolmogorov-Arnold Networks",
+    "question_id": "q_024"
+  },
+  {
+    "question": "What method does ClKAN use to address the challenges associated with higher dimensional algebras?",
+    "answer": "ClKAN utilizes Randomized Quasi Monte Carlo grid generation to address the exponential scaling associated with higher dimensional algebras.",
+    "doc_id": "2602.05977v1",
+    "gold_doc_ids": [
+      "2602.05977v1"
+    ],
+    "title": "Clifford Kolmogorov-Arnold Networks",
+    "question_id": "q_025"
+  },
+  {
+    "question": "How does loss scale with respect to depth in large language models according to the study?",
+    "answer": "Loss scales inversely proportional to depth in large language models. This is attributed to functionally similar layers reducing error through ensemble averaging.",
+    "doc_id": "2602.05970v1",
+    "gold_doc_ids": [
+      "2602.05970v1"
+    ],
+    "title": "Inverse Depth Scaling From Most Layers Being Similar",
+    "question_id": "q_026"
+  },
+  {
+    "question": "What are the proposed reasons for the inefficiency of the depth scaling regime observed in the study?",
+    "answer": "The inefficiency of the depth scaling regime is likely due to the architectural bias of residual networks and the target functions being incompatible with smooth dynamics. This suggests that improvements may require innovations in architecture.",
+    "doc_id": "2602.05970v1",
+    "gold_doc_ids": [
+      "2602.05970v1"
+    ],
+    "title": "Inverse Depth Scaling From Most Layers Being Similar",
+    "question_id": "q_027"
+  },
+  {
+    "question": "What framework is proposed to enhance temporal consistency in traffic video generation?",
+    "answer": "The framework proposed to enhance temporal consistency in traffic video generation is called Localized Semantic Alignment (LSA). It fine-tunes pre-trained video generation models by aligning semantic features between ground-truth and generated video clips.",
+    "doc_id": "2602.05966v1",
+    "gold_doc_ids": [
+      "2602.05966v1"
+    ],
+    "title": "LSA: Localized Semantic Alignment for Enhancing Temporal Consistency in Traffic Video Generation",
+    "question_id": "q_028"
+  },
+  {
+    "question": "What datasets were used to test the effectiveness of the proposed approach?",
+    "answer": "The effectiveness of the proposed approach was tested on the nuScenes and KITTI datasets. Extensive experiments conducted on these datasets demonstrated the ability of LSA to enhance temporal consistency in video generation.",
+    "doc_id": "2602.05966v1",
+    "gold_doc_ids": [
+      "2602.05966v1"
+    ],
+    "title": "LSA: Localized Semantic Alignment for Enhancing Temporal Consistency in Traffic Video Generation",
+    "question_id": "q_029"
+  },
+  {
+    "question": "What mechanism does the Learning to Share (LTS) propose for improving the efficiency of parallel agentic systems?",
+    "answer": "LTS proposes a learned shared-memory mechanism that enables selective cross-team information reuse while controlling context growth. It introduces a global memory bank accessible to all teams and a lightweight controller that decides whether to add intermediate agent steps to memory.",
+    "doc_id": "2602.05965v1",
+    "gold_doc_ids": [
+      "2602.05965v1"
+    ],
+    "title": "Learning to Share: Selective Memory for Efficient Parallel Agentic Systems",
+    "question_id": "q_030"
+  },
+  {
+    "question": "How is the controller in the Learning to Share (LTS) mechanism trained?",
+    "answer": "The controller is trained using stepwise reinforcement learning with usage-aware credit assignment, which allows it to identify information that is globally useful across parallel executions. This training approach enables the controller to optimize the efficiency of memory usage in parallel agentic systems.",
+    "doc_id": "2602.05965v1",
+    "gold_doc_ids": [
+      "2602.05965v1"
+    ],
+    "title": "Learning to Share: Selective Memory for Efficient Parallel Agentic Systems",
+    "question_id": "q_031"
+  },
+  {
+    "question": "What is the main objective of the research presented in the paper?",
+    "answer": "The main objective is to propose learning a condition-dependent source distribution under the flow matching objective to better exploit rich conditioning signals for text-to-image generation. This approach aims to improve the flexibility and effectiveness of flow matching compared to traditional methods that rely on standard Gaussian distributions.",
+    "doc_id": "2602.05951v1",
+    "gold_doc_ids": [
+      "2602.05951v1"
+    ],
+    "title": "Better Source, Better Flow: Learning Condition-Dependent Source Distribution for Flow Matching",
+    "question_id": "q_032"
+  },
+  {
+    "question": "What key issues are identified when incorporating conditioning into the source distribution?",
+    "answer": "The key issues identified include distributional collapse and instability when directly incorporating conditioning into the source. The paper emphasizes that appropriate variance regularization and directional alignment between source and target are critical for stable and effective learning.",
+    "doc_id": "2602.05951v1",
+    "gold_doc_ids": [
+      "2602.05951v1"
+    ],
+    "title": "Better Source, Better Flow: Learning Condition-Dependent Source Distribution for Flow Matching",
+    "question_id": "q_033"
+  },
+  {
+    "question": "What is the percentage of fabricated citations classified as Total Fabrication in the study's taxonomy?",
+    "answer": "Total Fabrication accounts for 66% of the hallucinated citations identified in the study's five-category taxonomy.",
+    "doc_id": "2602.05930v1",
+    "gold_doc_ids": [
+      "2602.05930v1"
+    ],
+    "title": "Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at NeurIPS 2025",
+    "question_id": "q_034"
+  },
+  {
+    "question": "How many published papers contained hallucinated citations according to the study?",
+    "answer": "The study found that 53 published papers, approximately 1% of all accepted papers, contained hallucinated citations.",
+    "doc_id": "2602.05930v1",
+    "gold_doc_ids": [
+      "2602.05930v1"
+    ],
+    "title": "Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at NeurIPS 2025",
+    "question_id": "q_035"
+  },
+  {
+    "question": "What are the main approaches compared in the study for addressing the Capacitated Vehicle Routing Problem (CVRP)?",
+    "answer": "The study compares classical and quantum Reinforcement Learning (RL) approaches, specifically implementing an Advantage Actor-Critic (A2C) agent in classical, full quantum, and hybrid variants.",
+    "doc_id": "2602.05920v1",
+    "gold_doc_ids": [
+      "2602.05920v1"
+    ],
+    "title": "Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem",
+    "question_id": "q_036"
+  },
+  {
+    "question": "What performance metrics were used to assess the effectiveness of the routing policies in the experiments?",
+    "answer": "The performance of the routing policies was assessed using routing distance, route compactness, and route overlap.",
+    "doc_id": "2602.05920v1",
+    "gold_doc_ids": [
+      "2602.05920v1"
+    ],
+    "title": "Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem",
+    "question_id": "q_037"
+  },
+  {
+    "question": "What is the primary advantage of the DFlash framework in speculative decoding?",
+    "answer": "The primary advantage of DFlash is that it employs a lightweight block diffusion model for parallel drafting, allowing for efficient generation of draft tokens in a single forward pass. This results in high-quality outputs and higher acceptance rates compared to existing methods.",
+    "doc_id": "2602.06036v1",
+    "gold_doc_ids": [
+      "2602.06036v1"
+    ],
+    "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
+    "question_id": "q_038"
+  },
+  {
+    "question": "How does DFlash compare to the state-of-the-art speculative decoding method EAGLE-3 in terms of speedup?",
+    "answer": "DFlash delivers up to 2.5x higher speedup than the state-of-the-art speculative decoding method EAGLE-3. Additionally, it achieves over 6x lossless acceleration across a range of models and tasks.",
+    "doc_id": "2602.06036v1",
+    "gold_doc_ids": [
+      "2602.06036v1"
+    ],
+    "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
+    "question_id": "q_039"
+  },
+  {
+    "question": "What factors were systematically varied to understand their impact on the accuracy of large language models in PTSD severity estimation?",
+    "answer": "The factors systematically varied include contextual knowledge such as subscale definitions, distribution summary, and interview questions, as well as modeling strategies like zero-shot vs few shot, reasoning effort, model sizes, structured subscales vs direct scalar prediction, output rescaling, and nine ensemble methods.",
+    "doc_id": "2602.06015v1",
+    "gold_doc_ids": [
+      "2602.06015v1"
+    ],
+    "title": "A Systematic Evaluation of Large Language Models for PTSD Severity Estimation: The Role of Contextual Knowledge and Modeling Strategies",
+    "question_id": "q_040"
+  },
+  {
+    "question": "What was the finding regarding the performance of open-weight models compared to closed-weight models?",
+    "answer": "The findings indicate that open-weight models like Llama and Deepseek plateau in performance beyond 70B parameters, while closed-weight models such as o3-mini and gpt-5 continue to improve with newer generations.",
+    "doc_id": "2602.06015v1",
+    "gold_doc_ids": [
+      "2602.06015v1"
+    ],
+    "title": "A Systematic Evaluation of Large Language Models for PTSD Severity Estimation: The Role of Contextual Knowledge and Modeling Strategies",
+    "question_id": "q_041"
+  },
+  {
+    "question": "What is the primary limitation of the widely-used fixed, predefined block schedule for dLLMs?",
+    "answer": "The primary limitation is that the naive schedule is agnostic to semantic difficulty, leading to suboptimal strategies for quality and efficiency by forcing premature commitments to uncertain positions and delaying easy positions near block boundaries.",
+    "doc_id": "2602.05992v1",
+    "gold_doc_ids": [
+      "2602.05992v1"
+    ],
+    "title": "DSB: Dynamic Sliding Block Scheduling for Diffusion LLMs",
+    "question_id": "q_042"
+  },
+  {
+    "question": "What does the Dynamic Sliding Block (DSB) method aim to achieve in the context of block scheduling for dLLMs?",
+    "answer": "The DSB method aims to overcome the rigidity of naive block scheduling by using a sliding block with a dynamic size, allowing for better adaptation to semantic difficulty and improving reliability and efficiency in inference.",
+    "doc_id": "2602.05992v1",
+    "gold_doc_ids": [
+      "2602.05992v1"
+    ],
+    "title": "DSB: Dynamic Sliding Block Scheduling for Diffusion LLMs",
+    "question_id": "q_043"
+  },
+  {
+    "question": "What is the name of the benchmark introduced in the study for scientific literature retrieval, and how many queries does it comprise?",
+    "answer": "The benchmark introduced in the study is called SAGE, and it comprises 1,200 queries across four scientific domains.",
+    "doc_id": "2602.05975v1",
+    "gold_doc_ids": [
+      "2602.05975v1"
+    ],
+    "title": "SAGE: Benchmarking and Improving Retrieval for Deep Research Agents",
+    "question_id": "q_044"
+  },
+  {
+    "question": "What percentage does BM25 outperform LLM-based retrievers according to the findings in the study?",
+    "answer": "BM25 significantly outperforms LLM-based retrievers by approximately 30%, as noted in the study's findings.",
+    "doc_id": "2602.05975v1",
+    "gold_doc_ids": [
+      "2602.05975v1"
+    ],
+    "title": "SAGE: Benchmarking and Improving Retrieval for Deep Research Agents",
+    "question_id": "q_045"
+  }
+]

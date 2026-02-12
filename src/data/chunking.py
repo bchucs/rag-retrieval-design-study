@@ -15,25 +15,25 @@ logger = logging.getLogger(__name__)
 class ChunkConfig:
     """Configuration for text chunking
 
-    Note: Default values are provided, but load from experiments/configs/baseline.yaml in practice
+    IMPORTANT: Always load from config files using utils.config.get_chunk_config()
+    Do not use default values - all values should come from YAML configs
     """
-    chunk_size: int = 512  # tokens - override with config
-    overlap: int = 0  # tokens - override with config
-    encoding_name: str = "cl100k_base"  # OpenAI's tokenizer
+    chunk_size: int  # tokens
+    overlap: int  # tokens
+    encoding_name: str = "cl100k_base"  # OpenAI's tokenizer (has sensible default)
 
 
 class TextChunker:
     """Chunks text into smaller segments for embedding"""
 
-    def __init__(self, config: ChunkConfig):
+    def __init__(self, chunk_config):
         """Initialize chunker with configuration
 
         Args:
-            config: Chunking configuration
+            chunk_config: Chunking configuration
         """
-        self.config = config
-        self.encoding = tiktoken.get_encoding(config.encoding_name)
-
+        self.config = chunk_config
+        self.encoding = tiktoken.get_encoding(chunk_config.encoding_name)
     def chunk_text(self, text: str, doc_id: str) -> List[Dict[str, Any]]:
         """Split text into chunks
 

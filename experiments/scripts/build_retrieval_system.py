@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Run baseline RAG experiment
+"""Build retrieval system artifacts
 
-This script runs the baseline configuration and establishes initial metrics.
+This script builds the complete retrieval system for a given configuration,
+including chunks, embeddings, and vector index.
 """
 
 import sys
@@ -18,10 +19,11 @@ from typing import Dict, Any
 from pathlib import Path
 
 from data.loader import ArXivLoader
-from data.chunking import TextChunker, ChunkConfig
+from data.chunking import TextChunker
 from retrieval.embeddings import EmbeddingModel
-from retrieval.indexing import VectorIndex, IndexConfig
-from retrieval.retriever import Retriever, RetrievalConfig
+from retrieval.indexing import VectorIndex
+from retrieval.retriever import Retriever
+from utils import config as config_utils
 
 # Set up logging
 logging.basicConfig(
@@ -37,8 +39,8 @@ def load_config(config_path: str) -> Dict[str, Any]:
         return yaml.safe_load(f)
 
 
-def run_baseline(config: Dict[str, Any], max_docs: int = None):
-    """Run baseline experiment
+def build_retrieval_system(config: Dict[str, Any], max_docs: int = None):
+    """Build retrieval system artifacts for a given configuration
 
     Args:
         config: Experiment configuration
@@ -46,7 +48,7 @@ def run_baseline(config: Dict[str, Any], max_docs: int = None):
     """
     exp_name = config['experiment_name']
     logger.info(f"="*60)
-    logger.info(f"Running baseline experiment: {exp_name}")
+    logger.info(f"Building retrieval system: {exp_name}")
     logger.info(f"="*60)
 
     # Setup paths
@@ -68,10 +70,7 @@ def run_baseline(config: Dict[str, Any], max_docs: int = None):
 
     # 2. Chunk documents
     logger.info("\n[Step 2/5] Chunking documents...")
-    chunk_config = ChunkConfig(
-        chunk_size=config['chunking']['chunk_size'],
-        overlap=config['chunking']['overlap']
-    )
+    chunk_config = config_utils.get_chunk_config(config)
     chunker = TextChunker(chunk_config)
     chunks = chunker.chunk_documents(documents)
     logger.info(f"Created {len(chunks)} chunks")
@@ -83,9 +82,11 @@ def run_baseline(config: Dict[str, Any], max_docs: int = None):
 
     # 3. Generate embeddings
     logger.info("\n[Step 3/5] Generating embeddings...")
+    emb_config = config_utils.get_embedding_config(config)
     embedding_model = EmbeddingModel(
-        model_name=config['embedding']['model_name'],
-        batch_size=config['embedding']['batch_size']
+        model_name=emb_config['model_name'],
+        batch_size=emb_config['batch_size'],
+        cache_dir=emb_config.get('cache_dir')
     )
     embedding_model.load()
 
@@ -102,12 +103,9 @@ def run_baseline(config: Dict[str, Any], max_docs: int = None):
 
     # 4. Build index
     logger.info("\n[Step 4/5] Building vector index...")
-    index_config = IndexConfig(
-        index_type=config['indexing']['index_type'],
-        n_clusters=config['indexing'].get('n_clusters', 100)
-    )
+    index_config = config_utils.get_index_config(config)
     vector_index = VectorIndex(
-        config=index_config,
+        index_config=index_config,
         embedding_dim=embedding_model.embedding_dim
     )
     vector_index.build(embeddings, verbose=True)
@@ -117,10 +115,7 @@ def run_baseline(config: Dict[str, Any], max_docs: int = None):
 
     # 5. Test retrieval with sample queries
     logger.info("\n[Step 5/5] Testing retrieval with sample queries...")
-    retrieval_config = RetrievalConfig(
-        top_k=config['retrieval']['top_k'],
-        distance_threshold=config['retrieval'].get('distance_threshold')
-    )
+    retrieval_config = config_utils.get_retrieval_config(config)
     retriever = Retriever(
         embedding_model=embedding_model,
         vector_index=vector_index,
@@ -149,7 +144,7 @@ def run_baseline(config: Dict[str, Any], max_docs: int = None):
             logger.info(f"  {i+1}. [score={dist:.3f}] {title[:80]}...")
 
     logger.info("\n" + "="*60)
-    logger.info("Baseline experiment complete!")
+    logger.info("Retrieval system build complete!")
     logger.info(f"Artifacts saved to: {processed_dir}")
     logger.info(f"  - Chunks: {chunks_file.name}")
     logger.info(f"  - Embeddings: {embeddings_file.name}")
@@ -158,7 +153,7 @@ def run_baseline(config: Dict[str, Any], max_docs: int = None):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run baseline RAG experiment")
+    parser = argparse.ArgumentParser(description="Build retrieval system artifacts")
     parser.add_argument(
         "--config",
         type=str,
@@ -174,7 +169,7 @@ def main():
     args = parser.parse_args()
 
     config = load_config(args.config)
-    run_baseline(config, max_docs=args.max_docs)
+    build_retrieval_system(config, max_docs=args.max_docs)
 
 
 if __name__ == "__main__":

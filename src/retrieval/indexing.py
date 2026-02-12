@@ -18,24 +18,25 @@ logger = logging.getLogger(__name__)
 class IndexConfig:
     """Configuration for vector index
 
-    Note: Default values are provided, but load from experiments/configs/baseline.yaml in practice
+    IMPORTANT: Always load from config files using utils.config.get_index_config()
+    Do not use default values - all values should come from YAML configs
     """
-    index_type: str = "flat"  # "flat" or "ivf" - override with config
-    n_clusters: int = 100  # for IVF index - override with config
-    nprobe: int = 10  # number of clusters to search in IVF
+    index_type: str  # "flat" or "ivf"
+    n_clusters: int = 100  # for IVF index (sensible default)
+    nprobe: int = 10  # number of clusters to search in IVF (sensible default)
 
 
 class VectorIndex:
     """Vector index for similarity search"""
 
-    def __init__(self, config: IndexConfig, embedding_dim: int):
+    def __init__(self, index_config: IndexConfig, embedding_dim: int):
         """Initialize vector index
 
         Args:
-            config: Index configuration
+            index_config: Index configuration
             embedding_dim: Dimension of embedding vectors
         """
-        self.config = config
+        self.index_config = index_config
         self.embedding_dim = embedding_dim
         self.index = None
         self.n_vectors = 0
@@ -59,13 +60,13 @@ class VectorIndex:
         # Ensure embeddings are contiguous and float32
         embeddings = np.ascontiguousarray(embeddings.astype('float32'))
 
-        if self.config.index_type == "flat":
+        if self.index_config.index_type == "flat":
             self._build_flat_index(embeddings)
-        elif self.config.index_type == "ivf":
+        elif self.index_config.index_type == "ivf":
             self._build_ivf_index(embeddings)
         else:
             raise ValueError(
-                f"Unknown index type: {self.config.index_type}. "
+                f"Unknown index type: {self.index_config.index_type}. "
                 "Must be 'flat' or 'ivf'"
             )
 
@@ -73,7 +74,7 @@ class VectorIndex:
 
         if verbose:
             logger.info(
-                f"Built {self.config.index_type} index with {self.n_vectors} vectors "
+                f"Built {self.index_config.index_type} index with {self.n_vectors} vectors "
                 f"in {build_time:.2f}s"
             )
 
@@ -100,19 +101,19 @@ class VectorIndex:
         self.index = faiss.IndexIVFFlat(
             quantizer,
             self.embedding_dim,
-            self.config.n_clusters,
+            self.index_config.n_clusters,
             faiss.METRIC_INNER_PRODUCT
         )
 
         # Train the index (find cluster centroids)
-        logger.info(f"Training IVF index with {self.config.n_clusters} clusters...")
+        logger.info(f"Training IVF index with {self.index_config.n_clusters} clusters...")
         self.index.train(embeddings)
 
         # Add vectors to index
         self.index.add(embeddings)
 
         # Set search parameters
-        self.index.nprobe = self.config.nprobe
+        self.index.nprobe = self.index_config.nprobe
 
     def search(
         self,
@@ -180,7 +181,7 @@ class VectorIndex:
         self.n_vectors = self.index.ntotal
 
         # Set nprobe for IVF index
-        if self.config.index_type == "ivf":
-            self.index.nprobe = self.config.nprobe
+        if self.index_config.index_type == "ivf":
+            self.index.nprobe = self.index_config.nprobe
 
         logger.info(f"Loaded index with {self.n_vectors} vectors from {load_path}")

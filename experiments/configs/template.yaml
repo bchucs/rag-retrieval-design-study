@@ -1,0 +1,91 @@
+# Configuration Template for RAG Experiments
+# This file documents all available configuration options
+# Copy this file and modify values for your specific experiment
+
+experiment_name: "my_experiment"  # Unique name for this experiment
+
+# ============================================================================
+# DATA CONFIGURATION
+# ============================================================================
+data:
+  corpus: "arxiv_cs"  # Currently only supports "arxiv_cs"
+  data_dir: "data/raw"  # Directory to store/cache raw data
+
+# ============================================================================
+# CHUNKING CONFIGURATION
+# Experiment 1: Vary chunk_size (256/512/1024) and overlap
+# ============================================================================
+chunking:
+  chunk_size: 512  # Size of each chunk in tokens (256, 512, or 1024)
+  overlap: 0  # Token overlap between chunks (0, chunk_size/4, chunk_size/2)
+  encoding_name: "cl100k_base"  # Tokenizer to use (OpenAI's cl100k_base)
+
+# ============================================================================
+# EMBEDDING CONFIGURATION
+# Fixed across all experiments to isolate retrieval design choices
+# ============================================================================
+embedding:
+  model_name: "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
+  # Alternative models:
+  # - "sentence-transformers/all-MiniLM-L6-v2" (general purpose)
+  # - "sentence-transformers/all-mpnet-base-v2" (higher quality, slower)
+  batch_size: 32  # Batch size for embedding generation (adjust based on memory)
+  cache_dir: null  # Directory to cache model files (null = use default)
+
+# ============================================================================
+# INDEXING CONFIGURATION
+# Experiment 3: Vary index_type (flat vs ivf)
+# ============================================================================
+indexing:
+  index_type: "flat"  # Index type: "flat" (exact) or "ivf" (approximate)
+  n_clusters: 100  # Number of clusters for IVF index (only used if index_type="ivf")
+                   # Typical values: sqrt(n_vectors) to n_vectors/100
+  nprobe: 10  # Number of clusters to search in IVF (only used if index_type="ivf")
+              # Higher = more accurate but slower (1-100)
+
+# ============================================================================
+# RETRIEVAL CONFIGURATION
+# Experiment 2: Vary top_k (3/5/10) and distance_threshold
+# ============================================================================
+retrieval:
+  top_k: 5  # Number of documents to retrieve (3, 5, 10, or 20)
+  distance_threshold: null  # Optional: minimum similarity score (null = no threshold)
+                           # For cosine similarity: 0.0 to 1.0 (higher = more similar)
+
+# ============================================================================
+# GENERATION CONFIGURATION
+# Fixed LLM across all experiments
+# ============================================================================
+generation:
+  model_name: "gpt-4o-mini"  # OpenAI model to use
+  # Alternative models:
+  # - "gpt-4o" (higher quality, more expensive)
+  # - "gpt-3.5-turbo" (cheaper, faster, lower quality)
+  temperature: 0.0  # Temperature for generation (0.0 = deterministic)
+  max_tokens: 500  # Maximum tokens in generated answer
+  api_key: null  # OpenAI API key (null = use OPENAI_API_KEY env var)
+
+# ============================================================================
+# EVALUATION CONFIGURATION
+# ============================================================================
+evaluation:
+  questions_file: "data/questions/eval_questions.json"  # Path to evaluation questions
+  output_dir: "results"  # Directory to save results
+
+# ============================================================================
+# NOTES FOR EXPERIMENTS
+# ============================================================================
+# Experiment 1 - Chunking Strategy:
+#   - Vary chunk_size: 256, 512, 1024
+#   - Vary overlap: 0, chunk_size/4, chunk_size/2
+#   - Keep all other settings constant
+#
+# Experiment 2 - Top-k and Thresholds:
+#   - Vary top_k: 3, 5, 10, 20
+#   - Try with/without distance_threshold
+#   - Keep all other settings constant
+#
+# Experiment 3 - Indexing Strategy:
+#   - Compare index_type: flat vs ivf
+#   - For IVF, vary n_clusters and nprobe
+#   - Measure latency vs accuracy tradeoff

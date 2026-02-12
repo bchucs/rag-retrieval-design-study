@@ -18,10 +18,11 @@ logger = logging.getLogger(__name__)
 class RetrievalConfig:
     """Configuration for retrieval
 
-    Note: Default values are provided, but load from experiments/configs/baseline.yaml in practice
+    IMPORTANT: Always load from config files using utils.config.get_retrieval_config()
+    Do not use default values - all values should come from YAML configs
     """
-    top_k: int = 5  # override with config
-    distance_threshold: Optional[float] = None  # override with config
+    top_k: int  # number of documents to retrieve
+    distance_threshold: Optional[float] = None  # optional distance cutoff
 
 
 @dataclass

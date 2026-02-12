@@ -68,7 +68,7 @@ class EmbeddingModel:
     def embed_texts(
         self,
         texts: List[str],
-        show_progress: bool = False,
+        show_progress: bool = True,
         normalize: bool = True
     ) -> np.ndarray:
         """Generate embeddings for a batch of texts

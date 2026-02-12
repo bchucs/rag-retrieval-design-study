@@ -12,16 +12,19 @@ data:
 chunking:
   chunk_size: 512  # tokens
   overlap: 0  # tokens
+  encoding_name: "cl100k_base"  # OpenAI's tokenizer
 
 # Embedding configuration (fixed across all experiments)
 embedding:
   model_name: "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"  # Optimized for Q&A over documents
   batch_size: 32
+  cache_dir: null  # Use default cache directory
 
 # Indexing configuration
 indexing:
   index_type: "flat"  # "flat" or "ivf"
-  n_clusters: null  # only for ivf
+  n_clusters: 100  # only for ivf (default value when using ivf)
+  nprobe: 10  # number of clusters to search in IVF
 
 # Retrieval configuration
 retrieval:

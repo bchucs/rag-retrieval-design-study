@@ -109,9 +109,6 @@ class ArXivLoader:
                     if len(documents) % 50 == 0:
                         logger.info(f"Collected {len(documents)} papers so far...")
 
-                # Rate limiting to be polite to arXiv API
-                time.sleep(3)
-
             except Exception as e:
                 logger.warning(f"Error fetching from {category}: {e}")
                 continue

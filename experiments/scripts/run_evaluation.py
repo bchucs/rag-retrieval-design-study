@@ -16,12 +16,12 @@ import argparse
 from dotenv import load_dotenv
 
 from retrieval.embeddings import EmbeddingModel
-from retrieval.indexing import VectorIndex, IndexConfig
-from retrieval.retriever import Retriever, RetrievalConfig
-from generation.llm import LLMGenerator, GenerationConfig
+from retrieval.indexing import VectorIndex
+from retrieval.retriever import Retriever
+from generation.llm import LLMGenerator
 from rag_pipeline import RAGPipeline
 from evaluation.harness import EvaluationHarness
-from utils.config import load_config, get_embedding_model_name, get_retrieval_config, get_generation_config
+from utils import config as config_utils
 
 # Load environment variables
 load_dotenv()
@@ -62,14 +62,16 @@ def run_evaluation(
 
     # Load configuration
     logger.info("\nLoading configuration...")
-    config = load_config()
-    embedding_model_name = get_embedding_model_name(config)
-    retrieval_cfg = get_retrieval_config(config)
-    generation_cfg = get_generation_config(config)
+    config = config_utils.load_config()
+    emb_config = config_utils.get_embedding_config(config)
+    retrieval_config = config_utils.get_retrieval_config(config)
+    generation_config = config_utils.get_generation_config(config)
+    index_config = config_utils.get_index_config(config)
+
     logger.info(f"Config: {config_name}")
-    logger.info(f"  Embedding: {embedding_model_name}")
-    logger.info(f"  Generation: {generation_cfg['model_name']}")
-    logger.info(f"  Top-k: {retrieval_cfg['top_k']}")
+    logger.info(f"  Embedding: {emb_config['model_name']}")
+    logger.info(f"  Generation: {generation_config.model_name}")
+    logger.info(f"  Top-k: {retrieval_config.top_k}")
 
     # Load artifacts
     logger.info("\nLoading baseline artifacts...")
@@ -80,32 +82,26 @@ def run_evaluation(
 
     # Load embedding model
     logger.info(f"Loading embedding model...")
-    embedding_model = EmbeddingModel(embedding_model_name)
+    embedding_model = EmbeddingModel(
+        model_name=emb_config['model_name'],
+        batch_size=emb_config['batch_size'],
+        cache_dir=emb_config.get('cache_dir')
+    )
     embedding_model.load()
     logger.info(f"✓ Model loaded")
 
     # Load index
     logger.info("Loading vector index...")
-    index_config = IndexConfig(index_type="flat")
     vector_index = VectorIndex(index_config, embedding_model.embedding_dim)
     vector_index.load(str(index_file))
     logger.info(f"✓ Index loaded ({vector_index.n_vectors} vectors)")
 
     # Create retriever
-    retrieval_config = RetrievalConfig(
-        top_k=retrieval_cfg['top_k'],
-        distance_threshold=retrieval_cfg.get('distance_threshold')
-    )
     retriever = Retriever(embedding_model, vector_index, retrieval_config, chunks)
     logger.info("✓ Retriever initialized")
 
     # Initialize LLM generator
     logger.info("Initializing LLM generator...")
-    generation_config = GenerationConfig(
-        model_name=generation_cfg['model_name'],
-        temperature=generation_cfg['temperature'],
-        max_tokens=generation_cfg['max_tokens']
-    )
     generator = LLMGenerator(generation_config)
     generator.initialize()
     logger.info("✓ LLM generator initialized")

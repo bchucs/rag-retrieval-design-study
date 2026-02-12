@@ -17,13 +17,13 @@ logger = logging.getLogger(__name__)
 class GenerationConfig:
     """Configuration for LLM generation
 
-    Note: Default values are provided, but in practice, load from experiments/configs/baseline.yaml
-    using utils.config.get_generation_config()
+    IMPORTANT: Always load from config files using utils.config.get_generation_config()
+    Do not use default values - all values should come from YAML configs
     """
-    model_name: str = "gpt-4o-mini"  # Default - override with config
-    temperature: float = 0.0
-    max_tokens: int = 500
-    api_key: Optional[str] = None
+    model_name: str  # e.g., "gpt-4o-mini"
+    temperature: float = 0.0  # sensible default for reproducibility
+    max_tokens: int = 500  # sensible default
+    api_key: Optional[str] = None  # can also be set via OPENAI_API_KEY env var
 
 
 @dataclass
@@ -42,18 +42,18 @@ class GenerationResult:
 class LLMGenerator:
     """Interface for LLM-based answer generation"""
 
-    def __init__(self, config: GenerationConfig):
+    def __init__(self, generation_config: GenerationConfig):
         """Initialize LLM generator
 
         Args:
-            config: Generation configuration
+            generation_config: Generation configuration
         """
-        self.config = config
+        self.generation_config = generation_config
         self.client = None
 
     def initialize(self):
         """Initialize the LLM client"""
-        api_key = self.config.api_key or os.getenv("OPENAI_API_KEY")
+        api_key = self.generation_config.api_key or os.getenv("OPENAI_API_KEY")
 
         if not api_key:
             raise ValueError(
@@ -62,7 +62,7 @@ class LLMGenerator:
             )
 
         self.client = OpenAI(api_key=api_key)
-        logger.info(f"Initialized OpenAI client with model: {self.config.model_name}")
+        logger.info(f"Initialized OpenAI client with model: {self.generation_config.model_name}")
 
     def generate_answer(
         self,
@@ -89,7 +89,7 @@ class LLMGenerator:
         # Call LLM
         try:
             response = self.client.chat.completions.create(
-                model=self.config.model_name,
+                model=self.generation_config.model_name,
                 messages=[
                     {
                         "role": "system",
@@ -104,8 +104,8 @@ class LLMGenerator:
                         "content": prompt
                     }
                 ],
-                temperature=self.config.temperature,
-                max_tokens=self.config.max_tokens,
+                temperature=self.generation_config.temperature,
+                max_tokens=self.generation_config.max_tokens,
             )
 
             answer = response.choices[0].message.content
@@ -117,7 +117,7 @@ class LLMGenerator:
                 query=query,
                 answer=answer,
                 prompt=prompt,
-                model=self.config.model_name,
+                model=self.generation_config.model_name,
                 latency_ms=latency_ms,
                 prompt_tokens=usage.prompt_tokens,
                 completion_tokens=usage.completion_tokens,
@@ -177,7 +177,7 @@ Answer:"""
         self,
         queries: List[str],
         context_documents_list: List[List[Dict[str, Any]]],
-        show_progress: bool = False
+        show_progress: bool = True
     ) -> List[GenerationResult]:
         """Generate answers for multiple queries
 

@@ -118,7 +118,7 @@ class RAGPipeline:
     def batch_query(
         self,
         questions: List[str],
-        show_progress: bool = True
+        show_progress: bool = False
     ) -> List[RAGResult]:
         """Process multiple questions through the pipeline
 

@@ -177,7 +177,7 @@ Answer:"""
         self,
         queries: List[str],
         context_documents_list: List[List[Dict[str, Any]]],
-        show_progress: bool = True
+        show_progress: bool = False
     ) -> List[GenerationResult]:
         """Generate answers for multiple queries
 

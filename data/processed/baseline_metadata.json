@@ -1,0 +1,16 @@
+{
+  "experiment_name": "baseline",
+  "artifact_hash": "c757c8f7",
+  "chunk_config": {
+    "chunk_size": 512,
+    "overlap": 0,
+    "encoding_name": "cl100k_base"
+  },
+  "embedding_config": {
+    "model_name": "sentence-transformers/multi-qa-MiniLM-L6-cos-v1",
+    "batch_size": 32
+  },
+  "max_docs": 100,
+  "num_chunks": 100,
+  "embedding_dim": 384
+}

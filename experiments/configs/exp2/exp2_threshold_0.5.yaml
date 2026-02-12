@@ -1,0 +1,45 @@
+# Experiment 3: Retrieval Quality vs Quantity
+# Configuration: Moderate distance threshold (0.5)
+# Research Question: Does moderate filtering balance recall and precision?
+# Note: For cosine distance, threshold of 0.5 means similarity >= 0.5
+
+experiment_name: "exp2_threshold_0.5"
+
+# Data configuration
+data:
+  corpus: "arxiv_cs"
+  data_dir: "data/raw"
+
+# Chunking configuration (keep constant for Experiment 3)
+chunking:
+  chunk_size: 512  # tokens
+  overlap: 0  # tokens
+  encoding_name: "cl100k_base"
+
+# Embedding configuration (fixed across all experiments)
+embedding:
+  model_name: "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
+  batch_size: 32
+  cache_dir: null
+
+# Indexing configuration (keep constant for Experiment 3)
+indexing:
+  index_type: "flat"
+  n_clusters: 100
+  nprobe: 10
+
+# Retrieval configuration - EXPERIMENTAL VARIABLE
+retrieval:
+  top_k: 10  # Use higher k, filter by threshold
+  distance_threshold: 0.5  # Moderate filtering
+
+# Generation configuration (fixed across all experiments)
+generation:
+  model_name: "gpt-4o-mini"
+  temperature: 0.0
+  max_tokens: 500
+
+# Evaluation configuration
+evaluation:
+  questions_file: "data/questions/eval_questions.json"
+  output_dir: "results"

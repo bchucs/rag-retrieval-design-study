@@ -1,0 +1,44 @@
+# Experiment 4: Indexing Strategy (Engineering Optimization)
+# Configuration: Flat index (exact nearest neighbor search)
+# Research Question: Baseline latency and accuracy with exact search
+
+experiment_name: "exp3_index_flat"
+
+# Data configuration
+data:
+  corpus: "arxiv_cs"
+  data_dir: "data/raw"
+
+# Chunking configuration (keep constant for Experiment 4)
+chunking:
+  chunk_size: 512  # tokens
+  overlap: 0  # tokens
+  encoding_name: "cl100k_base"
+
+# Embedding configuration (fixed across all experiments)
+embedding:
+  model_name: "sentence-transformers/multi-qa-MiniLM-L6-cos-v1"
+  batch_size: 32
+  cache_dir: null
+
+# Indexing configuration - EXPERIMENTAL VARIABLE
+indexing:
+  index_type: "flat"  # Exact search - slowest but most accurate
+  n_clusters: null  # Not used for flat index
+  nprobe: null  # Not used for flat index
+
+# Retrieval configuration (keep constant for Experiment 4)
+retrieval:
+  top_k: 5
+  distance_threshold: null
+
+# Generation configuration (fixed across all experiments)
+generation:
+  model_name: "gpt-4o-mini"
+  temperature: 0.0
+  max_tokens: 500
+
+# Evaluation configuration
+evaluation:
+  questions_file: "data/questions/eval_questions.json"
+  output_dir: "results"

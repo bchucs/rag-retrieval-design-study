@@ -35,22 +35,25 @@ logger = logging.getLogger(__name__)
 
 
 def run_evaluation(
-    config_name: str = "baseline",
+    config_path: str = None,
     questions_file: str = "data/questions/eval_questions.json",
-    chunks_file: str = "data/processed/baseline_chunks.json",
-    index_file: str = "data/processed/baseline_index.faiss",
+    chunks_file: str = None,
+    index_file: str = None,
     output_file: str = None,
-    num_questions: int = None
+    num_questions: int = None,
+    artifacts_name: str = None
 ):
-    """Run evaluation on baseline RAG system
+    """Run evaluation on RAG system
 
     Args:
-        config_name: Name of configuration being tested
+        config_path: Path to experiment config YAML file
         questions_file: Path to questions JSON file
-        chunks_file: Path to chunks JSON file
-        index_file: Path to FAISS index file
+        chunks_file: Path to chunks JSON file (auto-derived if None)
+        index_file: Path to FAISS index file (auto-derived if None)
         output_file: Path to save results CSV (optional)
         num_questions: Number of questions to evaluate (None for all)
+        artifacts_name: Name prefix for artifacts (e.g., 'baseline', 'exp3_index_flat').
+                       If None, uses experiment_name from config.
     """
     logger.info("="*60)
     logger.info("RAG System Evaluation")
@@ -62,16 +65,43 @@ def run_evaluation(
 
     # Load configuration
     logger.info("\nLoading configuration...")
-    config = config_utils.load_config()
+    if config_path is None:
+        config_path = "experiments/configs/baseline.yaml"
+
+    config = config_utils.load_config(config_path)
+    exp_name = config['experiment_name']
+
     emb_config = config_utils.get_embedding_config(config)
     retrieval_config = config_utils.get_retrieval_config(config)
     generation_config = config_utils.get_generation_config(config)
     index_config = config_utils.get_index_config(config)
 
-    logger.info(f"Config: {config_name}")
+    # Auto-derive artifact paths if not provided
+    from pathlib import Path
+    project_root = Path(__file__).parent.parent.parent
+    processed_dir = project_root / "data" / "processed"
+
+    # Chunks always use baseline (all experiments share same chunks)
+    if chunks_file is None:
+        chunks_file = str(processed_dir / "baseline_chunks.json")
+
+    # Index logic:
+    # - If --artifacts NOT provided: use baseline_index.faiss
+    # - If --artifacts IS provided: use {experiment_name}_index.faiss
+    if index_file is None:
+        if not artifacts_name:
+            index_file = str(processed_dir / "baseline_index.faiss")
+        else:
+            index_file = str(processed_dir / f"{exp_name}_index.faiss")
+
+    logger.info(f"Config: {exp_name}")
+    logger.info(f"  Config file: {config_path}")
     logger.info(f"  Embedding: {emb_config['model_name']}")
     logger.info(f"  Generation: {generation_config.model_name}")
     logger.info(f"  Top-k: {retrieval_config.top_k}")
+    logger.info(f"  Distance threshold: {retrieval_config.distance_threshold}")
+    logger.info(f"  Chunks: {chunks_file}")
+    logger.info(f"  Index: {index_file}")
 
     # Load artifacts
     logger.info("\nLoading baseline artifacts...")
@@ -126,7 +156,7 @@ def run_evaluation(
     logger.info("="*60 + "\n")
 
     results = harness.run_evaluation(
-        config_name=config_name,
+        config_name=exp_name,
         rag_pipeline=rag_pipeline
     )
 
@@ -135,7 +165,7 @@ def run_evaluation(
 
     # Save results
     if output_file is None:
-        output_file = f"results/{config_name}_evaluation.csv"
+        output_file = f"results/{exp_name}_evaluation.csv"
 
     harness.save_results(results, output_file)
 
@@ -146,10 +176,10 @@ def run_evaluation(
 def main():
     parser = argparse.ArgumentParser(description="Run RAG evaluation")
     parser.add_argument(
-        "--config-name",
+        "--config",
         type=str,
-        default="baseline",
-        help="Name of configuration being tested"
+        default=None,
+        help="Path to experiment config YAML file (defaults to baseline.yaml)"
     )
     parser.add_argument(
         "--questions",
@@ -160,14 +190,14 @@ def main():
     parser.add_argument(
         "--chunks",
         type=str,
-        default="data/processed/baseline_chunks.json",
-        help="Path to chunks JSON file"
+        default=None,
+        help="Path to chunks JSON file (auto-derived from config if not provided)"
     )
     parser.add_argument(
         "--index",
         type=str,
-        default="data/processed/baseline_index.faiss",
-        help="Path to FAISS index file"
+        default=None,
+        help="Path to FAISS index file (auto-derived from config if not provided)"
     )
     parser.add_argument(
         "--output",
@@ -181,15 +211,21 @@ def main():
         default=None,
         help="Number of questions to evaluate (default: all)"
     )
+    parser.add_argument(
+        "--artifacts",
+        action="store_true",
+        help="Use experiment-specific index ({experiment_name}_index.faiss). If not set, uses baseline_index.faiss. Chunks always use baseline."
+    )
     args = parser.parse_args()
 
     run_evaluation(
-        config_name=args.config_name,
+        config_path=args.config,
         questions_file=args.questions,
         chunks_file=args.chunks,
         index_file=args.index,
         output_file=args.output,
-        num_questions=args.num_questions
+        num_questions=args.num_questions,
+        artifacts_name=args.artifacts
     )
 
 

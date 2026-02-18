@@ -219,15 +219,6 @@ Return ONLY the JSON object in this format: {{"questions": [...]}}"""
 
         content = response.choices[0].message.content.strip()
 
-        # Remove markdown code blocks if present (shouldn't be needed with response_format)
-        if content.startswith("```json"):
-            content = content[7:]
-        if content.startswith("```"):
-            content = content[3:]
-        if content.endswith("```"):
-            content = content[:-3]
-        content = content.strip()
-
         try:
             result = json.loads(content)
         except json.JSONDecodeError as je:

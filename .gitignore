@@ -55,12 +55,6 @@ data/processed/*.h5
 *.bin
 models/
 
-# Results and logs
-results/*.csv
-results/*.json
-logs/
-*.log
-
 # Environment variables
 .env
 .env.local

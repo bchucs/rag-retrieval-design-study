@@ -197,3 +197,82 @@ Respond with ONLY one word: YES or NO."""
     except Exception as e:
         logger.error(f"Error in hallucination detection: {e}")
         return False  # Default to no hallucination on error
+
+
+def abstention_score(
+    answer: str,
+    client: Optional[OpenAI] = None
+) -> float:
+    """Evaluate if the system properly abstained from answering an unanswerable question
+
+    Args:
+        answer: Generated answer from RAG system
+        client: OpenAI client (optional, will create if not provided)
+
+    Returns:
+        Abstention score on 0-2 scale:
+        - 0: Confidently answered (should have abstained)
+        - 1: Partially hedged or expressed uncertainty
+        - 2: Clearly refused to answer / stated insufficient information
+    """
+    if client is None:
+        client = OpenAI()
+
+    prompt = f"""You are evaluating whether a question-answering system properly abstained from answering a question it should not answer.
+
+Generated Answer: {answer}
+
+Rate how well the system abstained on a scale of 0-2:
+- 0: Provided a confident answer with specific factual claims (should have refused)
+- 1: Attempted to answer but heavily hedged or expressed significant uncertainty
+- 2: Clearly refused to answer or stated it doesn't have sufficient information
+
+Examples of score 2:
+- "I don't have enough information to answer this question."
+- "I cannot answer this based on the provided documents."
+- "This information is not available in my context."
+
+Examples of score 1:
+- "I'm not entirely sure, but it might be X..."
+- "Based on limited information, possibly Y, though I cannot confirm."
+
+Examples of score 0:
+- "The answer is X because Y."
+- "According to the research, Z is the case."
+
+Respond with ONLY a single number: 0, 1, or 2."""
+
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are an expert evaluator for question-answering systems. Provide objective ratings."
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            temperature=0.0,
+            max_tokens=10,
+        )
+
+        content = response.choices[0].message.content.strip()
+
+        # Parse score
+        try:
+            score = float(content)
+            if score not in [0, 1, 2]:
+                logger.warning(f"LLM returned invalid abstention score: {content}, defaulting to 0")
+                score = 0.0
+        except ValueError:
+            logger.warning(f"Could not parse abstention score: {content}, defaulting to 0")
+            score = 0.0
+
+        return score
+
+    except Exception as e:
+        logger.error(f"Error in abstention score evaluation: {e}")
+        return 0.0

@@ -34,6 +34,38 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def get_next_result_index(exp_name: str, results_dir: str = "results") -> int:
+    """Find the next available index for experiment results
+
+    Args:
+        exp_name: Experiment name
+        results_dir: Directory where results are stored
+
+    Returns:
+        Next available index (starting from 0)
+    """
+    from pathlib import Path
+    import re
+
+    results_path = Path(results_dir)
+    if not results_path.exists():
+        return 0
+
+    # Find all existing result files for this experiment
+    pattern = re.compile(rf"{re.escape(exp_name)}_evaluation_(\d+)\.csv")
+    existing_indices = []
+
+    for file in results_path.glob(f"{exp_name}_evaluation_*.csv"):
+        match = pattern.match(file.name)
+        if match:
+            existing_indices.append(int(match.group(1)))
+
+    # Return next index
+    if not existing_indices:
+        return 0
+    return max(existing_indices) + 1
+
+
 def run_evaluation(
     config_path: str = None,
     questions_file: str = "data/questions/eval_questions.json",
@@ -165,7 +197,9 @@ def run_evaluation(
 
     # Save results
     if output_file is None:
-        output_file = f"results/{exp_name}_evaluation.csv"
+        # Get next available index
+        next_index = get_next_result_index(exp_name)
+        output_file = f"results/{exp_name}_evaluation_{next_index}.csv"
 
     harness.save_results(results, output_file)
 

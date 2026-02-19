@@ -28,6 +28,31 @@ Controlled experiments isolate the impact of retrieval parameters by fixing the 
 
 ---
 
+## Results
+
+### Exp 1 — Top-k Retrieval (5,000-doc corpus, 283 questions)
+
+| Config | Recall | Miss% | Correctness | Hallucination | Abstention | Total latency |
+|---|---|---|---|---|---|---|
+| top_k=1  | 0.676 | 32.4% | 1.409 | 6.7% | 1.552 | 3,818ms |
+| top_k=3  | 0.760 | 24.0% | 1.564 | 3.9% | 1.069 | 3,959ms |
+| top_k=5  | 0.791 | 20.9% | 1.653 | 2.8% | 1.086 | 3,795ms |
+| top_k=10 | 0.827 | 17.3% | 1.684 | 4.6% | 1.155 | 4,217ms |
+| top_k=20 | 0.853 | 14.7% | 1.720 | 3.9% | 1.172 | 6,348ms |
+
+*Recall and Correctness are for answerable questions only. Abstention is for unanswerable questions (max 2.0). Miss% = fraction of answerable questions where the gold doc was not retrieved.*
+
+**Findings:**
+- Retrieval recall improves with higher k but with diminishing returns (+8.4pp, +3.1pp, +3.6pp, +2.6pp per step)
+- Answer correctness tracks recall tightly — generation quality is high; retrieval is the bottleneck
+- Hallucination is worst at top_k=1 (6.7%) and lowest at top_k=5 (2.8%); adding more context beyond k=5 slightly increases hallucination
+- Abstention degrades above top_k=1 — more retrieved context makes the model more likely to attempt an answer on unanswerable questions
+- Total latency is flat up to top_k=10, then jumps 67% at top_k=20 due to larger context windows
+
+Exp 2 (distance thresholds) and Exp 3 (indexing strategies) pending.
+
+---
+
 ## Project Structure
 
 ```
@@ -62,6 +87,7 @@ Controlled experiments isolate the impact of retrieval parameters by fixing the 
 ├── scripts/
 │   ├── build_retrieval_system.py # Build chunks, embeddings, and FAISS index
 │   ├── generate_questions.py     # LLM-based eval question generation
+│   ├── compare_results.py        # Print summary table from result CSVs
 │   └── run_all_experiments.sh    # Batch runner for all configs
 │
 ├── data/
@@ -152,6 +178,14 @@ Results are written to `results/<exp_name>_evaluation_<n>.csv`. Logs go to `resu
 
 > **Note**: Exp 3 configs use experiment-specific FAISS indices (`{exp_name}_index.faiss`). Build these before running exp3: `python scripts/build_retrieval_system.py --config experiments/configs/exp3/<config>.yaml`
 
+### Step 4 — Compare results
+
+```bash
+python scripts/compare_results.py                        # exp1 top-k (default)
+python scripts/compare_results.py --pattern "exp2_*"    # exp2
+python scripts/compare_results.py --pattern "exp3_*"    # exp3
+```
+
 ---
 
 ## Evaluation Metrics
@@ -170,9 +204,6 @@ Results are written to `results/<exp_name>_evaluation_<n>.csv`. Logs go to `resu
 `question_id`, `question`, `config_name`, `answerable`, `retrieved_doc_ids`, `retrieval_recall`, `answer`, `reference_answer`, `answer_correctness`, `has_hallucination`, `abstention_score`, `retrieval_latency_ms`, `generation_latency_ms`, `total_latency_ms`
 
 ---
-
-## Results
-Ongoing
 
 ## References
 

@@ -1,25 +1,28 @@
 [
   {
-    "question": "How much acceleration does DFlash achieve in comparison to the state-of-the-art speculative decoding method EAGLE-3?",
-    "answer": "DFlash achieves over 6x lossless acceleration across various models and tasks, delivering up to 2.5x higher speedup than EAGLE-3.",
-    "doc_id": "2602.06036v1",
+    "question": "How many trajectories were collected during the extensive quantitative analysis and large-scale real-world experiments conducted in this research?",
+    "answer": "The research collected datasets of 18,000 trajectories during the extensive quantitative analysis and large-scale real-world experiments.",
+    "doc_id": "2602.16444v1",
     "gold_doc_ids": [
-      "2602.06036v1"
+      "2602.16444v1"
     ],
-    "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
+    "title": "RoboGene: Boosting VLA Pre-training via Diversity-Driven Agentic Framework for Real-World Task Generation",
     "answerable": true,
     "question_id": "q_000"
   },
   {
-    "question": "Who are the keynote speakers for the upcoming ICCV 2025?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What are the benchmarks on which REMUL demonstrated improvements in faithfulness and accuracy?",
+    "answer": "REMUL demonstrated improvements on multiple reasoning benchmarks, including BIG-Bench Extra Hard, MuSR, ZebraLogicBench, and FOLIO, showing consistent and substantial enhancements in faithfulness measures and accuracy.",
+    "doc_id": "2602.16154v1",
+    "gold_doc_ids": [
+      "2602.16154v1"
+    ],
+    "title": "Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution",
+    "answerable": true,
     "question_id": "q_001"
   },
   {
-    "question": "What specific security vulnerabilities were discussed at the last DEF CON in relation to machine learning?",
+    "question": "What are the emerging trends in explainability for AI systems as of 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -27,234 +30,243 @@
     "question_id": "q_002"
   },
   {
-    "question": "What challenges do researchers face when assessing new interventions in virtual reality according to the abstract?",
-    "answer": "Researchers face challenges such as the need to recruit new participant cohorts for each condition, which makes large-scale or iterative evaluation difficult. These limitations are particularly restrictive when trying to learn effective intervention strategies that typically require many training episodes.",
-    "doc_id": "2602.06023v1",
+    "question": "What is the observed effect of increasing recommender adoption on individual consumption according to the findings?",
+    "answer": "Increasing recommender adoption may lead to a progressive diversification of individual consumption; however, collective demand is redistributed in a way that often amplifies popularity concentration.",
+    "doc_id": "2602.16315v1",
     "gold_doc_ids": [
-      "2602.06023v1"
+      "2602.16315v1"
     ],
-    "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+    "title": "The Diversity Paradox revisited: Systemic Effects of Feedback Loops in Recommender Systems",
     "answerable": true,
     "question_id": "q_003"
   },
   {
-    "question": "Who is the chair of the NeurIPS 2024 organizing committee?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "How many patients are included in the Omni-iEEG dataset?",
+    "answer": "The Omni-iEEG dataset includes a total of 302 patients. This large-scale resource is designed to aid in epilepsy research, particularly for those suffering from drug-resistant seizures.",
+    "doc_id": "2602.16072v1",
+    "gold_doc_ids": [
+      "2602.16072v1"
+    ],
+    "title": "Omni-iEEG: A Large-Scale, Comprehensive iEEG Dataset and Benchmark for Epilepsy Research",
+    "answerable": true,
     "question_id": "q_004"
   },
   {
-    "question": "What novel method does the paper propose to improve block scheduling for diffusion large language models?",
-    "answer": "The paper proposes Dynamic Sliding Block (DSB), a training-free block scheduling method that utilizes a sliding block with a dynamic size to enhance the rigidity of the naive block scheduling approach.",
-    "doc_id": "2602.05992v1",
+    "question": "What tasks are formalized as sequential decision-making problems in this study?",
+    "answer": "The study formalizes multiple tasks, including information retrieval and coding, as sequential decision-making problems under uncertainty. These tasks involve reasoning about latent environment states via a prior passed to the LLM agent.",
+    "doc_id": "2602.16699v1",
     "gold_doc_ids": [
-      "2602.05992v1"
+      "2602.16699v1"
     ],
-    "title": "DSB: Dynamic Sliding Block Scheduling for Diffusion LLMs",
+    "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
     "answerable": true,
     "question_id": "q_005"
   },
   {
-    "question": "How does Share compare to traditional LoRA methods in terms of parameter reduction and memory savings?",
-    "answer": "Share achieves up to 100x parameter reduction and 281x memory savings over traditional LoRA methods, while maintaining performance comparable to jointly trained models. This makes it a more efficient solution for continual learning in large-scale AI systems.",
-    "doc_id": "2602.06043v1",
+    "question": "What is the primary contribution of GPEReg-Net in the context of photoacoustic microscopy registration?",
+    "answer": "GPEReg-Net is a scene-appearance disentanglement framework that separates domain-invariant scene features from domain-specific appearance codes using Adaptive Instance Normalization (AdaIN), allowing for direct image-to-image registration without the need for explicit deformation field estimation.",
+    "doc_id": "2602.15959v1",
     "gold_doc_ids": [
-      "2602.06043v1"
+      "2602.15959v1"
     ],
-    "title": "Shared LoRA Subspaces for almost Strict Continual Learning",
+    "title": "Position-Aware Scene-Appearance Disentanglement for Bidirectional Photoacoustic Microscopy Registration",
     "answerable": true,
     "question_id": "q_006"
   },
   {
-    "question": "What is the installation size of the CUDA toolkit on Windows 11?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "How many agentic models were evaluated in the study, and what was the outcome regarding recent capability gains?",
+    "answer": "The study evaluated 14 agentic models. The findings indicated that recent capability gains have only led to small improvements in reliability.",
+    "doc_id": "2602.16666v1",
+    "gold_doc_ids": [
+      "2602.16666v1"
+    ],
+    "title": "Towards a Science of AI Agent Reliability",
+    "answerable": true,
     "question_id": "q_007"
   },
   {
-    "question": "What is the Spearman correlation achieved by the GenArena method compared to pointwise methods?",
-    "answer": "GenArena achieves a Spearman correlation of 0.86 with the authoritative LMArena leaderboard, which is significantly higher than the 0.36 correlation of pointwise methods. This demonstrates the effectiveness of the pairwise comparison paradigm introduced in the study.",
-    "doc_id": "2602.06013v1",
+    "question": "What key limitations of Multimodal Large Language Models (MLLMs) does the research highlight in multi-turn settings?",
+    "answer": "The research highlights substantial degradation in multi-turn settings due to error accumulation and breakdowns in shared context. While MLLMs perform well on stylistic edits, they frequently experience execution failures on data-centric transformations.",
+    "doc_id": "2602.15758v1",
     "gold_doc_ids": [
-      "2602.06013v1"
+      "2602.15758v1"
     ],
-    "title": "GenArena: How Can We Achieve Human-Aligned Evaluation for Visual Generation Tasks?",
+    "title": "ChartEditBench: Evaluating Grounded Multi-Turn Chart Editing in Multimodal Language Models",
     "answerable": true,
     "question_id": "q_008"
   },
   {
-    "question": "How many attendees were there at the recent ACM SIGKDD 2023 conference?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What are the two techniques discussed in the abstract that are linked to stronger reasoning in models?",
+    "answer": "The two techniques discussed are looping, which reuses a block of layers across depth, and depth growing, which involves training shallow-to-deep models by duplicating middle layers. Both techniques exhibit convergent depth-wise signatures that support their connection to iterative computation.",
+    "doc_id": "2602.16490v1",
+    "gold_doc_ids": [
+      "2602.16490v1"
+    ],
+    "title": "From Growing to Looping: A Unified View of Iterative Computation in LLMs",
+    "answerable": true,
     "question_id": "q_009"
   },
   {
-    "question": "What is the main purpose of Codified Finite-State Machines (CFSMs) as introduced in the paper?",
-    "answer": "The main purpose of CFSMs is to automatically codify textual character profiles into finite-state machines using LLM-based coding, allowing for the extraction of key states and transitions that enforce character consistency in role-playing scenarios.",
-    "doc_id": "2602.05905v1",
+    "question": "What framework is presented in the research paper for the approximation of DNNs?",
+    "answer": "The framework presented is called HAWX, which is a hardware-aware scalable exploration framework that employs multi-level sensitivity scoring to guide the integration of heterogeneous AxC blocks.",
+    "doc_id": "2602.16336v1",
     "gold_doc_ids": [
-      "2602.05905v1"
+      "2602.16336v1"
     ],
-    "title": "Codified Finite-state Machines for Role-playing",
+    "title": "HAWX: A Hardware-Aware FrameWork for Fast and Scalable ApproXimation of DNNs",
     "answerable": true,
     "question_id": "q_010"
   },
   {
-    "question": "What is the main purpose of the CORAL method introduced in the paper?",
-    "answer": "The CORAL (Correctness-Optimized Residual Activation Lens) method is designed to improve model accuracy and calibration during inference by capturing distributed correctness signals from model internal activations using weight-decay MLP probes. It provides a compute-efficient, transferable, and calibration-aware approach to enhance MCQA performance.",
-    "doc_id": "2602.06022v1",
+    "question": "What framework is proposed in the paper to address the issues with existing PINN methods?",
+    "answer": "The paper proposes the Geometric Compactification (GC)-PINN framework, which introduces three mapping strategies for handling periodic boundaries, far-field scale expansion, and localized singular structures in the input domain without modifying the underlying PINN architecture.",
+    "doc_id": "2602.16193v1",
     "gold_doc_ids": [
-      "2602.06022v1"
+      "2602.16193v1"
     ],
-    "title": "Correctness-Optimized Residual Activation Lens (CORAL): Transferrable and Calibration-Aware Inference-Time Steering",
+    "title": "Rethinking Input Domains in Physics-Informed Neural Networks via Geometric Compactification Mappings",
     "answerable": true,
     "question_id": "q_011"
   },
   {
-    "question": "What was the best performance achieved in the evaluation of LLMs for PTSD severity estimation according to the findings?",
-    "answer": "The best performance was achieved by ensembling a supervised model with the zero-shot LLMs, indicating the importance of combining different approaches for accurate mental health assessment.",
-    "doc_id": "2602.06015v1",
+    "question": "What is the main challenge that existing neural operators face according to the abstract?",
+    "answer": "Existing neural operators often suffer from instability in multi-layer iteration and long-horizon rollout due to the unconstrained Euclidean latent space updates that violate geometric and conservation laws.",
+    "doc_id": "2602.16209v1",
     "gold_doc_ids": [
-      "2602.06015v1"
+      "2602.16209v1"
     ],
-    "title": "A Systematic Evaluation of Large Language Models for PTSD Severity Estimation: The Role of Contextual Knowledge and Modeling Strategies",
+    "title": "Geometric Neural Operators via Lie Group-Constrained Latent Dynamics",
     "answerable": true,
     "question_id": "q_012"
   },
   {
-    "question": "What experimental results are reported in the abstract regarding the performance of LTS compared to memory-free parallel baselines?",
-    "answer": "The experiments reported in the abstract show that LTS significantly reduces overall runtime while matching or improving task performance compared to memory-free parallel baselines. This indicates that learned memory admission is an effective strategy for enhancing the efficiency of parallel agentic systems.",
-    "doc_id": "2602.05965v1",
+    "question": "What does the Reason-Reflect-Refine (R3) framework propose to address the optimization dilemma?",
+    "answer": "The R3 framework proposes to re-frame the single-step generation task into a multi-step process of 'generate-understand-regenerate', which helps to leverage the model's understanding capability during generation.",
+    "doc_id": "2602.15772v1",
     "gold_doc_ids": [
-      "2602.05965v1"
+      "2602.15772v1"
     ],
-    "title": "Learning to Share: Selective Memory for Efficient Parallel Agentic Systems",
+    "title": "Understanding vs. Generation: Navigating Optimization Dilemma in Multimodal Models",
     "answerable": true,
     "question_id": "q_013"
   },
   {
-    "question": "What method does KV-CoRE use to quantify the data-dependent low-rank compressibility of kv-caches?",
-    "answer": "KV-CoRE uses an SVD-based method to compute the optimal low-rank approximation under the Frobenius norm for quantifying the data-dependent low-rank compressibility of kv-caches.",
-    "doc_id": "2602.05929v1",
+    "question": "What methodology is used to train large language models (LLMs) to solicit and learn from language feedback?",
+    "answer": "The methodology used is social meta-learning (SML), which is formulated as a finetuning approach that trains LLMs in simulated pedagogical dialogues. This allows them to convert static tasks into interactive social learning problems.",
+    "doc_id": "2602.16488v1",
     "gold_doc_ids": [
-      "2602.05929v1"
+      "2602.16488v1"
     ],
-    "title": "KV-CoRE: Benchmarking Data-Dependent Low-Rank Compressibility of KV-Caches in LLMs",
+    "title": "Learning to Learn from Language Feedback with Social Meta-Learning",
     "answerable": true,
     "question_id": "q_014"
   },
   {
-    "question": "What was the distribution pattern of contaminated papers based on the number of hallucinations they contained?",
-    "answer": "The distribution exhibited a bimodal pattern: 92% of contaminated papers contained 1-2 hallucinations, indicating minimal AI use, while 8% contained 4-13 hallucinations, suggesting heavy reliance on AI.",
-    "doc_id": "2602.05930v1",
+    "question": "How does CARL-XRay compare to joint training in terms of routing accuracy and AUROC performance?",
+    "answer": "CARL-XRay achieves a routing accuracy of 75.0%, which is higher than the 62.5% achieved by joint training. In terms of diagnostic performance, it maintains an AUROC of 0.74 in the oracle setting and 0.75 under task-unknown inference, while using significantly fewer trainable parameters.",
+    "doc_id": "2602.15811v1",
     "gold_doc_ids": [
-      "2602.05930v1"
+      "2602.15811v1"
     ],
-    "title": "Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at NeurIPS 2025",
+    "title": "Task-Agnostic Continual Learning for Chest Radiograph Classification",
     "answerable": true,
     "question_id": "q_015"
   },
   {
-    "question": "What geometric and dynamical metrics are extracted from the semantic trajectories in the study?",
-    "answer": "The metrics extracted include distance to next, distance to centroid, entropy, velocity, and acceleration. These measures capture both scalar and directional aspects of semantic navigation.",
-    "doc_id": "2602.05971v1",
+    "question": "What are the two main findings regarding representation collapse in neural networks during training?",
+    "answer": "The two main findings are that training begins with a universal representation collapse to task-specific floors that are scale-invariant across a 210X parameter range, and that this collapse propagates top-down through layers, which contradicts the intuition of bottom-up feature building.",
+    "doc_id": "2602.15997v1",
     "gold_doc_ids": [
-      "2602.05971v1"
+      "2602.15997v1"
     ],
-    "title": "Characterizing Human Semantic Navigation in Concept Production as Trajectories in Embedding Space",
+    "title": "Anatomy of Capability Emergence: Scale-Invariant Representation Collapse and Top-Down Reorganization in Neural Networks",
     "answerable": true,
     "question_id": "q_016"
   },
   {
-    "question": "What is the main contribution of the paper 'Learning to Share'?",
-    "answer": "The main contribution of the paper is the proposal of Learning to Share (LTS), a learned shared-memory mechanism for parallel agentic frameworks that enables selective cross-team information reuse while controlling context growth. LTS utilizes a global memory bank accessible to all teams and a lightweight controller to manage memory admission based on its usefulness.",
-    "doc_id": "2602.05965v1",
+    "question": "How does CrispEdit ensure capability preservation during the editing process?",
+    "answer": "CrispEdit ensures capability preservation by formulating editing as constrained optimization and enforcing the constraint through projection of edit updates onto the low-curvature subspace of the capability-loss landscape, using Bregman divergence to express the capability constraint.",
+    "doc_id": "2602.15823v1",
     "gold_doc_ids": [
-      "2602.05965v1"
+      "2602.15823v1"
     ],
-    "title": "Learning to Share: Selective Memory for Efficient Parallel Agentic Systems",
+    "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
     "answerable": true,
     "question_id": "q_017"
   },
   {
-    "question": "What time does the CVPR 2025 keynote speech start?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What improvements in correctness and execution does ReLoop achieve on the strongest model compared to previous levels?",
+    "answer": "ReLoop raises correctness from 22.6% to 31.1% and execution from 72.1% to 100.0% on the strongest model, demonstrating significant gains in both areas across multiple models and benchmarks.",
+    "doc_id": "2602.15983v1",
+    "gold_doc_ids": [
+      "2602.15983v1"
+    ],
+    "title": "ReLoop: Structured Modeling and Behavioral Verification for Reliable LLM-Based Optimization",
+    "answerable": true,
     "question_id": "q_018"
   },
   {
-    "question": "What factors were systematically varied in the study to evaluate the performance of large language models (LLMs) for PTSD severity estimation?",
-    "answer": "The study systematically varied contextual knowledge, such as subscale definitions and interview questions, and modeling strategies, including zero-shot vs few-shot approaches, reasoning effort, model sizes, and ensemble methods.",
-    "doc_id": "2602.06015v1",
-    "gold_doc_ids": [
-      "2602.06015v1"
-    ],
-    "title": "A Systematic Evaluation of Large Language Models for PTSD Severity Estimation: The Role of Contextual Knowledge and Modeling Strategies",
-    "answerable": true,
-    "question_id": "q_019"
-  },
-  {
-    "question": "What is the primary goal of the Localized Semantic Alignment (LSA) framework proposed in the paper?",
-    "answer": "The primary goal of the LSA framework is to enhance temporal consistency in traffic video generation by aligning semantic features between ground-truth and generated video clips. This is achieved without requiring external control signals during inference.",
-    "doc_id": "2602.05966v1",
-    "gold_doc_ids": [
-      "2602.05966v1"
-    ],
-    "title": "LSA: Localized Semantic Alignment for Enhancing Temporal Consistency in Traffic Video Generation",
-    "answerable": true,
-    "question_id": "q_020"
-  },
-  {
-    "question": "What is the current state of research funding in AI at MIT?",
+    "question": "What is the current status of the MLCommons benchmarks?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
+    "question_id": "q_019"
+  },
+  {
+    "question": "What is the latest benchmark for BERT models reported in 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_020"
+  },
+  {
+    "question": "What method do the authors propose to enable cooperation among agents without hardcoded assumptions?",
+    "answer": "The authors propose using the in-context learning capabilities of sequence models to allow for co-player learning awareness. This method does not require hardcoded assumptions or explicit timescale separation, enabling agents to adapt in the context of diverse co-players.",
+    "doc_id": "2602.16301v1",
+    "gold_doc_ids": [
+      "2602.16301v1"
+    ],
+    "title": "Multi-agent cooperation through in-context co-player inference",
+    "answerable": true,
     "question_id": "q_021"
   },
   {
-    "question": "What is the primary purpose of the data-driven discrete-event simulator (DES) developed in this research?",
-    "answer": "The primary purpose of the DES is to model shooter movement and in-region actions as stochastic processes learned from participant behavior in virtual reality studies. This simulator is used to examine the impact of a robot-based shooter intervention strategy and enables scalable evaluation and learning of intervention strategies.",
-    "doc_id": "2602.06023v1",
+    "question": "How does SIT-LMPC ensure safety while balancing optimality?",
+    "answer": "SIT-LMPC employs an adaptive penalty method to ensure safety while maintaining optimality. Additionally, it utilizes trajectories from previous iterations to learn a value function using normalizing flows for improved uncertainty modeling.",
+    "doc_id": "2602.16187v1",
     "gold_doc_ids": [
-      "2602.06023v1"
+      "2602.16187v1"
     ],
-    "title": "Learning Event-Based Shooter Models from Virtual Reality Experiments",
+    "title": "SIT-LMPC: Safe Information-Theoretic Learning Model Predictive Control for Iterative Tasks",
     "answerable": true,
     "question_id": "q_022"
   },
   {
-    "question": "How do Diamond Maps achieve scalability in the context of reward alignment?",
-    "answer": "Diamond Maps amortize many simulation steps into a single-step sampler, allowing for efficient and consistent estimation of the value function. This design enhances the scalability of search, sequential Monte Carlo, and guidance compared to existing methods.",
-    "doc_id": "2602.05993v1",
+    "question": "What types of challenges does the DocSplit benchmark aim to address?",
+    "answer": "The DocSplit benchmark aims to address real-world challenges including out-of-order pages, interleaved documents, and documents lacking clear demarcations. These challenges are critical for improving the performance of models in document packet processing.",
+    "doc_id": "2602.15958v1",
     "gold_doc_ids": [
-      "2602.05993v1"
+      "2602.15958v1"
     ],
-    "title": "Diamond Maps: Efficient Reward Alignment via Stochastic Flow Maps",
+    "title": "DocSplit: A Comprehensive Benchmark Dataset and Evaluation Approach for Document Packet Recognition and Splitting",
     "answerable": true,
     "question_id": "q_023"
   },
   {
-    "question": "What is the name of the new corpus released in the study, and how does it differ from prior work?",
-    "answer": "The new corpus released is called the Multilingual European Value Survey (MEVS). It differs from prior work by comprising solely human-translated survey questions aligned in 8 European languages, rather than relying on machine translation or ad hoc prompts.",
-    "doc_id": "2602.05932v1",
+    "question": "How does GlobeDiff improve upon existing belief-based and communication methods in multi-agent systems?",
+    "answer": "GlobeDiff improves upon existing methods by formulating the state inference process as a multi-modal diffusion process, which allows it to overcome ambiguities in state estimation and effectively leverage global information while inferring the global state.",
+    "doc_id": "2602.15776v1",
     "gold_doc_ids": [
-      "2602.05932v1"
+      "2602.15776v1"
     ],
-    "title": "Polyglots or Multitudes? Multilingual LLM Answers to Value-laden Multiple-Choice Questions",
+    "title": "GlobeDiff: State Diffusion Process for Partial Observability in Multi-Agent Systems",
     "answerable": true,
     "question_id": "q_024"
   },
   {
-    "question": "What is the latest research finding from the Google Brain team?",
+    "question": "Which companies are currently leading in AI-driven automation solutions for 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -262,7 +274,7 @@
     "question_id": "q_025"
   },
   {
-    "question": "Which AI technology won the best innovation award at CES 2024?",
+    "question": "What is the estimated impact of AI on employment rates as predicted for 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -270,37 +282,37 @@
     "question_id": "q_026"
   },
   {
-    "question": "What approach is proposed to convert a pretrained autoregressive language model into a fast multi-token prediction model?",
-    "answer": "The proposed approach involves using a simple online distillation objective to convert the pretrained autoregressive language model from a slow single next token prediction model into a fast standalone multi-token prediction model.",
-    "doc_id": "2602.06019v1",
-    "gold_doc_ids": [
-      "2602.06019v1"
-    ],
-    "title": "Multi-Token Prediction via Self-Distillation",
-    "answerable": true,
-    "question_id": "q_027"
-  },
-  {
-    "question": "What are the registration fees for the upcoming ICML 2024 conference?",
+    "question": "What specific datasets are being used in current AI research in 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
+    "question_id": "q_027"
+  },
+  {
+    "question": "How does PCAS ensure policy compliance during execution?",
+    "answer": "PCAS ensures policy compliance by using a reference monitor that intercepts all actions and blocks violations before execution. This mechanism provides deterministic enforcement independent of model reasoning, thereby enhancing security and compliance.",
+    "doc_id": "2602.16708v1",
+    "gold_doc_ids": [
+      "2602.16708v1"
+    ],
+    "title": "Policy Compiler for Secure Agentic Systems",
+    "answerable": true,
     "question_id": "q_028"
   },
   {
-    "question": "What is the main purpose of the Clifford Kolmogorov-Arnold Network (ClKAN)?",
-    "answer": "The main purpose of ClKAN is to provide a flexible and efficient architecture for function approximation in arbitrary Clifford algebra spaces. It addresses the challenges associated with higher dimensional algebras through innovative techniques.",
-    "doc_id": "2602.05977v1",
+    "question": "What is the primary goal of the DiSC method introduced in the research paper?",
+    "answer": "The primary goal of the DiSC method is to enable continual knowledge adaptation in post-trained LLMs by allowing them to learn new knowledge from adaptation document corpora while mitigating the forgetting of earlier learned capabilities. This is achieved through a context-distillation based approach that minimizes the KL divergence between student and teacher distributions.",
+    "doc_id": "2602.16093v1",
     "gold_doc_ids": [
-      "2602.05977v1"
+      "2602.16093v1"
     ],
-    "title": "Clifford Kolmogorov-Arnold Networks",
+    "title": "Updating Parametric Knowledge with Context Distillation Retains Post-Training Capabilities",
     "answerable": true,
     "question_id": "q_029"
   },
   {
-    "question": "What is the latest dataset released by OpenAI?",
+    "question": "Which AI-related podcasts have gained popularity in 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -308,285 +320,300 @@
     "question_id": "q_030"
   },
   {
-    "question": "What is the proposed method introduced in the paper for improving multilingual long reasoning?",
-    "answer": "The proposed method is called TRIT (Translation-Reasoning Integrated Training), which integrates the training of translation into multilingual reasoning to enhance multilingual question understanding and response generation. It does so without requiring external feedback or additional multilingual data.",
-    "doc_id": "2602.05940v1",
+    "question": "Which three state-of-the-art LLMs are investigated in the study regarding targeted gender alignment and its effects on fairness?",
+    "answer": "The three state-of-the-art LLMs investigated in the study are Mistral 7B, Llama 3.1 8B, and Qwen 2.5 7B.",
+    "doc_id": "2602.16438v1",
     "gold_doc_ids": [
-      "2602.05940v1"
+      "2602.16438v1"
     ],
-    "title": "Self-Improving Multilingual Long Reasoning via Translation-Reasoning Integrated Training",
+    "title": "Intra-Fairness Dynamics: The Bias Spillover Effect in Targeted LLM Alignment",
     "answerable": true,
     "question_id": "q_031"
   },
   {
-    "question": "What time does the hackathon at SIGGRAPH 2024 begin?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the name of the machine learning based solution presented in the paper for predicting off-target behavior in CRISPR applications?",
+    "answer": "The machine learning based solution presented in the paper is named Guide-Guard. It is designed to predict the behavior of the system given a gRNA in the CRISPR gene-editing process.",
+    "doc_id": "2602.16327v1",
+    "gold_doc_ids": [
+      "2602.16327v1"
+    ],
+    "title": "Guide-Guard: Off-Target Predicting in CRISPR Applications",
+    "answerable": true,
     "question_id": "q_032"
   },
   {
-    "question": "What is the performance difference between BM25 and LLM-based retrievers according to the findings in the abstract?",
-    "answer": "BM25 significantly outperforms LLM-based retrievers by approximately 30%. This finding highlights the challenges that existing deep research agents face when generating keyword-oriented sub-queries.",
-    "doc_id": "2602.05975v1",
+    "question": "What percentage of the language models tested showed sensitivity to implied knowledge states?",
+    "answer": "The study found that 34% of the language models tested showed sensitivity to implied knowledge states.",
+    "doc_id": "2602.16085v1",
     "gold_doc_ids": [
-      "2602.05975v1"
+      "2602.16085v1"
     ],
-    "title": "SAGE: Benchmarking and Improving Retrieval for Deep Research Agents",
+    "title": "Language Statistics and False Belief Reasoning: Evidence from 41 Open-Weight LMs",
     "answerable": true,
     "question_id": "q_033"
   },
   {
-    "question": "How many active contributors does the PyTorch repository have currently?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the fundamental purpose of abstracting from low level to high level descriptions according to the abstract?",
+    "answer": "The fundamental purpose of abstracting from low level to high level descriptions is to preserve causal structure, which is essential for scientific practice, causal inference problems, and the development of robust, efficient, and interpretable AI.",
+    "doc_id": "2602.16612v1",
+    "gold_doc_ids": [
+      "2602.16612v1"
+    ],
+    "title": "Causal and Compositional Abstraction",
+    "answerable": true,
     "question_id": "q_034"
   },
   {
-    "question": "Which universities are leading in AI research in 2024?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the purpose of the \textsc{EnterpriseGym} suite introduced in the paper?",
+    "answer": "The purpose of the \textsc{EnterpriseGym} suite is to provide agentic reinforcement learning environments, with \textcorecraft{} being the first environment designed to simulate a customer support organization and measure AI agents' capabilities in performing domain-specific tasks.",
+    "doc_id": "2602.16179v1",
+    "gold_doc_ids": [
+      "2602.16179v1"
+    ],
+    "title": "EnterpriseGym Corecraft: Training Generalizable Agents on High-Fidelity RL Environments",
+    "answerable": true,
     "question_id": "q_035"
   },
   {
-    "question": "What is the size of the scientific literature retrieval corpus used in the SAGE benchmark?",
-    "answer": "The retrieval corpus used in the SAGE benchmark comprises 200,000 papers. This corpus is utilized to evaluate the effectiveness of deep research agents in retrieving scientific literature.",
-    "doc_id": "2602.05975v1",
+    "question": "What were the results of the blinded authorship test conducted with humanities students and graduates?",
+    "answer": "In the blinded authorship test, judgments were at chance, with human poems labeled human 54% of the time and AI poems 52% of the time. The 95% confidence intervals included 50%, indicating no significant distinction between the two types of poems.",
+    "doc_id": "2602.16578v1",
     "gold_doc_ids": [
-      "2602.05975v1"
+      "2602.16578v1"
     ],
-    "title": "SAGE: Benchmarking and Improving Retrieval for Deep Research Agents",
+    "title": "Creating a digital poet",
     "answerable": true,
     "question_id": "q_036"
   },
   {
-    "question": "What is the current number of downloads for the latest version of PyTorch?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What are the four stages of the SPARC framework for automated unit test generation?",
+    "answer": "The four stages of the SPARC framework are: (1) Control Flow Graph (CFG) analysis, (2) an Operation Map that grounds LLM reasoning in validated utility helpers, (3) Path-targeted test synthesis, and (4) an iterative, self-correction validation loop using compiler and runtime feedback.",
+    "doc_id": "2602.16671v1",
+    "gold_doc_ids": [
+      "2602.16671v1"
+    ],
+    "title": "SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation",
+    "answerable": true,
     "question_id": "q_037"
   },
   {
-    "question": "When will the results of the latest AI ethics survey be published?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What type of annotations does the Omni-iEEG dataset provide for pathological events?",
+    "answer": "The Omni-iEEG dataset provides over 36,000 expert-validated annotations of pathological events. These annotations are essential for enabling robust biomarker studies in epilepsy research.",
+    "doc_id": "2602.16072v1",
+    "gold_doc_ids": [
+      "2602.16072v1"
+    ],
+    "title": "Omni-iEEG: A Large-Scale, Comprehensive iEEG Dataset and Benchmark for Epilepsy Research",
+    "answerable": true,
     "question_id": "q_038"
   },
   {
-    "question": "How do Codified Probabilistic Finite-State Machines (CPFSMs) differ from traditional CFSMs?",
-    "answer": "CPFSMs extend CFSMs by modeling transitions as probability distributions over states, which helps capture uncertainty and variability in character interactions, making them suitable for more complex role-playing scenarios.",
-    "doc_id": "2602.05905v1",
-    "gold_doc_ids": [
-      "2602.05905v1"
-    ],
-    "title": "Codified Finite-state Machines for Role-playing",
-    "answerable": true,
-    "question_id": "q_039"
-  },
-  {
-    "question": "How many PhD students are currently enrolled in AI-related programs at Stanford?",
+    "question": "What specific algorithms are projected to dominate in the next five years?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
+    "question_id": "q_039"
+  },
+  {
+    "question": "What is the main focus of the UrbanVerse model in terms of urban representation learning?",
+    "answer": "The UrbanVerse model focuses on generalizing urban representation learning across cities and analytic tasks. It does this by emphasizing features local to target regions and structural features of nearby regions, rather than relying solely on entire city data.",
+    "doc_id": "2602.15750v1",
+    "gold_doc_ids": [
+      "2602.15750v1"
+    ],
+    "title": "UrbanVerse: Learning Urban Region Representation Across Cities and Tasks",
+    "answerable": true,
     "question_id": "q_040"
   },
   {
-    "question": "What role does optimism play in stabilizing Thompson sampling according to the study?",
-    "answer": "Optimism is identified as a key mechanism for restoring stability in Thompson sampling, which is necessary for valid asymptotic inference in multi-armed bandits. It helps ensure that each arm's pull count concentrates around a deterministic scale, addressing issues related to random sample sizes and action-selection rules.",
-    "doc_id": "2602.06014v1",
+    "question": "What algorithm is introduced in the paper for iterative tasks in complex environments?",
+    "answer": "The paper introduces the safe information-theoretic learning model predictive control (SIT-LMPC) algorithm for iterative tasks. This algorithm is designed to balance robustness, safety, and high performance in uncertain environments.",
+    "doc_id": "2602.16187v1",
     "gold_doc_ids": [
-      "2602.06014v1"
+      "2602.16187v1"
     ],
-    "title": "Optimism Stabilizes Thompson Sampling for Adaptive Inference",
+    "title": "SIT-LMPC: Safe Information-Theoretic Learning Model Predictive Control for Iterative Tasks",
     "answerable": true,
     "question_id": "q_041"
   },
   {
-    "question": "What percentage of the analyzed hallucinated citations were classified as Total Fabrication?",
-    "answer": "66% of the analyzed hallucinated citations were classified as Total Fabrication, according to the five-category taxonomy developed in the study.",
-    "doc_id": "2602.05930v1",
+    "question": "What unique challenges does designing a robot for social dining contexts present?",
+    "answer": "Designing a robot for social dining contexts presents unique challenges such as dynamic and unsupervised dining environments that a robot needs to account for and respond to.",
+    "doc_id": "2602.15767v1",
     "gold_doc_ids": [
-      "2602.05930v1"
+      "2602.15767v1"
     ],
-    "title": "Compound Deception in Elite Peer Review: A Failure Mode Taxonomy of 100 Fabricated Citations at NeurIPS 2025",
+    "title": "Robot-Assisted Social Dining as a White Glove Service",
     "answerable": true,
     "question_id": "q_042"
   },
   {
-    "question": "How many samples does RISE-Video comprise and what are the dimensions it probes for model intelligence?",
-    "answer": "RISE-Video comprises 467 meticulously human-annotated samples spanning eight rigorous categories. It probes model intelligence across diverse dimensions, including commonsense, spatial dynamics, and specialized subject domains.",
-    "doc_id": "2602.05986v1",
-    "gold_doc_ids": [
-      "2602.05986v1"
-    ],
-    "title": "RISE-Video: Can Video Generators Decode Implicit World Rules?",
-    "answerable": true,
+    "question": "What is the most commonly used evaluation metric for unsupervised learning in 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
     "question_id": "q_043"
   },
   {
-    "question": "What metrics were used to assess the performance of the routing policies in the experiments?",
-    "answer": "The performance of the routing policies was assessed using routing distance, route compactness, and route overlap. The experiments focused on multi-vehicle scenarios with capacity constraints involving 20 clients and 4 vehicles.",
-    "doc_id": "2602.05920v1",
+    "question": "What challenge is associated with the output of large language models in automatic assessment?",
+    "answer": "The challenge associated with the output of large language models in automatic assessment is output uncertainty, which arises from the probabilistic nature of LLMs. This uncertainty can lead to unreliable assessment results that negatively impact students' learning processes.",
+    "doc_id": "2602.16039v1",
     "gold_doc_ids": [
-      "2602.05920v1"
+      "2602.16039v1"
     ],
-    "title": "Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem",
+    "title": "How Uncertain Is the Grade? A Benchmark of Uncertainty Metrics for LLM-Based Automatic Assessment",
     "answerable": true,
     "question_id": "q_044"
   },
   {
-    "question": "What is the main advantage of the DFlash framework introduced in the paper?",
-    "answer": "DFlash employs a lightweight block diffusion model for parallel drafting, which allows for efficient token generation in a single forward pass. This results in high-quality outputs and higher acceptance rates compared to traditional autoregressive drafting methods.",
-    "doc_id": "2602.06036v1",
-    "gold_doc_ids": [
-      "2602.06036v1"
-    ],
-    "title": "DFlash: Block Diffusion for Flash Speculative Decoding",
-    "answerable": true,
+    "question": "What is the estimated number of active machine learning practitioners as of 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
     "question_id": "q_045"
   },
   {
-    "question": "What are the two attention-based pooling methods proposed in the research for Speech Emotion Recognition?",
-    "answer": "The two attention-based pooling methods proposed for Speech Emotion Recognition are Multi-head Attentive Average Pooling and QKV Pooling. These methods are designed to efficiently reduce the dimensionality of Whisper representations while preserving emotional features.",
-    "doc_id": "2602.06000v1",
+    "question": "What is the primary purpose of the AIFL model introduced in the paper?",
+    "answer": "The primary purpose of the AIFL model is to provide reliable global daily streamflow forecasting, which is essential for flood preparedness and water resource management. It aims to bridge the performance gap seen in data-driven models when transitioning from historical reanalysis to operational forecast products.",
+    "doc_id": "2602.16579v1",
     "gold_doc_ids": [
-      "2602.06000v1"
+      "2602.16579v1"
     ],
-    "title": "Speech Emotion Recognition Leveraging OpenAI's Whisper Representations and Attentive Pooling Methods",
+    "title": "AIFL: A Global Daily Streamflow Forecasting Model Using Deterministic LSTM Pre-trained on ERA5-Land and Fine-tuned on IFS",
     "answerable": true,
     "question_id": "q_046"
   },
   {
-    "question": "How many participants are registered for the upcoming AAAI 2024 conference?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What theoretical framework does the paper develop to characterize practical learnability in deep neural networks?",
+    "answer": "The paper develops a conjugate learning theoretical framework based on convex conjugate duality to characterize the practical learnability property in finite sample settings.",
+    "doc_id": "2602.16177v1",
+    "gold_doc_ids": [
+      "2602.16177v1"
+    ],
+    "title": "Conjugate Learning Theory: Uncovering the Mechanisms of Trainability and Generalization in Deep Neural Networks",
+    "answerable": true,
     "question_id": "q_047"
   },
   {
-    "question": "What methodology does CommCP utilize to enhance communication reliability?",
-    "answer": "CommCP employs a decentralized communication framework based on large language models (LLM) and uses conformal prediction to calibrate the generated messages. This approach minimizes distractions for the receiver and improves the reliability of communication.",
-    "doc_id": "2602.06038v1",
-    "gold_doc_ids": [
-      "2602.06038v1"
-    ],
-    "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
-    "answerable": true,
-    "question_id": "q_048"
-  },
-  {
-    "question": "What is the most recent version of the Scikit-learn library?",
+    "question": "What is the current community opinion on using zero-shot learning in practice?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
+    "question_id": "q_048"
+  },
+  {
+    "question": "What are the prompting schemes mentioned in the abstract that enhance reasoning capabilities in large language models?",
+    "answer": "The prompting schemes mentioned are Chain of Thought, Tree of Thoughts, and Graph of Thoughts. These schemes are noted for significantly enhancing the reasoning capabilities of large language models.",
+    "doc_id": "2602.16512v1",
+    "gold_doc_ids": [
+      "2602.16512v1"
+    ],
+    "title": "Framework of Thoughts: A Foundation Framework for Dynamic and Optimized Reasoning based on Chains, Trees, and Graphs",
+    "answerable": true,
     "question_id": "q_049"
   },
   {
-    "question": "What are the three budget tiers offered by BudgetMem for memory modules?",
-    "answer": "BudgetMem offers three budget tiers for its memory modules: Low, Mid, and High. These tiers are used to balance task performance and memory construction cost.",
-    "doc_id": "2602.06025v1",
+    "question": "What is FineMuSe and what does it include?",
+    "answer": "FineMuSe is a new multimodal sexism detection dataset in Spanish that includes both binary and fine-grained annotations. It aims to enhance the detection of various forms of sexism in social media videos.",
+    "doc_id": "2602.15757v1",
     "gold_doc_ids": [
-      "2602.06025v1"
+      "2602.15757v1"
     ],
-    "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+    "title": "Beyond Binary Classification: Detecting Fine-Grained Sexism in Social Media Videos",
     "answerable": true,
     "question_id": "q_050"
   },
   {
-    "question": "What is the main contribution of the research presented in the paper?",
-    "answer": "The main contribution of the research is the proposal of a condition-dependent source distribution under the flow matching objective, which enhances the performance of text-to-image generation by better exploiting rich conditioning signals.",
-    "doc_id": "2602.05951v1",
-    "gold_doc_ids": [
-      "2602.05951v1"
-    ],
-    "title": "Better Source, Better Flow: Learning Condition-Dependent Source Distribution for Flow Matching",
-    "answerable": true,
-    "question_id": "q_051"
-  },
-  {
-    "question": "When is the application deadline for the NeurIPS 2024 scholarship program?",
+    "question": "What are the latest trends in algorithm optimization for 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
+    "question_id": "q_051"
+  },
+  {
+    "question": "What is the primary purpose of DataJoint 2.0 as described in the abstract?",
+    "answer": "DataJoint 2.0 aims to create a computational substrate for agentic scientific workflows by addressing the gaps in scientific data pipelines, particularly regarding operational rigor and collaboration between humans and agents. It unifies data structure, computational dependencies, and integrity constraints in a single formal system.",
+    "doc_id": "2602.16585v1",
+    "gold_doc_ids": [
+      "2602.16585v1"
+    ],
+    "title": "DataJoint 2.0: A Computational Substrate for Agentic Scientific Workflows",
+    "answerable": true,
     "question_id": "q_052"
   },
   {
-    "question": "What is the main limitation of the naive block scheduling method in the context of diffusion large language models?",
-    "answer": "The main limitation of the naive block scheduling method is that it is agnostic to semantic difficulty, which results in suboptimal quality and efficiency, as it can lead to premature commitments to uncertain positions while delaying easier positions near block boundaries.",
-    "doc_id": "2602.05992v1",
+    "question": "What are the two main goals of the temporal sortition framework discussed in the paper?",
+    "answer": "The two main goals of the temporal sortition framework are to achieve proportional representation, ensuring that every group of citizens receives adequate representation, and to maintain individual fairness, ensuring that each individual has an equal probability of being selected.",
+    "doc_id": "2602.16194v1",
     "gold_doc_ids": [
-      "2602.05992v1"
+      "2602.16194v1"
     ],
-    "title": "DSB: Dynamic Sliding Block Scheduling for Diffusion LLMs",
+    "title": "Temporal Panel Selection in Ongoing Citizens' Assemblies",
     "answerable": true,
     "question_id": "q_053"
   },
   {
-    "question": "What is the main advantage of using DyTopo in multi-agent systems compared to existing pipelines?",
-    "answer": "DyTopo reconstructs a sparse directed communication graph at each round, allowing for communication patterns that are better matched to the stage-dependent needs of iterative problem solving. This dynamic approach improves multi-round reasoning in multi-agent systems.",
-    "doc_id": "2602.06039v1",
+    "question": "What is the primary method used in the research to enhance feature representations for object detection?",
+    "answer": "The primary method used in the research is a self-supervised learning strategy, which allows the model to be trained on unlabeled data. This approach enables the model to learn more effective representations and outperform state-of-the-art feature extractors pre-trained on ImageNet.",
+    "doc_id": "2602.16322v1",
     "gold_doc_ids": [
-      "2602.06039v1"
+      "2602.16322v1"
     ],
-    "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching",
+    "title": "A Self-Supervised Approach for Enhanced Feature Representations in Object Detection Tasks",
     "answerable": true,
     "question_id": "q_054"
   },
   {
-    "question": "On how many datasets and in what contexts was the framework evaluated?",
-    "answer": "The framework was evaluated on four datasets across different languages, specifically in the contexts of Neurodegenerative tasks, Swear verbal fluency, and Property listing tasks in Italian and German. This evaluation demonstrates the framework's applicability across varied property generation tasks.",
-    "doc_id": "2602.05971v1",
+    "question": "What framework does the paper explore for integrating data and expertise in causal discovery?",
+    "answer": "The paper explores the Causal Assumption-based Argumentation (ABA) framework, which uses symbolic reasoning to ensure correspondence between input constraints and output graphs while combining data and expertise in a principled way.",
+    "doc_id": "2602.16481v1",
     "gold_doc_ids": [
-      "2602.05971v1"
+      "2602.16481v1"
     ],
-    "title": "Characterizing Human Semantic Navigation in Concept Production as Trajectories in Embedding Space",
+    "title": "Leveraging Large Language Models for Causal Discovery: a Constraint-based, Argumentation-driven Approach",
     "answerable": true,
     "question_id": "q_055"
   },
   {
-    "question": "What does the AgenticPay framework model in terms of buyer-seller interactions?",
-    "answer": "AgenticPay models markets where buyers and sellers have private constraints and product-dependent valuations. It facilitates agreements through multi-round linguistic negotiation rather than numeric bidding.",
-    "doc_id": "2602.06008v1",
+    "question": "How does the proposed method ensure the reliability of the generated reports?",
+    "answer": "The proposed method ensures reliability by incorporating a retrieval-based verification step that compares generated reports with a reference corpus using Sentence BERT embeddings, replacing the generated report with a retrieved ground truth reference if a high similarity match is found.",
+    "doc_id": "2602.16422v1",
     "gold_doc_ids": [
-      "2602.06008v1"
+      "2602.16422v1"
     ],
-    "title": "AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions",
+    "title": "Automated Histopathology Report Generation via Pyramidal Feature Extraction and the UNI Foundation Model",
     "answerable": true,
     "question_id": "q_056"
   },
   {
-    "question": "What are the three variants of the Advantage Actor-Critic (A2C) agent implemented in this study?",
-    "answer": "The study implements classical, full quantum, and hybrid variants of the Advantage Actor-Critic (A2C) agent. These variants integrate transformer architectures to address the Capacitated Vehicle Routing Problem (CVRP).",
-    "doc_id": "2602.05920v1",
+    "question": "What methodology does the framework introduce for expanding dataset coverage?",
+    "answer": "The framework introduces an automated intelligent sampling pipeline that utilizes propensity scores to efficiently expand dataset coverage. This approach aids in the evaluation of moderation decisions against the established benchmarks.",
+    "doc_id": "2602.15809v1",
     "gold_doc_ids": [
-      "2602.05920v1"
+      "2602.15809v1"
     ],
-    "title": "Quantum Reinforcement Learning with Transformers for the Capacitated Vehicle Routing Problem",
+    "title": "Decision Quality Evaluation Framework at Pinterest",
     "answerable": true,
     "question_id": "q_057"
   },
   {
-    "question": "What is the exact release date of the next version of TensorFlow?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "On which datasets was UCTECG-Net evaluated and what were its accuracy results?",
+    "answer": "UCTECG-Net was evaluated on the MIT-BIH Arrhythmia and PTB Diagnostic datasets. It achieved up to 98.58% accuracy on the MIT-BIH dataset and 99.14% on the PTB dataset, outperforming LSTM, CNN1D, and Transformer baselines in various performance metrics.",
+    "doc_id": "2602.16216v1",
+    "gold_doc_ids": [
+      "2602.16216v1"
+    ],
+    "title": "UCTECG-Net: Uncertainty-aware Convolution Transformer ECG Network for Arrhythmia Detection",
+    "answerable": true,
     "question_id": "q_058"
   },
   {
-    "question": "What are the latest trends in AI hardware as reported in recent tech news?",
+    "question": "What is the average salary of a machine learning engineer in Silicon Valley in 2023?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -594,48 +621,51 @@
     "question_id": "q_059"
   },
   {
-    "question": "What is RISE-Video and what does it aim to achieve in the context of generative video models?",
-    "answer": "RISE-Video is a pioneering reasoning-oriented benchmark for Text-Image-to-Video (TI2V) synthesis. It aims to shift the evaluative focus from surface-level aesthetics to deep cognitive reasoning, addressing the capacity of generative video models to internalize and reason over implicit world rules.",
-    "doc_id": "2602.05986v1",
+    "question": "What performance metrics did HiPER achieve on the ALFWorld and WebShop benchmarks?",
+    "answer": "HiPER achieved 97.4% success on the ALFWorld benchmark and 83.3% on the WebShop benchmark with Qwen2.5-7B-Instruct. This performance represents improvements of 6.6% on ALFWorld and 8.3% on WebShop over the best prior method, particularly excelling in long-horizon tasks that require multiple dependent subtasks.",
+    "doc_id": "2602.16165v1",
     "gold_doc_ids": [
-      "2602.05986v1"
+      "2602.16165v1"
     ],
-    "title": "RISE-Video: Can Video Generators Decode Implicit World Rules?",
+    "title": "HiPER: Hierarchical Reinforcement Learning with Explicit Credit Assignment for Large Language Model Agents",
     "answerable": true,
     "question_id": "q_060"
   },
   {
-    "question": "What is the name of the runtime agent memory framework presented in the paper?",
-    "answer": "The runtime agent memory framework presented in the paper is called BudgetMem. It is designed for explicit, query-aware performance-cost control in memory utilization for Large Language Model agents.",
-    "doc_id": "2602.06025v1",
+    "question": "What was the sample size of the randomized controlled trial conducted in the study?",
+    "answer": "The randomized controlled trial (RCT) conducted in the study had a sample size of 979 participants.",
+    "doc_id": "2602.16033v1",
     "gold_doc_ids": [
-      "2602.06025v1"
+      "2602.16033v1"
     ],
-    "title": "Learning Query-Aware Budget-Tier Routing for Runtime Agent Memory",
+    "title": "Transforming GenAI Policy to Prompting Instruction: An RCT of Scalable Prompting Interventions in a CS1 Course",
     "answerable": true,
     "question_id": "q_061"
   },
   {
-    "question": "What is the main advantage of the GATTF model introduced in the paper?",
-    "answer": "The GATTF model enhances the accuracy of traffic forecasting by incorporating geographical awareness through mutual information (MI) between distributed sensors, compared to a standard Transformer. This improvement occurs without increasing the model's complexity.",
-    "doc_id": "2602.05983v1",
+    "question": "What is the primary focus of the research presented in the abstract?",
+    "answer": "The research focuses on enabling LLMs to reason about cost-uncertainty tradeoffs in decision-making scenarios, allowing them to explore environments more optimally before committing to an answer. This is achieved through the proposed framework called Calibrate-Then-Act (CTA).",
+    "doc_id": "2602.16699v1",
     "gold_doc_ids": [
-      "2602.05983v1"
+      "2602.16699v1"
     ],
-    "title": "Geographically-aware Transformer-based Traffic Forecasting for Urban Motorway Digital Twins",
+    "title": "Calibrate-Then-Act: Cost-Aware Exploration in LLM Agents",
     "answerable": true,
     "question_id": "q_062"
   },
   {
-    "question": "How many machine learning books were published in 2023?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What approach does the chapter introduce for generating synthetic data for AI training purposes?",
+    "answer": "The chapter introduces simulation as a systematic approach to generating diverse synthetic data for AI training purposes. It also discusses the key concepts, benefits, and challenges of this method.",
+    "doc_id": "2602.15816v1",
+    "gold_doc_ids": [
+      "2602.15816v1"
+    ],
+    "title": "Developing AI Agents with Simulated Data: Why, what, and how?",
+    "answerable": true,
     "question_id": "q_063"
   },
   {
-    "question": "What is the total number of AI patents filed in 2023?",
+    "question": "What is the hashtag that is trending among AI professionals in 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -643,53 +673,62 @@
     "question_id": "q_064"
   },
   {
-    "question": "What are the current challenges in deploying AI in healthcare as discussed in recent workshops?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the main theoretical result presented in the paper regarding contaminated recursive training?",
+    "answer": "The main theoretical result presented in the paper is that contaminated recursive training still converges, with a convergence rate equal to the minimum of the baseline model's convergence rate and the fraction of real data used in each iteration. This is noted as the first positive theoretical outcome on recursive training without distributional assumptions on the data.",
+    "doc_id": "2602.16065v1",
+    "gold_doc_ids": [
+      "2602.16065v1"
+    ],
+    "title": "Can Generative Artificial Intelligence Survive Data Contamination? Theoretical Guarantees under Contaminated Recursive Training",
+    "answerable": true,
     "question_id": "q_065"
   },
   {
-    "question": "What is the projected market growth rate for AI technologies in the next five years?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the primary purpose of the proposed Collision-captured Network (CN) in the context of sea ice modeling?",
+    "answer": "The primary purpose of the Collision-captured Network (CN) is to integrate data assimilation techniques to effectively learn and predict sea ice dynamics under various conditions, while accelerating the simulation of trajectories without compromising accuracy.",
+    "doc_id": "2602.16213v1",
+    "gold_doc_ids": [
+      "2602.16213v1"
+    ],
+    "title": "Graph neural network for colliding particles with an application to sea ice floe modeling",
+    "answerable": true,
     "question_id": "q_066"
   },
   {
-    "question": "Which datasets were used for experimentation in the study, and what languages do they represent?",
-    "answer": "The study experimented on the IEMOCAP dataset for English and the ShEMO dataset for Persian. These datasets were utilized to evaluate the performance of the proposed methods in speech emotion recognition.",
-    "doc_id": "2602.06000v1",
+    "question": "What is the main challenge addressed by the research in the paper?",
+    "answer": "The main challenge addressed by the research is capturing the agility and adaptivity of highly dynamic human motions, particularly in the context of agile parkour in complex environments. This involves achieving low-level robustness, human-like motion expressiveness, long-horizon skill composition, and perception-driven decision-making.",
+    "doc_id": "2602.15827v1",
     "gold_doc_ids": [
-      "2602.06000v1"
+      "2602.15827v1"
     ],
-    "title": "Speech Emotion Recognition Leveraging OpenAI's Whisper Representations and Attentive Pooling Methods",
+    "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
     "answerable": true,
     "question_id": "q_067"
   },
   {
-    "question": "What are the upcoming features in the next iteration of Keras?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the primary challenge that CrispEdit addresses in large language model editing?",
+    "answer": "CrispEdit addresses the challenge of capability preservation in large language model editing, where methods that change targeted behavior can inadvertently corrupt general capabilities and produce degenerate behaviors akin to proxy/reward hacking.",
+    "doc_id": "2602.15823v1",
+    "gold_doc_ids": [
+      "2602.15823v1"
+    ],
+    "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
+    "answerable": true,
     "question_id": "q_068"
   },
   {
-    "question": "How much faster does the method produce models on GSM8K compared to single token decoding performance, and what is the associated drop in accuracy?",
-    "answer": "The method produces models that can decode more than 3 times faster on average at less than 5% drop in accuracy relative to single token decoding performance on GSM8K.",
-    "doc_id": "2602.06019v1",
+    "question": "What is the main advantage of spectral representations over temporal waveforms in EEG-based BCIs according to the abstract?",
+    "answer": "Spectral representations offer more stable features for cross-subject transfer than temporal waveforms, as they exhibit consistently higher cross-subject similarity in correlation analyses across three EEG paradigms.",
+    "doc_id": "2602.16147v1",
     "gold_doc_ids": [
-      "2602.06019v1"
+      "2602.16147v1"
     ],
-    "title": "Multi-Token Prediction via Self-Distillation",
+    "title": "ASPEN: Spectral-Temporal Fusion for Cross-Subject Brain Decoding",
     "answerable": true,
     "question_id": "q_069"
   },
   {
-    "question": "What are the most common programming languages used for machine learning in 2023?",
+    "question": "Which AI startup achieved the highest valuation in 2023?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -697,48 +736,42 @@
     "question_id": "q_070"
   },
   {
-    "question": "What are Diamond Maps and what purpose do they serve in the context of the research?",
-    "answer": "Diamond Maps are stochastic flow map models designed to enable efficient and accurate alignment to arbitrary rewards at inference time. They aim to make reward alignment a property of the generative model itself, rather than an afterthought, thereby improving adaptability to user preferences and constraints.",
-    "doc_id": "2602.05993v1",
-    "gold_doc_ids": [
-      "2602.05993v1"
-    ],
-    "title": "Diamond Maps: Efficient Reward Alignment via Stochastic Flow Maps",
-    "answerable": true,
-    "question_id": "q_071"
-  },
-  {
-    "question": "What is the primary purpose of the Share approach proposed in the paper?",
-    "answer": "The Share approach is designed for parameter efficient continual finetuning, enabling seamless adaptation across multiple tasks and modalities by learning and dynamically updating a single, shared low-rank subspace. It aims to facilitate forward knowledge transfer while minimizing catastrophic interference.",
-    "doc_id": "2602.06043v1",
-    "gold_doc_ids": [
-      "2602.06043v1"
-    ],
-    "title": "Shared LoRA Subspaces for almost Strict Continual Learning",
-    "answerable": true,
-    "question_id": "q_072"
-  },
-  {
-    "question": "How many submissions were made to the ICLR 2024 conference?",
+    "question": "Which researchers were awarded grants for AI ethics projects in 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
+    "question_id": "q_071"
+  },
+  {
+    "question": "How many AI-related patents were filed in the last month?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_072"
+  },
+  {
+    "question": "What are the two phases involved in the CAFE framework for automated feature engineering?",
+    "answer": "Phase I learns a sparse directed acyclic graph over features and the target to obtain soft causal priors, while Phase II uses a cascading multi-agent deep Q-learning architecture to select causal groups and transformation operators.",
+    "doc_id": "2602.16435v1",
+    "gold_doc_ids": [
+      "2602.16435v1"
+    ],
+    "title": "Causally-Guided Automated Feature Engineering with Multi-Agent Reinforcement Learning",
+    "answerable": true,
     "question_id": "q_073"
   },
   {
-    "question": "What metric is employed in the analysis of kv-cache compressibility, and what relationship does it have with performance degradation?",
-    "answer": "The Normalized Effective Rank is employed as a metric of compressibility, and it is shown to correlate strongly with performance degradation under compression.",
-    "doc_id": "2602.05929v1",
-    "gold_doc_ids": [
-      "2602.05929v1"
-    ],
-    "title": "KV-CoRE: Benchmarking Data-Dependent Low-Rank Compressibility of KV-Caches in LLMs",
-    "answerable": true,
+    "question": "How many people attended the last major AI workshop?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
     "question_id": "q_074"
   },
   {
-    "question": "What are the most recent hardware requirements for training large language models?",
+    "question": "What are the latest statistics on AI adoption rates in various sectors?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -746,18 +779,18 @@
     "question_id": "q_075"
   },
   {
-    "question": "By how many percentage points does the proposed method improve cross-lingual question alignment?",
-    "answer": "The proposed method improves cross-lingual question alignment by over 10 percentage points, according to the analysis presented in the abstract.",
-    "doc_id": "2602.05940v1",
+    "question": "How does social meta-learning (SML) enhance the problem-solving capabilities of LLMs in ambiguous situations?",
+    "answer": "SML enhances problem-solving capabilities by training models to ask for necessary information rather than making premature answer attempts when faced with ambiguity. This training allows models to better utilize feedback over multiple conversational turns, improving their performance on underspecified tasks.",
+    "doc_id": "2602.16488v1",
     "gold_doc_ids": [
-      "2602.05940v1"
+      "2602.16488v1"
     ],
-    "title": "Self-Improving Multilingual Long Reasoning via Translation-Reasoning Integrated Training",
+    "title": "Learning to Learn from Language Feedback with Social Meta-Learning",
     "answerable": true,
     "question_id": "q_076"
   },
   {
-    "question": "What time does the networking event at AI Expo 2024 start?",
+    "question": "What is the current market share of TensorFlow vs PyTorch?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -765,110 +798,122 @@
     "question_id": "q_077"
   },
   {
-    "question": "What type of data was used to evaluate the GATTF model?",
-    "answer": "The GATTF model was evaluated using real-time data from the Geneva motorway network in Switzerland. This evaluation demonstrated the effectiveness of the model in improving traffic forecasting accuracy.",
-    "doc_id": "2602.05983v1",
-    "gold_doc_ids": [
-      "2602.05983v1"
-    ],
-    "title": "Geographically-aware Transformer-based Traffic Forecasting for Urban Motorway Digital Twins",
-    "answerable": true,
+    "question": "Which new AI-powered tools were launched in late 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
     "question_id": "q_078"
   },
   {
-    "question": "Who won the Best Paper Award at NeurIPS 2023?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What improvement in task pass rate did the GLM~4.6 model achieve after training on the \textcorecraft{} environment?",
+    "answer": "After a single epoch of training, the GLM~4.6 model improved its task pass rate from 25.37% to 36.76% on held-out evaluation tasks.",
+    "doc_id": "2602.16179v1",
+    "gold_doc_ids": [
+      "2602.16179v1"
+    ],
+    "title": "EnterpriseGym Corecraft: Training Generalizable Agents on High-Fidelity RL Environments",
+    "answerable": true,
     "question_id": "q_079"
   },
   {
-    "question": "What are the key focus areas for AI research in 2024 according to industry leaders?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What advantages does the CA-LIG Framework provide over existing explainability methods?",
+    "answer": "The CA-LIG Framework provides more faithful attributions, shows stronger sensitivity to contextual dependencies, and produces clearer, more semantically coherent visualizations than established explainability methods. It captures how relevance evolves across layers and how structural components shape decision-making.",
+    "doc_id": "2602.16608v1",
+    "gold_doc_ids": [
+      "2602.16608v1"
+    ],
+    "title": "Explainable AI: Context-Aware Layer-Wise Integrated Gradients for Explaining Transformer Models",
+    "answerable": true,
     "question_id": "q_080"
   },
   {
-    "question": "What are the latest specifications for NVIDIA's next generation of GPUs?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the main contribution of the MedProbCLIP framework in the context of vision-language models?",
+    "answer": "The main contribution of the MedProbCLIP framework is its probabilistic approach to vision-language learning, which models image and text representations as Gaussian embeddings to capture uncertainty and many-to-many correspondences between radiographs and clinical narratives. This approach enhances the reliability of radiograph-report retrieval in high-stakes biomedical applications.",
+    "doc_id": "2602.16019v1",
+    "gold_doc_ids": [
+      "2602.16019v1"
+    ],
+    "title": "MedProbCLIP: Probabilistic Adaptation of Vision-Language Foundation Model for Reliable Radiograph-Report Retrieval",
+    "answerable": true,
     "question_id": "q_081"
   },
   {
-    "question": "Which machine learning framework is currently the most popular according to recent industry surveys?",
+    "question": "What is the primary challenge addressed by the CARL-XRay framework in chest radiograph classification?",
+    "answer": "The CARL-XRay framework addresses the challenge of updating models with new datasets without retraining on previously observed data or degrading validated performance. It operates in a task-incremental continual learning setting where task identifiers are unavailable at inference.",
+    "doc_id": "2602.15811v1",
+    "gold_doc_ids": [
+      "2602.15811v1"
+    ],
+    "title": "Task-Agnostic Continual Learning for Chest Radiograph Classification",
+    "answerable": true,
+    "question_id": "q_082"
+  },
+  {
+    "question": "What are the latest developments in quantum machine learning?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
-    "question_id": "q_082"
-  },
-  {
-    "question": "What architectural aspect of neural networks may contribute to the inefficiency discussed in the findings?",
-    "answer": "The inefficiency may arise from the architectural bias of residual networks and the target functions that are incompatible with smooth dynamics. This suggests that architectural innovations are needed to improve LLM efficiency.",
-    "doc_id": "2602.05970v1",
-    "gold_doc_ids": [
-      "2602.05970v1"
-    ],
-    "title": "Inverse Depth Scaling From Most Layers Being Similar",
-    "answerable": true,
     "question_id": "q_083"
   },
   {
-    "question": "What technique does ClKAN propose to handle the exponential scaling in higher dimensional algebras?",
-    "answer": "ClKAN proposes the use of Randomized Quasi Monte Carlo grid generation as a solution to the exponential scaling associated with higher dimensional algebras. This technique helps improve the efficiency of the network's function approximation capabilities.",
-    "doc_id": "2602.05977v1",
+    "question": "What are the four technical innovations introduced by DataJoint 2.0?",
+    "answer": "The four technical innovations of DataJoint 2.0 include object-augmented schemas that integrate relational metadata with scalable object storage, semantic matching using attribute lineage to prevent erroneous joins, an extensible type system for domain-specific formats, and distributed job coordination designed for composability with external orchestration.",
+    "doc_id": "2602.16585v1",
     "gold_doc_ids": [
-      "2602.05977v1"
+      "2602.16585v1"
     ],
-    "title": "Clifford Kolmogorov-Arnold Networks",
+    "title": "DataJoint 2.0: A Computational Substrate for Agentic Scientific Workflows",
     "answerable": true,
     "question_id": "q_084"
   },
   {
-    "question": "What are the latest updates regarding the GDPR compliance for AI developers?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What evaluation criteria were used to assess the performance of the tokenization strategies?",
+    "answer": "The evaluation criteria included signal reconstruction fidelity, token prediction, biological plausibility of generated data, preservation of subject-specific information, and performance on downstream tasks.",
+    "doc_id": "2602.16626v1",
+    "gold_doc_ids": [
+      "2602.16626v1"
+    ],
+    "title": "A Systematic Evaluation of Sample-Level Tokenization Strategies for MEG Foundation Models",
+    "answerable": true,
     "question_id": "q_085"
   },
   {
-    "question": "What recent breakthroughs were highlighted at the last AI safety summit?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What is the proposed certification protocol based on in the research paper?",
+    "answer": "The proposed certification protocol is based on the stimulus-meaning model, where agents are tested on shared observable events and terms are certified if empirical disagreement falls below a statistical threshold.",
+    "doc_id": "2602.16424v1",
+    "gold_doc_ids": [
+      "2602.16424v1"
+    ],
+    "title": "Verifiable Semantics for Agent-to-Agent Communication",
+    "answerable": true,
     "question_id": "q_086"
   },
   {
-    "question": "What is the main problem that CommCP addresses in multi-agent coordination?",
-    "answer": "CommCP addresses the information-gathering process in a fully cooperative setting, formalized as the multi-agent multi-task Embodied Question Answering (MM-EQA) problem. This is an extension of the canonical Embodied Question Answering (EQA) where effective communication is crucial for coordination.",
-    "doc_id": "2602.06038v1",
+    "question": "What are the three core components integrated into the RoboGene framework?",
+    "answer": "The three core components of the RoboGene framework are diversity-driven sampling for broad task coverage, self-reflection mechanisms to enforce physical constraints, and human-in-the-loop refinement for continuous improvement.",
+    "doc_id": "2602.16444v1",
     "gold_doc_ids": [
-      "2602.06038v1"
+      "2602.16444v1"
     ],
-    "title": "CommCP: Efficient Multi-Agent Coordination via LLM-Based Communication with Conformal Prediction",
+    "title": "RoboGene: Boosting VLA Pre-training via Diversity-Driven Agentic Framework for Real-World Task Generation",
     "answerable": true,
     "question_id": "q_087"
   },
   {
-    "question": "What does the paper seek to investigate regarding multilingual LLMs and value-laden MCQs?",
-    "answer": "The paper investigates whether multilingual LLMs are consistent in their responses across languages, behaving like theoretical polyglots, or if they respond differently depending on the language of the question, akin to a multitude of monolingual models expressing different values.",
-    "doc_id": "2602.05932v1",
+    "question": "What challenge does the research work aim to address in the field of object detection?",
+    "answer": "The research work aims to address the significant challenge of the availability of labeled data for training deep learning models in object detection tasks. This challenge requires considerable time and resources for data labeling, leading to extensive investments in skilled personnel or costly outsourcing.",
+    "doc_id": "2602.16322v1",
     "gold_doc_ids": [
-      "2602.05932v1"
+      "2602.16322v1"
     ],
-    "title": "Polyglots or Multitudes? Multilingual LLM Answers to Value-laden Multiple-Choice Questions",
+    "title": "A Self-Supervised Approach for Enhanced Feature Representations in Object Detection Tasks",
     "answerable": true,
     "question_id": "q_088"
   },
   {
-    "question": "How many new AI startups were founded in 2023?",
+    "question": "What is the most popular programming language among AI researchers in 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -876,18 +921,18 @@
     "question_id": "q_089"
   },
   {
-    "question": "What improvements were observed in accuracy and expected calibration error (ECE) when using CORAL across the evaluated models?",
-    "answer": "The implementation of CORAL resulted in a consistent accuracy improvement of 10% and a 50% reduction in expected calibration error (ECE) on average across three 7B-parameter models. Additionally, it showed that these gains could transfer to held-out benchmark test sets, averaging 14% accuracy improvements and 49% ECE improvements.",
-    "doc_id": "2602.06022v1",
+    "question": "What are the two main types of features that clinical interpretation of CT relies on according to the abstract?",
+    "answer": "Clinical interpretation relies on slice-driven local features, such as sub-centimeter nodules and lesion boundaries, as well as volume-driven spatial representations, including tumor infiltration and inter-organ anatomical relations.",
+    "doc_id": "2602.16110v1",
     "gold_doc_ids": [
-      "2602.06022v1"
+      "2602.16110v1"
     ],
-    "title": "Correctness-Optimized Residual Activation Lens (CORAL): Transferrable and Calibration-Aware Inference-Time Steering",
+    "title": "OmniCT: Towards a Unified Slice-Volume LVLM for Comprehensive CT Analysis",
     "answerable": true,
     "question_id": "q_090"
   },
   {
-    "question": "Which startup recently received the highest valuation in the AI sector?",
+    "question": "What is the ranking of the top machine learning journals as of October 2023?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
@@ -895,104 +940,2002 @@
     "question_id": "q_091"
   },
   {
-    "question": "What specific challenges are being addressed by the latest frameworks for model interpretability?",
-    "answer": "I don't have enough information in the provided documents to answer this question.",
-    "gold_doc_ids": [],
-    "title": null,
-    "answerable": false,
+    "question": "What type of performance comparison is made in the paper regarding multimodal LLMs?",
+    "answer": "The paper evaluates a wide range of LLMs for both binary and fine-grained sexism detection, indicating that multimodal LLMs perform competitively with human annotators in identifying nuanced forms of sexism. However, they struggle to capture co-occurring sexist types conveyed through visual cues.",
+    "doc_id": "2602.15757v1",
+    "gold_doc_ids": [
+      "2602.15757v1"
+    ],
+    "title": "Beyond Binary Classification: Detecting Fine-Grained Sexism in Social Media Videos",
+    "answerable": true,
     "question_id": "q_092"
   },
   {
-    "question": "What is the main finding regarding variance-inflated Thompson sampling in the context of adaptive data collection?",
-    "answer": "The study proves that variance-inflated Thompson sampling is stable for any number of arms K, including cases where multiple arms are optimal. This finding extends previous results from a two-armed setting to a general K-armed setting, resolving an open question in the literature.",
-    "doc_id": "2602.06014v1",
+    "question": "How does the proposed model leverage the natural graph structure of sea ice?",
+    "answer": "The proposed model leverages the natural graph structure of sea ice by representing individual ice pieces as nodes and modeling the physical interactions, including collisions, as edges in a one-dimensional framework.",
+    "doc_id": "2602.16213v1",
     "gold_doc_ids": [
-      "2602.06014v1"
+      "2602.16213v1"
     ],
-    "title": "Optimism Stabilizes Thompson Sampling for Adaptive Inference",
+    "title": "Graph neural network for colliding particles with an application to sea ice floe modeling",
     "answerable": true,
     "question_id": "q_093"
   },
   {
-    "question": "How many tasks does AgenticPay support, and what types of markets do they include?",
-    "answer": "AgenticPay supports a diverse suite of over 110 tasks, including bilateral bargaining and many-to-many markets. This variety allows for comprehensive evaluation of negotiation scenarios.",
-    "doc_id": "2602.06008v1",
+    "question": "What is the main result established by the research regarding alignment loss?",
+    "answer": "The main result established by the research is a quartic scaling law, indicating that alignment loss grows with the fourth power of training time. This growth is governed by the sharpness of alignment geometry and the strength of curvature coupling between the fine-tuning task and safety-critical parameters.",
+    "doc_id": "2602.15799v1",
     "gold_doc_ids": [
-      "2602.06008v1"
+      "2602.15799v1"
     ],
-    "title": "AgenticPay: A Multi-Agent LLM Negotiation System for Buyer-Seller Transactions",
+    "title": "The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety",
     "answerable": true,
     "question_id": "q_094"
   },
   {
-    "question": "How does loss scale with depth in large language models (LLMs) according to the findings in the abstract?",
-    "answer": "Loss scales inversely proportional to depth in LLMs. This relationship is attributed to functionally similar layers reducing error through ensemble averaging.",
-    "doc_id": "2602.05970v1",
-    "gold_doc_ids": [
-      "2602.05970v1"
-    ],
-    "title": "Inverse Depth Scaling From Most Layers Being Similar",
-    "answerable": true,
-    "question_id": "q_095"
-  },
-  {
-    "question": "Which datasets were used to test the effectiveness of the LSA approach in the paper?",
-    "answer": "The effectiveness of the LSA approach was tested using extensive experiments on the nuScenes and KITTI datasets. These datasets were utilized to evaluate the enhancement of temporal consistency in video generation.",
-    "doc_id": "2602.05966v1",
-    "gold_doc_ids": [
-      "2602.05966v1"
-    ],
-    "title": "LSA: Localized Semantic Alignment for Enhancing Temporal Consistency in Traffic Video Generation",
-    "answerable": true,
-    "question_id": "q_096"
-  },
-  {
-    "question": "What key challenges are identified when incorporating conditioning into the source distribution?",
-    "answer": "The paper identifies key challenges such as distributional collapse and instability that arise when directly incorporating conditioning into the source distribution, emphasizing the need for appropriate variance regularization and directional alignment for stable learning.",
-    "doc_id": "2602.05951v1",
-    "gold_doc_ids": [
-      "2602.05951v1"
-    ],
-    "title": "Better Source, Better Flow: Learning Condition-Dependent Source Distribution for Flow Matching",
-    "answerable": true,
-    "question_id": "q_097"
-  },
-  {
-    "question": "What is the latest update on the AI policy legislation in the US Congress?",
+    "question": "How many attendees registered for CVPR 2024?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
+    "question_id": "q_095"
+  },
+  {
+    "question": "What method does the paper propose for improving multilingual safety alignment in large language models?",
+    "answer": "The paper proposes a resource-efficient method that introduces a Multi-Lingual Consistency (MLC) loss, which can be integrated into existing monolingual alignment pipelines. This method improves collinearity between multilingual representation vectors and encourages directional consistency at the multilingual semantic level in a single update.",
+    "doc_id": "2602.16660v1",
+    "gold_doc_ids": [
+      "2602.16660v1"
+    ],
+    "title": "Align Once, Benefit Multilingually: Enforcing Multilingual Consistency for LLM Safety Alignment",
+    "answerable": true,
+    "question_id": "q_096"
+  },
+  {
+    "question": "What is the purpose of the hierarchical vision language framework proposed in the paper?",
+    "answer": "The purpose of the hierarchical vision language framework is to generate diagnostic text from histopathology whole slide images (WSIs) by combining a frozen pathology foundation model with a Transformer decoder for report generation.",
+    "doc_id": "2602.16422v1",
+    "gold_doc_ids": [
+      "2602.16422v1"
+    ],
+    "title": "Automated Histopathology Report Generation via Pyramidal Feature Extraction and the UNI Foundation Model",
+    "answerable": true,
+    "question_id": "q_097"
+  },
+  {
+    "question": "What is the primary focus of the study conducted in the paper regarding LLMs?",
+    "answer": "The study focuses on evaluating the behavior of Large Language Models (LLMs) as zero-shot annotators for Bangla hate speech, particularly in terms of their reliability and bias in low-resource and identity-sensitive settings.",
+    "doc_id": "2602.16241v1",
+    "gold_doc_ids": [
+      "2602.16241v1"
+    ],
+    "title": "Are LLMs Ready to Replace Bangla Annotators?",
+    "answerable": true,
     "question_id": "q_098"
   },
   {
-    "question": "What performance improvement does DyTopo achieve over the strongest baseline in the benchmarks tested?",
-    "answer": "DyTopo consistently outperforms the strongest baseline by an average of +6.2 across code generation and mathematical reasoning benchmarks. This shows its effectiveness in enhancing the performance of multi-agent reasoning tasks.",
-    "doc_id": "2602.06039v1",
+    "question": "How does SPARC's performance compare to the vanilla prompt generation baseline and the symbolic execution tool KLEE?",
+    "answer": "SPARC outperforms the vanilla prompt generation baseline by 31.36% in line coverage, 26.01% in branch coverage, and 20.78% in mutation score. It matches or exceeds the performance of the symbolic execution tool KLEE on complex subjects.",
+    "doc_id": "2602.16671v1",
     "gold_doc_ids": [
-      "2602.06039v1"
+      "2602.16671v1"
     ],
-    "title": "DyTopo: Dynamic Topology Routing for Multi-Agent Reasoning via Semantic Matching",
+    "title": "SPARC: Scenario Planning and Reasoning for Automated C Unit Test Generation",
     "answerable": true,
     "question_id": "q_099"
   },
   {
-    "question": "What limitations of the absolute pointwise scoring standard are highlighted in the study?",
-    "answer": "The study reveals that the absolute pointwise scoring standard is limited due to stochastic inconsistency and poor alignment with human perception. These limitations necessitate the adoption of a new evaluation framework.",
-    "doc_id": "2602.06013v1",
+    "question": "What is the name of the proposed method that enhances the adaptation of pre-trained vision-language models for street-view image classification?",
+    "answer": "The proposed method is called CLIP-MHAdapter, which is a variant of the current lightweight CLIP adaptation paradigm that utilizes multi-head self-attention on patch tokens.",
+    "doc_id": "2602.16590v1",
     "gold_doc_ids": [
-      "2602.06013v1"
+      "2602.16590v1"
     ],
-    "title": "GenArena: How Can We Achieve Human-Aligned Evaluation for Visual Generation Tasks?",
+    "title": "A Contrastive Learning Framework Empowered by Attention-based Feature Adaptation for Street-View Image Classification",
     "answerable": true,
     "question_id": "q_100"
   },
   {
-    "question": "What are the current job openings in AI research at Google?",
+    "question": "What is the average price of high-end GPUs as of December 2023?",
     "answer": "I don't have enough information in the provided documents to answer this question.",
     "gold_doc_ids": [],
     "title": null,
     "answerable": false,
     "question_id": "q_101"
+  },
+  {
+    "question": "What is the main contribution of the work presented in the paper regarding the scalability of analytical diffusion models?",
+    "answer": "The main contribution is the introduction of Dynamic Time-Aware Golden Subset Diffusion (GoldDiff), which addresses the scalability bottleneck by decoupling inference complexity from dataset size and using a coarse-to-fine mechanism to dynamically identify the 'Golden Subset' for inference.",
+    "doc_id": "2602.16498v1",
+    "gold_doc_ids": [
+      "2602.16498v1"
+    ],
+    "title": "Fast and Scalable Analytical Diffusion",
+    "answerable": true,
+    "question_id": "q_102"
+  },
+  {
+    "question": "What are the two complementary directions that ReLoop addresses to mitigate silent failures in LLM-based optimization code?",
+    "answer": "ReLoop addresses silent failures through structured generation and behavioral verification. Structured generation decomposes code production into a four-stage reasoning chain, while behavioral verification detects errors by testing formulation responses to solver-based parameter perturbation.",
+    "doc_id": "2602.15983v1",
+    "gold_doc_ids": [
+      "2602.15983v1"
+    ],
+    "title": "ReLoop: Structured Modeling and Behavioral Verification for Reliable LLM-Based Optimization",
+    "answerable": true,
+    "question_id": "q_103"
+  },
+  {
+    "question": "What are the two stages of the Retrieval Collapse process as characterized in the paper?",
+    "answer": "The two stages of the Retrieval Collapse process are: (1) AI-generated content dominating search results and eroding source diversity, and (2) low-quality or adversarial content infiltrating the retrieval pipeline.",
+    "doc_id": "2602.16136v1",
+    "gold_doc_ids": [
+      "2602.16136v1"
+    ],
+    "title": "Retrieval Collapses When AI Pollutes the Web",
+    "answerable": true,
+    "question_id": "q_104"
+  },
+  {
+    "question": "What improvement in predictive reliability is achieved by embedding physical constraints during training according to the results?",
+    "answer": "Embedding physical constraints during training leads to a substantial improvement in predictive reliability, achieving a 68.17% decrease in mean relative error.",
+    "doc_id": "2602.15954v1",
+    "gold_doc_ids": [
+      "2602.15954v1"
+    ],
+    "title": "Hybrid Model Predictive Control with Physics-Informed Neural Network for Satellite Attitude Control",
+    "answerable": true,
+    "question_id": "q_105"
+  },
+  {
+    "question": "What are the two learning methodologies investigated in the paper for modeling spacecraft attitude dynamics?",
+    "answer": "The two learning methodologies investigated are a purely data-driven pipeline and a physics-regularized approach that incorporates prior knowledge into the optimization process.",
+    "doc_id": "2602.15954v1",
+    "gold_doc_ids": [
+      "2602.15954v1"
+    ],
+    "title": "Hybrid Model Predictive Control with Physics-Informed Neural Network for Satellite Attitude Control",
+    "answerable": true,
+    "question_id": "q_106"
+  },
+  {
+    "question": "What is the name of the novel framework presented in the paper for building semantic-kinematic 3D scene graphs?",
+    "answer": "The novel framework presented in the paper is called MoMa-SG. It is designed to build semantic-kinematic 3D scene graphs of articulated scenes containing various interactable objects.",
+    "doc_id": "2602.16356v1",
+    "gold_doc_ids": [
+      "2602.16356v1"
+    ],
+    "title": "Articulated 3D Scene Graphs for Open-World Mobile Manipulation",
+    "answerable": true,
+    "question_id": "q_107"
+  },
+  {
+    "question": "What are the three steps operationalized by the PAHF framework?",
+    "answer": "The three steps are: (1) seeking pre-action clarification to resolve ambiguity, (2) grounding actions in preferences retrieved from memory, and (3) integrating post-action feedback to update memory when preferences drift.",
+    "doc_id": "2602.16173v1",
+    "gold_doc_ids": [
+      "2602.16173v1"
+    ],
+    "title": "Learning Personalized Agents from Human Feedback",
+    "answerable": true,
+    "question_id": "q_108"
+  },
+  {
+    "question": "What is the main framework introduced in the paper for continual personalization of AI agents?",
+    "answer": "The framework introduced is called Personalized Agents from Human Feedback (PAHF), which allows agents to learn online from live interaction using explicit per-user memory.",
+    "doc_id": "2602.16173v1",
+    "gold_doc_ids": [
+      "2602.16173v1"
+    ],
+    "title": "Learning Personalized Agents from Human Feedback",
+    "answerable": true,
+    "question_id": "q_109"
+  },
+  {
+    "question": "What empirical results support the effectiveness of the proposed benchmark in differentiating models?",
+    "answer": "The empirical results indicate that the benchmark produces stable, model-differentiating rankings across families and inference-time reasoning efforts. Additionally, careful scenario specification leads to near-zero simulator hallucination rates, which is supported by ablation studies.",
+    "doc_id": "2602.16246v1",
+    "gold_doc_ids": [
+      "2602.16246v1"
+    ],
+    "title": "Toward Scalable Verifiable Reward: Proxy State-Based Evaluation for Multi-turn Tool-Calling LLM Agents",
+    "answerable": true,
+    "question_id": "q_110"
+  },
+  {
+    "question": "How does the Global Position Encoding (GPE) module enhance the performance of GPEReg-Net?",
+    "answer": "The Global Position Encoding (GPE) module enhances GPEReg-Net by combining learnable position embeddings with sinusoidal encoding and cross-frame attention, enabling the network to leverage context from neighboring frames to improve temporal coherence in sequential acquisitions.",
+    "doc_id": "2602.15959v1",
+    "gold_doc_ids": [
+      "2602.15959v1"
+    ],
+    "title": "Position-Aware Scene-Appearance Disentanglement for Bidirectional Photoacoustic Microscopy Registration",
+    "answerable": true,
+    "question_id": "q_111"
+  },
+  {
+    "question": "What were the top-performing models in the recent ImageNet competition?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_112"
+  },
+  {
+    "question": "What are the two architectural models distinguished in the study regarding Model Context Protocols (MCPs)?",
+    "answer": "The two architectural models distinguished in the study are context-coupled (traditional) models and context-decoupled models, referred to as Code Execution MCP (CE-MCP). This distinction highlights the fundamental scalability trade-offs between the two approaches.",
+    "doc_id": "2602.15945v1",
+    "gold_doc_ids": [
+      "2602.15945v1"
+    ],
+    "title": "From Tool Orchestration to Code Execution: A Study of MCP Design Choices",
+    "answerable": true,
+    "question_id": "q_113"
+  },
+  {
+    "question": "What was the average evaluation score for the latest ML competitions?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_114"
+  },
+  {
+    "question": "What limitation in existing convergence guarantees for differential TD learning does the paper address?",
+    "answer": "The paper addresses the limitation that existing convergence guarantees require a local clock in learning rates tied to state visit counts, which are not used by practitioners and do not extend beyond tabular settings.",
+    "doc_id": "2602.16629v1",
+    "gold_doc_ids": [
+      "2602.16629v1"
+    ],
+    "title": "Almost Sure Convergence of Differential Temporal Difference Learning for Average Reward Markov Decision Processes",
+    "answerable": true,
+    "question_id": "q_115"
+  },
+  {
+    "question": "Which university had the most AI patent filings in 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_116"
+  },
+  {
+    "question": "What unique dataset does the paper introduce, and what does it uniquely combine?",
+    "answer": "The paper introduces the Arti4D-Semantic dataset, which uniquely combines hierarchical object semantics, including parent-child relation labels and object axis annotations. This dataset consists of 62 in-the-wild RGB-D sequences containing 600 object interactions and three distinct observation paradigms.",
+    "doc_id": "2602.16356v1",
+    "gold_doc_ids": [
+      "2602.16356v1"
+    ],
+    "title": "Articulated 3D Scene Graphs for Open-World Mobile Manipulation",
+    "answerable": true,
+    "question_id": "q_117"
+  },
+  {
+    "question": "What are some of the previously learned skills that DiSC aims to retain during adaptation?",
+    "answer": "DiSC aims to retain previously learned skills such as instruction-following, reasoning, and factual knowledge during the adaptation process. The method is designed to achieve a balance between learning new knowledge and preserving these skills.",
+    "doc_id": "2602.16093v1",
+    "gold_doc_ids": [
+      "2602.16093v1"
+    ],
+    "title": "Updating Parametric Knowledge with Context Distillation Retains Post-Training Capabilities",
+    "answerable": true,
+    "question_id": "q_118"
+  },
+  {
+    "question": "What is the leading AI-related YouTube channel as of 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_119"
+  },
+  {
+    "question": "What is the proposed method to address the challenges faced by neural operators, and how does it function?",
+    "answer": "The proposed method is termed Manifold Constraining based on Lie group (MCL), which constrains manifolds with low-rank Lie algebra parameterization to perform group action updates on the latent representation, enforcing geometric inductive bias to existing neural operators.",
+    "doc_id": "2602.16209v1",
+    "gold_doc_ids": [
+      "2602.16209v1"
+    ],
+    "title": "Geometric Neural Operators via Lie Group-Constrained Latent Dynamics",
+    "answerable": true,
+    "question_id": "q_120"
+  },
+  {
+    "question": "What is the main purpose of MerLean as described in the abstract?",
+    "answer": "MerLean is a fully automated agentic framework for autoformalization in quantum computation. It extracts mathematical statements from LaTeX source files, formalizes them into verified Lean 4 code, and translates the results back into human-readable LaTeX for semantic review.",
+    "doc_id": "2602.16554v1",
+    "gold_doc_ids": [
+      "2602.16554v1"
+    ],
+    "title": "MerLean: An Agentic Framework for Autoformalization in Quantum Computation",
+    "answerable": true,
+    "question_id": "q_121"
+  },
+  {
+    "question": "How does MedProbCLIP improve upon the performance of traditional deterministic models in retrieval tasks?",
+    "answer": "MedProbCLIP improves upon traditional deterministic models by outperforming both deterministic and probabilistic baselines, including CLIP, CXR-CLIP, and PCME++, in retrieval and zero-shot classification tasks on the MIMIC-CXR dataset. Additionally, it demonstrates superior calibration and risk-coverage behavior, enhancing the trustworthiness and safety of image-text retrieval systems.",
+    "doc_id": "2602.16019v1",
+    "gold_doc_ids": [
+      "2602.16019v1"
+    ],
+    "title": "MedProbCLIP: Probabilistic Adaptation of Vision-Language Foundation Model for Reliable Radiograph-Report Retrieval",
+    "answerable": true,
+    "question_id": "q_122"
+  },
+  {
+    "question": "What is the proposed method to improve faithfulness in reasoning for large language models?",
+    "answer": "The proposed method is called Reasoning Execution by Multiple Listeners (REMUL), which is a multi-party reinforcement learning approach that aims to enhance the faithfulness of chain-of-thought reasoning by involving multiple listener models that execute a reasoning trace generated by a speaker model.",
+    "doc_id": "2602.16154v1",
+    "gold_doc_ids": [
+      "2602.16154v1"
+    ],
+    "title": "Balancing Faithfulness and Performance in Reasoning via Multi-Listener Soft Execution",
+    "answerable": true,
+    "question_id": "q_123"
+  },
+  {
+    "question": "What upcoming AI-related events are scheduled for early 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_124"
+  },
+  {
+    "question": "How many open-weight language models were assessed for mental state reasoning behavior in this study?",
+    "answer": "The study assessed mental state reasoning behavior across 41 open-weight language models from distinct model families.",
+    "doc_id": "2602.16085v1",
+    "gold_doc_ids": [
+      "2602.16085v1"
+    ],
+    "title": "Language Statistics and False Belief Reasoning: Evidence from 41 Open-Weight LMs",
+    "answerable": true,
+    "question_id": "q_125"
+  },
+  {
+    "question": "What was the effect of a 67% pool contamination in the SEO scenario on answer accuracy?",
+    "answer": "In the SEO scenario, a 67% pool contamination led to over 80% exposure contamination, resulting in a homogenized environment where answer accuracy remained stable despite reliance on synthetic sources.",
+    "doc_id": "2602.16136v1",
+    "gold_doc_ids": [
+      "2602.16136v1"
+    ],
+    "title": "Retrieval Collapses When AI Pollutes the Web",
+    "answerable": true,
+    "question_id": "q_126"
+  },
+  {
+    "question": "What training method is proposed for CALMs to fit interpretable shape functions?",
+    "answer": "A principled distillation-based training pipeline is proposed, which identifies homogeneous regions with limited interactions and fits interpretable shape functions via region-aware backfitting.",
+    "doc_id": "2602.16503v1",
+    "gold_doc_ids": [
+      "2602.16503v1"
+    ],
+    "title": "Interpretability-by-Design with Accurate Locally Additive Models and Conditional Feature Effects",
+    "answerable": true,
+    "question_id": "q_127"
+  },
+  {
+    "question": "What is the release date of the next version of Python?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_128"
+  },
+  {
+    "question": "What does PCAS stand for and what is its purpose?",
+    "answer": "PCAS stands for Policy Compiler for Agentic Systems. Its purpose is to provide deterministic policy enforcement for LLM-based agents deployed in complex authorization contexts by compiling agent implementations and policy specifications into a policy-compliant system.",
+    "doc_id": "2602.16708v1",
+    "gold_doc_ids": [
+      "2602.16708v1"
+    ],
+    "title": "Policy Compiler for Secure Agentic Systems",
+    "answerable": true,
+    "question_id": "q_129"
+  },
+  {
+    "question": "What were the results of using LLM encodings compared to conventional one-hot encoding in terms of F1-score?",
+    "answer": "The llama-3 (compacted) embedding achieved a weighted average F1-score of 0.8766, while the one-hot encoding achieved an F1-score of 0.8475, demonstrating that LLM encodings outperformed the conventional method.",
+    "doc_id": "2602.15791v1",
+    "gold_doc_ids": [
+      "2602.15791v1"
+    ],
+    "title": "Enhancing Building Semantics Preservation in AI Model Training with Large Language Model Encodings",
+    "answerable": true,
+    "question_id": "q_130"
+  },
+  {
+    "question": "What is the main contribution of the FedGraph-AGI framework in addressing cross-border insider threats?",
+    "answer": "The FedGraph-AGI framework integrates Artificial General Intelligence (AGI) reasoning with graph neural networks for privacy-preserving cross-border insider threat detection. It combines federated graph neural networks, Mixture-of-Experts aggregation, and AGI-powered reasoning for effective detection of complex attack patterns.",
+    "doc_id": "2602.16109v1",
+    "gold_doc_ids": [
+      "2602.16109v1"
+    ],
+    "title": "Federated Graph AGI for Cross-Border Insider Threat Intelligence in Government Financial Schemes",
+    "answerable": true,
+    "question_id": "q_131"
+  },
+  {
+    "question": "What are the public reactions to the newest AI-generated media?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_132"
+  },
+  {
+    "question": "Which AI research lab received the most funding in 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_133"
+  },
+  {
+    "question": "What is the purpose of the GPSBench dataset introduced in the paper?",
+    "answer": "The GPSBench dataset is designed to evaluate geospatial reasoning in large language models, consisting of 57,800 samples across 17 tasks that include geometric coordinate operations and reasoning that integrates coordinates with world knowledge.",
+    "doc_id": "2602.16105v1",
+    "gold_doc_ids": [
+      "2602.16105v1"
+    ],
+    "title": "GPSBench: Do Large Language Models Understand GPS Coordinates?",
+    "answerable": true,
+    "question_id": "q_134"
+  },
+  {
+    "question": "How does WS-KAN perform compared to structure-agnostic baselines across diverse tasks?",
+    "answer": "WS-KAN consistently outperforms structure-agnostic baselines across all tasks, often by a substantial margin. This performance is evaluated using a comprehensive 'zoo' of trained KANs that span diverse tasks.",
+    "doc_id": "2602.16316v1",
+    "gold_doc_ids": [
+      "2602.16316v1"
+    ],
+    "title": "A Graph Meta-Network for Learning on Kolmogorov-Arnold Networks",
+    "answerable": true,
+    "question_id": "q_135"
+  },
+  {
+    "question": "How does the performance of models on MAEB correlate with their performance in audio large language models?",
+    "answer": "The performance of audio encoders on MAEB correlates highly with their performance when used in audio large language models. This suggests that insights gained from MAEB can inform the use of audio encoders in different contexts.",
+    "doc_id": "2602.16008v1",
+    "gold_doc_ids": [
+      "2602.16008v1"
+    ],
+    "title": "MAEB: Massive Audio Embedding Benchmark",
+    "answerable": true,
+    "question_id": "q_136"
+  },
+  {
+    "question": "How much does FlowPrefill improve maximum goodput compared to state-of-the-art systems?",
+    "answer": "FlowPrefill improves maximum goodput by up to 5.6 times compared to state-of-the-art systems while satisfying heterogeneous service level objectives.",
+    "doc_id": "2602.16603v1",
+    "gold_doc_ids": [
+      "2602.16603v1"
+    ],
+    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+    "answerable": true,
+    "question_id": "q_137"
+  },
+  {
+    "question": "What was the primary endpoint of the trial conducted to evaluate LLMs' effect on novice performance?",
+    "answer": "The primary endpoint of the trial was workflow completion, with results showing 5.2% for the LLM group and 6.6% for the Internet group, leading to a P value of 0.759, indicating no significant difference.",
+    "doc_id": "2602.16703v1",
+    "gold_doc_ids": [
+      "2602.16703v1"
+    ],
+    "title": "Measuring Mid-2025 LLM-Assistance on Novice Performance in Biology",
+    "answerable": true,
+    "question_id": "q_138"
+  },
+  {
+    "question": "What is the main phenomenon that the research paper identifies as a risk when focusing on single sensitive attributes in LLM fairness alignment?",
+    "answer": "The main phenomenon identified is known as bias spillover, which occurs when efforts to achieve fairness along one attribute exacerbate disparities along untargeted attributes.",
+    "doc_id": "2602.16438v1",
+    "gold_doc_ids": [
+      "2602.16438v1"
+    ],
+    "title": "Intra-Fairness Dynamics: The Bias Spillover Effect in Targeted LLM Alignment",
+    "answerable": true,
+    "question_id": "q_139"
+  },
+  {
+    "question": "What does the ASPEN architecture specifically require for features to propagate?",
+    "answer": "The ASPEN architecture requires cross-modal agreement for features to propagate, as it combines spectral and temporal feature streams via multiplicative fusion.",
+    "doc_id": "2602.16147v1",
+    "gold_doc_ids": [
+      "2602.16147v1"
+    ],
+    "title": "ASPEN: Spectral-Temporal Fusion for Cross-Subject Brain Decoding",
+    "answerable": true,
+    "question_id": "q_140"
+  },
+  {
+    "question": "How much funding did the top AI startups receive in 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_141"
+  },
+  {
+    "question": "What is the main task that the DocSplit benchmark addresses?",
+    "answer": "The main task that the DocSplit benchmark addresses is document packet splitting, which involves separating a document packet into individual units. This requires models to identify document boundaries, classify document types, and maintain correct page ordering within a document packet.",
+    "doc_id": "2602.15958v1",
+    "gold_doc_ids": [
+      "2602.15958v1"
+    ],
+    "title": "DocSplit: A Comprehensive Benchmark Dataset and Evaluation Approach for Document Packet Recognition and Splitting",
+    "answerable": true,
+    "question_id": "q_142"
+  },
+  {
+    "question": "What is the main objective of the Proxy State-Based Evaluation framework proposed in the paper?",
+    "answer": "The main objective of the Proxy State-Based Evaluation framework is to provide a scalable and practical alternative to deterministic agentic benchmarks for industrial LLM agents, allowing for reliable evaluation without the need for a deterministic database. It focuses on preserving final state-based evaluation through an LLM-driven simulation framework.",
+    "doc_id": "2602.16246v1",
+    "gold_doc_ids": [
+      "2602.16246v1"
+    ],
+    "title": "Toward Scalable Verifiable Reward: Proxy State-Based Evaluation for Multi-turn Tool-Calling LLM Agents",
+    "answerable": true,
+    "question_id": "q_143"
+  },
+  {
+    "question": "What type of analysis was used in the systematic review of dataset documentation publications?",
+    "answer": "The systematic review employed a mixed-methods analysis of 59 dataset documentation publications to examine motivations, conceptualizations, and connections to existing systems, regulations, and cultural norms.",
+    "doc_id": "2602.15968v1",
+    "gold_doc_ids": [
+      "2602.15968v1"
+    ],
+    "title": "From Reflection to Repair: A Scoping Review of Dataset Documentation Tools",
+    "answerable": true,
+    "question_id": "q_144"
+  },
+  {
+    "question": "What are the four complementary axes used in the structured analytical framework developed in this paper?",
+    "answer": "The four complementary axes are how long-Tail Knowledge is defined, the mechanisms by which it is lost or distorted during training and inference, the technical interventions proposed to mitigate these failures, and the implications of these failures for fairness, accountability, transparency, and user trust.",
+    "doc_id": "2602.16201v1",
+    "gold_doc_ids": [
+      "2602.16201v1"
+    ],
+    "title": "Long-Tail Knowledge in Large Language Models: Taxonomy, Mechanisms, Interventions and Implications",
+    "answerable": true,
+    "question_id": "q_145"
+  },
+  {
+    "question": "What is the purpose of the RLM-JB framework?",
+    "answer": "The RLM-JB framework is designed for jailbreak detection in large language models, treating detection as a procedure that normalizes and de-obfuscates suspicious inputs while performing parallel chunk screening. It aggregates evidence into an auditable decision to effectively manage the threats posed by jailbreak prompts.",
+    "doc_id": "2602.16520v1",
+    "gold_doc_ids": [
+      "2602.16520v1"
+    ],
+    "title": "Recursive language models for jailbreak detection: a procedural defense for tool-augmented agents",
+    "answerable": true,
+    "question_id": "q_146"
+  },
+  {
+    "question": "How many Lean declarations did MerLean produce when evaluated on the three theoretical quantum computing papers?",
+    "answer": "MerLean produced a total of 2,050 Lean declarations from 114 statements when evaluated on three theoretical quantum computing papers. This demonstrates its effectiveness in formalizing the content of these papers.",
+    "doc_id": "2602.16554v1",
+    "gold_doc_ids": [
+      "2602.16554v1"
+    ],
+    "title": "MerLean: An Agentic Framework for Autoformalization in Quantum Computation",
+    "answerable": true,
+    "question_id": "q_147"
+  },
+  {
+    "question": "What are the two key innovations introduced by FlowPrefill for adaptive prefill scheduling?",
+    "answer": "The two key innovations introduced by FlowPrefill are Operator-Level Preemption, which allows for fine-grained execution interruption without efficiency loss, and Event-Driven Scheduling, which triggers scheduling decisions based on request arrival or completion events.",
+    "doc_id": "2602.16603v1",
+    "gold_doc_ids": [
+      "2602.16603v1"
+    ],
+    "title": "FlowPrefill: Decoupling Preemption from Prefill Scheduling Granularity to Mitigate Head-of-Line Blocking in LLM Serving",
+    "answerable": true,
+    "question_id": "q_148"
+  },
+  {
+    "question": "What was the most discussed topic during the last major AI conference?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_149"
+  },
+  {
+    "question": "Which countries have the most aggressive AI research funding as of 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_150"
+  },
+  {
+    "question": "What is the proposed solution in the paper for enhancing resource allocation in MEC-based wireless metaverse services?",
+    "answer": "The proposed solution is the Federated Split Decision Transformer (FSDT), which is an offline reinforcement learning framework that partitions the transformer model between MEC servers and the cloud to improve resource allocation.",
+    "doc_id": "2602.16174v1",
+    "gold_doc_ids": [
+      "2602.16174v1"
+    ],
+    "title": "Edge Learning via Federated Split Decision Transformers for Metaverse Resource Allocation",
+    "answerable": true,
+    "question_id": "q_151"
+  },
+  {
+    "question": "What is the main technique introduced in the HiPER framework for credit assignment in hierarchical reinforcement learning?",
+    "answer": "The main technique introduced in the HiPER framework is called hierarchical advantage estimation (HAE), which assigns credit at both the planning and execution levels. HAE aggregates returns over the execution of each subgoal and coordinates updates across the two levels to provide an unbiased gradient estimator and reduce variance compared to flat generalized advantage estimation.",
+    "doc_id": "2602.16165v1",
+    "gold_doc_ids": [
+      "2602.16165v1"
+    ],
+    "title": "HiPER: Hierarchical Reinforcement Learning with Explicit Credit Assignment for Large Language Model Agents",
+    "answerable": true,
+    "question_id": "q_152"
+  },
+  {
+    "question": "What are the three clinical symptoms evaluated in the study, and what are their respective prevalences?",
+    "answer": "The three clinical symptoms evaluated are shortness of breath at 23%, chest pain at 12%, and Long COVID brain fog at 3%. The study found that validation sensitivity oscillated across iterations, with performance varying significantly based on class prevalence.",
+    "doc_id": "2602.16037v1",
+    "gold_doc_ids": [
+      "2602.16037v1"
+    ],
+    "title": "Optimization Instability in Autonomous Agentic Workflows for Clinical Symptom Detection",
+    "answerable": true,
+    "question_id": "q_153"
+  },
+  {
+    "question": "How does B-DENSE modify the student architecture in relation to teacher's trajectory?",
+    "answer": "B-DENSE modifies the student architecture to output K-fold expanded channels, where each subset corresponds to a specific branch representing a discrete intermediate step in the teacher's trajectory. This setup allows the student model to map to the entire sequence of the teacher's target timesteps, enhancing the learning process.",
+    "doc_id": "2602.15971v1",
+    "gold_doc_ids": [
+      "2602.15971v1"
+    ],
+    "title": "B-DENSE: Branching For Dense Ensemble Network Learning",
+    "answerable": true,
+    "question_id": "q_154"
+  },
+  {
+    "question": "How many publications were submitted to NeurIPS 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_155"
+  },
+  {
+    "question": "What key features does the ODYN solver utilize to address ill-conditioned and degenerate problems in quadratic programming?",
+    "answer": "ODYN utilizes all-shifted nonlinear complementarity problem (NCP) functions combined with the proximal method of multipliers to robustly tackle ill-conditioned and degenerate problems.",
+    "doc_id": "2602.16005v1",
+    "gold_doc_ids": [
+      "2602.16005v1"
+    ],
+    "title": "ODYN: An All-Shifted Non-Interior-Point Method for Quadratic Programming in Robotics and AI",
+    "answerable": true,
+    "question_id": "q_156"
+  },
+  {
+    "question": "What was observed regarding the performance of smaller models trained with the proposed approach compared to larger models?",
+    "answer": "The performance of a smaller model trained with the proposed approach nearly reaches that of a model an order of magnitude larger. This suggests that the framework significantly improves the ability of models to learn interactively from language feedback.",
+    "doc_id": "2602.16066v1",
+    "gold_doc_ids": [
+      "2602.16066v1"
+    ],
+    "title": "Improving Interactive In-Context Learning from Natural Language Feedback",
+    "answerable": true,
+    "question_id": "q_157"
+  },
+  {
+    "question": "What challenges related to long-Tail Knowledge representation does the paper identify?",
+    "answer": "The paper identifies open challenges related to privacy, sustainability, and governance that constrain long-Tail Knowledge representation, highlighting the complexities involved in addressing these issues.",
+    "doc_id": "2602.16201v1",
+    "gold_doc_ids": [
+      "2602.16201v1"
+    ],
+    "title": "Long-Tail Knowledge in Large Language Models: Taxonomy, Mechanisms, Interventions and Implications",
+    "answerable": true,
+    "question_id": "q_158"
+  },
+  {
+    "question": "How do large language models perform on geographic reasoning compared to geometric computations according to the findings in the paper?",
+    "answer": "The findings indicate that models are generally more reliable at real-world geographic reasoning than at geometric computations, with geographic knowledge exhibiting hierarchical performance\u2014strong at the country level but weak at the city level.",
+    "doc_id": "2602.16105v1",
+    "gold_doc_ids": [
+      "2602.16105v1"
+    ],
+    "title": "GPSBench: Do Large Language Models Understand GPS Coordinates?",
+    "answerable": true,
+    "question_id": "q_159"
+  },
+  {
+    "question": "What are the key impediments to the adoption of modern subsymbolic AI as mentioned in the abstract?",
+    "answer": "The key impediments to the adoption of modern subsymbolic AI are insufficient data volume and quality. These issues hinder the effective implementation of AI technologies.",
+    "doc_id": "2602.15816v1",
+    "gold_doc_ids": [
+      "2602.15816v1"
+    ],
+    "title": "Developing AI Agents with Simulated Data: Why, what, and how?",
+    "answerable": true,
+    "question_id": "q_160"
+  },
+  {
+    "question": "What is the winning solution for the latest Kaggle competition?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_161"
+  },
+  {
+    "question": "How does the surrogate-based prevalence measurement framework estimate prevalence for different experiment arms and segments?",
+    "answer": "The framework estimates prevalence by calibrating a surrogate signal to reference labels offline and then using only impression logs. Specifically, it employs score bucketing to discretize model scores, allowing for fast, log-based prevalence estimates without the need for per-experiment labeling jobs.",
+    "doc_id": "2602.16111v1",
+    "gold_doc_ids": [
+      "2602.16111v1"
+    ],
+    "title": "Surrogate-Based Prevalence Measurement for Large-Scale A/B Testing",
+    "answerable": true,
+    "question_id": "q_162"
+  },
+  {
+    "question": "What is the power consumption of the system for keyword spotting on the FPGA implementation?",
+    "answer": "The power consumption of the system for keyword spotting is 1.18 W, with an achieved word-end detection accuracy of up to 95% and a latency of only 10.53 microseconds.",
+    "doc_id": "2602.16442v1",
+    "gold_doc_ids": [
+      "2602.16442v1"
+    ],
+    "title": "Hardware-accelerated graph neural networks: an alternative approach for neuromorphic event-based audio classification and keyword spotting on SoC FPGA",
+    "answerable": true,
+    "question_id": "q_163"
+  },
+  {
+    "question": "What training strategy does the AIFL model utilize to improve its forecasting capabilities?",
+    "answer": "The AIFL model employs a novel two-stage training strategy, first pre-training on 40 years of ERA5-Land reanalysis data to capture hydrological processes, and then fine-tuning on operational Integrated Forecasting System (IFS) control forecasts to adapt to specific error structures and biases of operational numerical weather prediction.",
+    "doc_id": "2602.16579v1",
+    "gold_doc_ids": [
+      "2602.16579v1"
+    ],
+    "title": "AIFL: A Global Daily Streamflow Forecasting Model Using Deterministic LSTM Pre-trained on ERA5-Land and Fine-tuned on IFS",
+    "answerable": true,
+    "question_id": "q_164"
+  },
+  {
+    "question": "Which universities had the highest number of AI-related publications in 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_165"
+  },
+  {
+    "question": "What method was used to shape the large language model into a digital poet during the workshop?",
+    "answer": "The large language model was shaped into a digital poet through iterative in-context expert feedback, without retraining. This approach allowed the model to develop a distinctive style and a coherent corpus over the course of the workshop.",
+    "doc_id": "2602.16578v1",
+    "gold_doc_ids": [
+      "2602.16578v1"
+    ],
+    "title": "Creating a digital poet",
+    "answerable": true,
+    "question_id": "q_166"
+  },
+  {
+    "question": "What new features were added to the latest release of Keras?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_167"
+  },
+  {
+    "question": "What does the AI-CARE tool evaluate in relation to machine learning models?",
+    "answer": "AI-CARE evaluates the energy consumption and carbon emissions of machine learning models, addressing the environmental costs associated with model training and inference. This evaluation aims to shift focus from traditional performance metrics to a more comprehensive understanding of the environmental impact of ML models.",
+    "doc_id": "2602.16042v1",
+    "gold_doc_ids": [
+      "2602.16042v1"
+    ],
+    "title": "AI-CARE: Carbon-Aware Reporting Evaluation Metric for AI Models",
+    "answerable": true,
+    "question_id": "q_168"
+  },
+  {
+    "question": "What is the most popular machine learning framework among industry practitioners in 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_169"
+  },
+  {
+    "question": "How much does FSDT enhance the quality of experience (QoE) in heterogeneous environments compared to baselines?",
+    "answer": "FSDT enhances the quality of experience (QoE) by up to 10% in heterogeneous environments compared to the baseline methods.",
+    "doc_id": "2602.16174v1",
+    "gold_doc_ids": [
+      "2602.16174v1"
+    ],
+    "title": "Edge Learning via Federated Split Decision Transformers for Metaverse Resource Allocation",
+    "answerable": true,
+    "question_id": "q_170"
+  },
+  {
+    "question": "What does the study benchmark in the context of LLM-based automatic assessment?",
+    "answer": "The study benchmarks a broad range of uncertainty quantification methods in the context of LLM-based automatic assessment. It aims to understand the uncertainty behaviors exhibited by LLMs across various assessment datasets, model families, and generation control settings.",
+    "doc_id": "2602.16039v1",
+    "gold_doc_ids": [
+      "2602.16039v1"
+    ],
+    "title": "How Uncertain Is the Grade? A Benchmark of Uncertainty Metrics for LLM-Based Automatic Assessment",
+    "answerable": true,
+    "question_id": "q_171"
+  },
+  {
+    "question": "What is the main goal of the B-DENSE framework proposed in the paper?",
+    "answer": "The main goal of the B-DENSE framework is to mitigate the loss of structural information and significant discretization errors caused by sparse supervision in diffusion models. It achieves this by leveraging multi-branch trajectory alignment to enforce dense intermediate trajectory alignment during training.",
+    "doc_id": "2602.15971v1",
+    "gold_doc_ids": [
+      "2602.15971v1"
+    ],
+    "title": "B-DENSE: Branching For Dense Ensemble Network Learning",
+    "answerable": true,
+    "question_id": "q_172"
+  },
+  {
+    "question": "What innovations were proposed in the reformulated Avey architecture?",
+    "answer": "The proposed innovations in the reformulated Avey architecture include decoupled static and dynamic parameterizations, stability-oriented normalization, and neural compression.",
+    "doc_id": "2602.15814v1",
+    "gold_doc_ids": [
+      "2602.15814v1"
+    ],
+    "title": "Avey-B",
+    "answerable": true,
+    "question_id": "q_173"
+  },
+  {
+    "question": "What are the three contributions of OmniCT as mentioned in the abstract?",
+    "answer": "The three contributions of OmniCT include Spatial Consistency Enhancement (SCE), which combines volumetric slice composition with tri-axial positional embedding; Organ-level Semantic Enhancement (OSE), which aligns anatomical regions for lesion- and organ-level semantics; and MedEval-CT, the largest slice-volume CT dataset and hybrid benchmark for unified evaluation.",
+    "doc_id": "2602.16110v1",
+    "gold_doc_ids": [
+      "2602.16110v1"
+    ],
+    "title": "OmniCT: Towards a Unified Slice-Volume LVLM for Comprehensive CT Analysis",
+    "answerable": true,
+    "question_id": "q_174"
+  },
+  {
+    "question": "What is the main goal of causal discovery as described in the abstract?",
+    "answer": "The main goal of causal discovery is to uncover causal relations from data, which are typically represented as causal graphs, and it is essential for predicting the effects of interventions.",
+    "doc_id": "2602.16481v1",
+    "gold_doc_ids": [
+      "2602.16481v1"
+    ],
+    "title": "Leveraging Large Language Models for Causal Discovery: a Constraint-based, Argumentation-driven Approach",
+    "answerable": true,
+    "question_id": "q_175"
+  },
+  {
+    "question": "What is the status of current AI regulations in the United States as of 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_176"
+  },
+  {
+    "question": "How does the performance of the reformulated Avey architecture compare to Transformer-based encoders?",
+    "answer": "The reformulated Avey architecture consistently outperforms four widely used Transformer-based encoders on standard token-classification and information-retrieval benchmarks while scaling more efficiently to long contexts.",
+    "doc_id": "2602.15814v1",
+    "gold_doc_ids": [
+      "2602.15814v1"
+    ],
+    "title": "Avey-B",
+    "answerable": true,
+    "question_id": "q_177"
+  },
+  {
+    "question": "What is the main purpose of the proposed UCTECG-Net architecture?",
+    "answer": "The main purpose of UCTECG-Net is to provide an uncertainty-aware hybrid architecture that improves automated electrocardiogram (ECG) classification and enhances prediction reliability for safety-critical settings. It achieves this by combining one-dimensional convolutions and Transformer encoders to process raw ECG signals and their spectrograms jointly.",
+    "doc_id": "2602.16216v1",
+    "gold_doc_ids": [
+      "2602.16216v1"
+    ],
+    "title": "UCTECG-Net: Uncertainty-aware Convolution Transformer ECG Network for Arrhythmia Detection",
+    "answerable": true,
+    "question_id": "q_178"
+  },
+  {
+    "question": "What is the main focus of the research in the paper regarding Spatial Audio Question Answering?",
+    "answer": "The main focus of the research is on movement reasoning in Spatial Audio Question Answering (Spatial AQA), where the model must infer object motion, position, and directional changes from stereo audio. This involves interpreting complex auditory scenes, particularly when sound sources are in motion over time.",
+    "doc_id": "2602.16334v1",
+    "gold_doc_ids": [
+      "2602.16334v1"
+    ],
+    "title": "Spatial Audio Question Answering and Reasoning on Dynamic Source Movements",
+    "answerable": true,
+    "question_id": "q_179"
+  },
+  {
+    "question": "What are the four key dimensions along which the proposed metrics decompose agent reliability?",
+    "answer": "The four key dimensions are consistency, robustness, predictability, and safety. These dimensions provide a holistic performance profile for evaluating AI agents.",
+    "doc_id": "2602.16666v1",
+    "gold_doc_ids": [
+      "2602.16666v1"
+    ],
+    "title": "Towards a Science of AI Agent Reliability",
+    "answerable": true,
+    "question_id": "q_180"
+  },
+  {
+    "question": "What are the key insights for robot-assisted feeding in social dining as identified in the research?",
+    "answer": "The key insights suggest that robot-assisted feeding systems should embody the principles of a white glove service by supporting multimodal inputs and unobtrusive outputs, exhibiting contextually sensitive social behavior, having expanded roles beyond feeding, and adapting to other relationships at the dining table.",
+    "doc_id": "2602.15767v1",
+    "gold_doc_ids": [
+      "2602.15767v1"
+    ],
+    "title": "Robot-Assisted Social Dining as a White Glove Service",
+    "answerable": true,
+    "question_id": "q_181"
+  },
+  {
+    "question": "What are the two retrieval pipelines developed in this work for enhancing retrieval-augmented generation in polymer literature?",
+    "answer": "The two retrieval pipelines developed are a dense semantic vector-based approach called VectorRAG and a graph-based approach named GraphRAG.",
+    "doc_id": "2602.16650v1",
+    "gold_doc_ids": [
+      "2602.16650v1"
+    ],
+    "title": "Retrieval Augmented Generation of Literature-derived Polymer Knowledge: The Example of a Biodegradable Polymer Expert System",
+    "answerable": true,
+    "question_id": "q_182"
+  },
+  {
+    "question": "What accuracy does the Guide-Guard solution achieve when predicting off-target behavior?",
+    "answer": "Guide-Guard achieves an accuracy of 84% when predicting off-target behavior in the CRISPR gene-editing process. This solution is also capable of being trained on multiple different genes simultaneously while retaining that accuracy.",
+    "doc_id": "2602.16327v1",
+    "gold_doc_ids": [
+      "2602.16327v1"
+    ],
+    "title": "Guide-Guard: Off-Target Predicting in CRISPR Applications",
+    "answerable": true,
+    "question_id": "q_183"
+  },
+  {
+    "question": "How does CaR improve upon previous construction-search hybrids in solving routing problems?",
+    "answer": "CaR improves upon previous construction-search hybrids by achieving efficient constraint handling through a joint training framework that generates diverse and high-quality solutions, requiring significantly fewer improvement steps (10 steps versus 5k steps in prior work). This makes it more effective at addressing hard constraints.",
+    "doc_id": "2602.16012v1",
+    "gold_doc_ids": [
+      "2602.16012v1"
+    ],
+    "title": "Towards Efficient Constraint Handling in Neural Solvers for Routing Problems",
+    "answerable": true,
+    "question_id": "q_184"
+  },
+  {
+    "question": "What types of examination questions does IndicEval utilize for its assessments?",
+    "answer": "IndicEval uses authentic high-stakes examination questions from UPSC, JEE, and NEET across STEM and humanities domains in both English and Hindi. This grounding in real examination standards enables a more realistic measurement of LLM performance.",
+    "doc_id": "2602.16467v1",
+    "gold_doc_ids": [
+      "2602.16467v1"
+    ],
+    "title": "IndicEval: A Bilingual Indian Educational Evaluation Framework for Large Language Models",
+    "answerable": true,
+    "question_id": "q_185"
+  },
+  {
+    "question": "How many new AI startups were founded in 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_186"
+  },
+  {
+    "question": "What types of tasks does the Massive Audio Embedding Benchmark (MAEB) cover?",
+    "answer": "MAEB covers 30 tasks across speech, music, environmental sounds, and cross-modal audio-text reasoning. These tasks are evaluated in over 100 languages.",
+    "doc_id": "2602.16008v1",
+    "gold_doc_ids": [
+      "2602.16008v1"
+    ],
+    "title": "MAEB: Massive Audio Embedding Benchmark",
+    "answerable": true,
+    "question_id": "q_187"
+  },
+  {
+    "question": "How did the accuracy of the January Mirror system compare to that of the human reference and other frontier LLMs?",
+    "answer": "The January Mirror system exceeded the human reference accuracy of 62.3% and outperformed other frontier LLMs, achieving higher accuracy than GPT-5.2 (74.6%), GPT-5 (74.0%), and Gemini-3-Pro (69.8%).",
+    "doc_id": "2602.16050v1",
+    "gold_doc_ids": [
+      "2602.16050v1"
+    ],
+    "title": "Evidence-Grounded Subspecialty Reasoning: Evaluating a Curated Clinical Intelligence Layer on the 2025 Endocrinology Board-Style Examination",
+    "answerable": true,
+    "question_id": "q_188"
+  },
+  {
+    "question": "What performance metrics did Chitrapathak-2 achieve compared to its predecessor?",
+    "answer": "Chitrapathak-2 achieved a 3-6x speedup over its predecessor and is state-of-the-art in Telugu with a character ANLS of 6.69, as well as being second best in the remaining languages.",
+    "doc_id": "2602.16430v1",
+    "gold_doc_ids": [
+      "2602.16430v1"
+    ],
+    "title": "Designing Production-Scale OCR for India: Multilingual and Domain-Specific Systems",
+    "answerable": true,
+    "question_id": "q_189"
+  },
+  {
+    "question": "What is a limitation of heuristic approaches in the context of confirmatory research?",
+    "answer": "Heuristic approaches lack the formal statistical guarantees typically required for confirmatory research. They are useful for exploratory tasks but do not ensure the same level of validity that statistical calibration provides.",
+    "doc_id": "2602.15785v1",
+    "gold_doc_ids": [
+      "2602.15785v1"
+    ],
+    "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
+    "answerable": true,
+    "question_id": "q_190"
+  },
+  {
+    "question": "What is the primary method proposed in the paper for improving underperforming language models?",
+    "answer": "The paper proposes a transplantation technique that involves identifying and transferring an internal module, activated for a specific task, from one language model to another. This method allows for immediate functional changes without additional training or fine-tuning.",
+    "doc_id": "2602.16189v1",
+    "gold_doc_ids": [
+      "2602.16189v1"
+    ],
+    "title": "Beyond Learning: A Training-Free Alternative to Model Adaptation",
+    "answerable": true,
+    "question_id": "q_191"
+  },
+  {
+    "question": "What does the research paper reveal about fine-tuning aligned language models on benign tasks?",
+    "answer": "The paper reveals that fine-tuning aligned language models on benign tasks can unpredictably degrade safety guardrails, despite the absence of harmful content in the training data and no adversarial intent from developers. This degradation occurs due to the structural instability of the orthogonality assumption in high-dimensional parameter space under gradient descent dynamics.",
+    "doc_id": "2602.15799v1",
+    "gold_doc_ids": [
+      "2602.15799v1"
+    ],
+    "title": "The Geometry of Alignment Collapse: When Fine-Tuning Breaks Safety",
+    "answerable": true,
+    "question_id": "q_192"
+  },
+  {
+    "question": "What is the accuracy achieved by the baseline floating-point model on the SHD dataset?",
+    "answer": "The baseline floating-point model achieves 92.7% accuracy on the SHD dataset, which is only 2.4% below the state of the art.",
+    "doc_id": "2602.16442v1",
+    "gold_doc_ids": [
+      "2602.16442v1"
+    ],
+    "title": "Hardware-accelerated graph neural networks: an alternative approach for neuromorphic event-based audio classification and keyword spotting on SoC FPGA",
+    "answerable": true,
+    "question_id": "q_193"
+  },
+  {
+    "question": "What is the current status of the GPT-4 model?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_194"
+  },
+  {
+    "question": "How many human subjects participated in the role-playing experiment related to the LLM-integrated BEMS?",
+    "answer": "A total of 85 human subjects participated in the role-playing experiment. They interacted with an advanced generative pre-trained transformer (OpenAI GPT-4o) during the study.",
+    "doc_id": "2602.16140v1",
+    "gold_doc_ids": [
+      "2602.16140v1"
+    ],
+    "title": "Human-AI Collaboration in Large Language Model-Integrated Building Energy Management Systems: The Role of User Domain Knowledge and AI Literacy",
+    "answerable": true,
+    "question_id": "q_195"
+  },
+  {
+    "question": "What built-in features does the Framework of Thoughts (FoT) provide to optimize dynamic reasoning schemes?",
+    "answer": "Framework of Thoughts (FoT) provides built-in features for hyperparameter tuning, prompt optimization, parallel execution, and intelligent caching. These features are designed to unlock the latent performance potential of reasoning schemes.",
+    "doc_id": "2602.16512v1",
+    "gold_doc_ids": [
+      "2602.16512v1"
+    ],
+    "title": "Framework of Thoughts: A Foundation Framework for Dynamic and Optimized Reasoning based on Chains, Trees, and Graphs",
+    "answerable": true,
+    "question_id": "q_196"
+  },
+  {
+    "question": "What novel training approach is proposed in the study to enhance building semantics preservation?",
+    "answer": "The study proposes using large language model (LLM) embeddings, such as OpenAI GPT and Meta LLaMA, as encodings to preserve finer distinctions in building semantics during AI model training.",
+    "doc_id": "2602.15791v1",
+    "gold_doc_ids": [
+      "2602.15791v1"
+    ],
+    "title": "Enhancing Building Semantics Preservation in AI Model Training with Large Language Model Encodings",
+    "answerable": true,
+    "question_id": "q_197"
+  },
+  {
+    "question": "What framework is designed to encode multiple objectives and their priority relations in the ScenicRules benchmark?",
+    "answer": "The framework designed to encode multiple objectives and their priority relations in the ScenicRules benchmark is called the Hierarchical Rulebook. This framework allows for an interpretable and adaptable representation of the objectives.",
+    "doc_id": "2602.16073v1",
+    "gold_doc_ids": [
+      "2602.16073v1"
+    ],
+    "title": "ScenicRules: An Autonomous Driving Benchmark with Multi-Objective Specifications and Abstract Scenarios",
+    "answerable": true,
+    "question_id": "q_198"
+  },
+  {
+    "question": "What performance metric is the focus of the study presented in the paper?",
+    "answer": "The focus of the study is on the average reward, which is a fundamental performance metric in reinforcement learning that emphasizes the long-run performance of an agent.",
+    "doc_id": "2602.16629v1",
+    "gold_doc_ids": [
+      "2602.16629v1"
+    ],
+    "title": "Almost Sure Convergence of Differential Temporal Difference Learning for Average Reward Markov Decision Processes",
+    "answerable": true,
+    "question_id": "q_199"
+  },
+  {
+    "question": "What is the purpose of the carbon-performance tradeoff curve introduced in the paper?",
+    "answer": "The carbon-performance tradeoff curve is introduced as an interpretable tool that visualizes the Pareto frontier between model performance and carbon cost. It aims to show how carbon-aware benchmarking can change the relative ranking of models and promote architectures that are both accurate and environmentally responsible.",
+    "doc_id": "2602.16042v1",
+    "gold_doc_ids": [
+      "2602.16042v1"
+    ],
+    "title": "AI-CARE: Carbon-Aware Reporting Evaluation Metric for AI Models",
+    "answerable": true,
+    "question_id": "q_200"
+  },
+  {
+    "question": "What are the latest advancements in AI safety mechanisms?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_201"
+  },
+  {
+    "question": "What types of applications is ODYN well suited for according to the abstract?",
+    "answer": "ODYN is well suited for general-purpose optimization as well as specific applications in robotics and AI, including model-based control, estimation, and kernel-based learning methods.",
+    "doc_id": "2602.16005v1",
+    "gold_doc_ids": [
+      "2602.16005v1"
+    ],
+    "title": "ODYN: An All-Shifted Non-Interior-Point Method for Quadratic Programming in Robotics and AI",
+    "answerable": true,
+    "question_id": "q_202"
+  },
+  {
+    "question": "What are the two training strategies explored for building multilingual OCR systems in the paper?",
+    "answer": "The paper studies two training strategies: one involves a multimodal approach using a generic vision encoder paired with a multilingual language model, while the other focuses on fine-tuning an existing OCR model not originally trained for the target languages.",
+    "doc_id": "2602.16430v1",
+    "gold_doc_ids": [
+      "2602.16430v1"
+    ],
+    "title": "Designing Production-Scale OCR for India: Multilingual and Domain-Specific Systems",
+    "answerable": true,
+    "question_id": "q_203"
+  },
+  {
+    "question": "What were the main findings regarding prompting skills across the different instructional conditions?",
+    "answer": "The study found that all instructional conditions significantly improved prompting skills, with gains progressively increasing from Condition 1 to Condition 4, validating the cognitive engagement hierarchy of the ICAP framework.",
+    "doc_id": "2602.16033v1",
+    "gold_doc_ids": [
+      "2602.16033v1"
+    ],
+    "title": "Transforming GenAI Policy to Prompting Instruction: An RCT of Scalable Prompting Interventions in a CS1 Course",
+    "answerable": true,
+    "question_id": "q_204"
+  },
+  {
+    "question": "What accuracies did the Team-of-Thoughts approach achieve on the AIME24 and LiveCodeBench benchmarks?",
+    "answer": "The Team-of-Thoughts approach achieved accuracies of 96.67% on AIME24 and 72.53% on LiveCodeBench, significantly outperforming homogeneous role-play baselines.",
+    "doc_id": "2602.16485v1",
+    "gold_doc_ids": [
+      "2602.16485v1"
+    ],
+    "title": "Team of Thoughts: Efficient Test-time Scaling of Agentic Systems through Orchestrated Tool Calling",
+    "answerable": true,
+    "question_id": "q_205"
+  },
+  {
+    "question": "What four number representations were investigated in the study concerning EMFI attacks on embedded neural network models?",
+    "answer": "The study investigated two common floating-point representations (32-bit and 16-bit) and two integer representations (8-bit and 4-bit) in relation to EMFI attacks.",
+    "doc_id": "2602.16309v1",
+    "gold_doc_ids": [
+      "2602.16309v1"
+    ],
+    "title": "The Weight of a Bit: EMFI Sensitivity Analysis of Embedded Deep Learning Models",
+    "answerable": true,
+    "question_id": "q_206"
+  },
+  {
+    "question": "What challenge does the paper address in multi-agent reinforcement learning?",
+    "answer": "The paper addresses the challenge of achieving cooperation among self-interested agents in multi-agent reinforcement learning. It highlights the difficulties posed by existing approaches that rely on hardcoded assumptions about co-player learning rules.",
+    "doc_id": "2602.16301v1",
+    "gold_doc_ids": [
+      "2602.16301v1"
+    ],
+    "title": "Multi-agent cooperation through in-context co-player inference",
+    "answerable": true,
+    "question_id": "q_207"
+  },
+  {
+    "question": "What detection effectiveness did RLM-JB achieve on AutoDAN-style adversarial inputs?",
+    "answer": "RLM-JB achieved a detection effectiveness measured by ASR/Recall between 92.5% and 98.0% across three LLM backends. Additionally, it maintained very high precision rates between 98.99% and 100% while keeping low false positive rates from 0.0% to 2.0%.",
+    "doc_id": "2602.16520v1",
+    "gold_doc_ids": [
+      "2602.16520v1"
+    ],
+    "title": "Recursive language models for jailbreak detection: a procedural defense for tool-augmented agents",
+    "answerable": true,
+    "question_id": "q_208"
+  },
+  {
+    "question": "What methods were used to gather data on GenAI usage among part-time students?",
+    "answer": "The study utilized a grounded theory approach and involved interviews with eleven students from a distance learning university. Through this methodology, the study identified three causal and four intervening conditions that influence GenAI usage among the students.",
+    "doc_id": "2602.16307v1",
+    "gold_doc_ids": [
+      "2602.16307v1"
+    ],
+    "title": "Generative AI Usage of University Students: Navigating Between Education and Business",
+    "answerable": true,
+    "question_id": "q_209"
+  },
+  {
+    "question": "What was the accuracy achieved by the January Mirror system on the 120-question endocrinology board-style examination?",
+    "answer": "The January Mirror system achieved an accuracy of 87.5% on the 120-question endocrinology board-style examination, which corresponds to 105 out of 120 questions correctly answered.",
+    "doc_id": "2602.16050v1",
+    "gold_doc_ids": [
+      "2602.16050v1"
+    ],
+    "title": "Evidence-Grounded Subspecialty Reasoning: Evaluating a Curated Clinical Intelligence Layer on the 2025 Endocrinology Board-Style Examination",
+    "answerable": true,
+    "question_id": "q_210"
+  },
+  {
+    "question": "What is the currently dominant paradigm for handling information in AI memory systems, and what is its main drawback?",
+    "answer": "The currently dominant paradigm is termed 'extract then store,' which involves extracting useful information from experiences and saving only that content. The main drawback of this approach is the inherent risk of losing valuable knowledge, particularly for different tasks, during the extraction process.",
+    "doc_id": "2602.16192v1",
+    "gold_doc_ids": [
+      "2602.16192v1"
+    ],
+    "title": "Revolutionizing Long-Term Memory in AI: New Horizons with High-Capacity and High-Speed Storage",
+    "answerable": true,
+    "question_id": "q_211"
+  },
+  {
+    "question": "What advancements in AI technology are expected to disrupt industries in 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_212"
+  },
+  {
+    "question": "What is the leading cause of model drift in production AI systems today?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_213"
+  },
+  {
+    "question": "What does BT-sigma propose to improve LLM evaluation, and how does it function?",
+    "answer": "BT-sigma is a judge-aware extension of the Bradley-Terry model that introduces a discriminator parameter for each judge. It jointly infers item rankings and judge reliability from pairwise comparisons alone, improving aggregation by modeling judge reliability.",
+    "doc_id": "2602.16610v1",
+    "gold_doc_ids": [
+      "2602.16610v1"
+    ],
+    "title": "Who can we trust? LLM-as-a-jury for Comparative Assessment",
+    "answerable": true,
+    "question_id": "q_214"
+  },
+  {
+    "question": "What method is introduced in the paper to correct neighborhood estimation for real and generated data?",
+    "answer": "The paper introduces Generative ICDM (GICDM), which builds on the classical Iterative Contextual Dissimilarity Measure (ICDM) to correct neighborhood estimation for both real and generated data.",
+    "doc_id": "2602.16449v1",
+    "gold_doc_ids": [
+      "2602.16449v1"
+    ],
+    "title": "GICDM: Mitigating Hubness for Reliable Distance-Based Generative Model Evaluation",
+    "answerable": true,
+    "question_id": "q_215"
+  },
+  {
+    "question": "What were the major findings of the recent CSRankings updates for 2023?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_216"
+  },
+  {
+    "question": "What is WPEM and how does it improve the refinement of X-ray diffraction data?",
+    "answer": "WPEM is a physics-constrained whole-pattern decomposition and refinement workflow that incorporates Bragg's law as an explicit constraint within a batch expectation-maximization framework. It improves refinement by providing a stable intensity representation in heavily overlapped regions and ensuring peak centers remain Bragg-consistent.",
+    "doc_id": "2602.16372v1",
+    "gold_doc_ids": [
+      "2602.16372v1"
+    ],
+    "title": "AI-Driven Structure Refinement of X-ray Diffraction",
+    "answerable": true,
+    "question_id": "q_217"
+  },
+  {
+    "question": "What method does the framework use to compose retargeted atomic human skills into long-horizon kinematic trajectories?",
+    "answer": "The framework uses motion matching, formulated as a nearest-neighbor search in a feature space, to compose retargeted atomic human skills into long-horizon kinematic trajectories. This method allows for flexible composition and smooth transition of complex skill chains while maintaining the fluidity of dynamic human motions.",
+    "doc_id": "2602.15827v1",
+    "gold_doc_ids": [
+      "2602.15827v1"
+    ],
+    "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
+    "answerable": true,
+    "question_id": "q_218"
+  },
+  {
+    "question": "What phenomenon affects dataset representations in high-dimensional embedding spaces according to the abstract?",
+    "answer": "The hubness phenomenon affects dataset representations in high-dimensional embedding spaces, distorting nearest neighbor relationships and biasing distance-based metrics.",
+    "doc_id": "2602.16449v1",
+    "gold_doc_ids": [
+      "2602.16449v1"
+    ],
+    "title": "GICDM: Mitigating Hubness for Reliable Distance-Based Generative Model Evaluation",
+    "answerable": true,
+    "question_id": "q_219"
+  },
+  {
+    "question": "What was the performance of the system at 3% prevalence in terms of accuracy and positive case detection?",
+    "answer": "At 3% prevalence, the system achieved 95% accuracy while detecting zero positive cases. This failure mode was obscured by standard evaluation metrics, highlighting the challenges in low-prevalence classification tasks.",
+    "doc_id": "2602.16037v1",
+    "gold_doc_ids": [
+      "2602.16037v1"
+    ],
+    "title": "Optimization Instability in Autonomous Agentic Workflows for Clinical Symptom Detection",
+    "answerable": true,
+    "question_id": "q_220"
+  },
+  {
+    "question": "What are the details of the latest AI ethics guidelines published in 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_221"
+  },
+  {
+    "question": "What are the three algorithms instantiated in the enhanced diffusion sampling framework?",
+    "answer": "The three algorithms instantiated in the enhanced diffusion sampling framework are UmbrellaDiff, $\u0394$G-Diff, and MetaDiff. These algorithms are designed for umbrella sampling, free-energy differences, and a batchwise approach for metadynamics, respectively.",
+    "doc_id": "2602.16634v1",
+    "gold_doc_ids": [
+      "2602.16634v1"
+    ],
+    "title": "Enhanced Diffusion Sampling: Efficient Rare Event Sampling and Free Energy Calculation with Diffusion Models",
+    "answerable": true,
+    "question_id": "q_222"
+  },
+  {
+    "question": "What range of model scales was examined in the study, and how many parameters did these models have?",
+    "answer": "The study examined model scales ranging from 405K to 85M parameters. This includes five model scales and three Pythia language models with sizes from 160M to 2.8B parameters.",
+    "doc_id": "2602.15997v1",
+    "gold_doc_ids": [
+      "2602.15997v1"
+    ],
+    "title": "Anatomy of Capability Emergence: Scale-Invariant Representation Collapse and Top-Down Reorganization in Neural Networks",
+    "answerable": true,
+    "question_id": "q_223"
+  },
+  {
+    "question": "How does applying inference-time looping to the middle blocks of a depth-grown model affect its accuracy on reasoning primitives?",
+    "answer": "Applying inference-time looping to the middle blocks of a depth-grown model improves accuracy on some reasoning primitives by up to 2 times, even though the model was never trained to loop. This demonstrates the adaptability and composability of the two techniques.",
+    "doc_id": "2602.16490v1",
+    "gold_doc_ids": [
+      "2602.16490v1"
+    ],
+    "title": "From Growing to Looping: A Unified View of Iterative Computation in LLMs",
+    "answerable": true,
+    "question_id": "q_224"
+  },
+  {
+    "question": "What accuracy did FedGraph-AGI achieve in its experiments, and how does it compare to federated and centralized baselines?",
+    "answer": "FedGraph-AGI achieved an accuracy of 92.3%, which significantly outperforms federated baselines at 86.1% and centralized approaches at 84.7%. This improvement highlights the effectiveness of the proposed system in insider threat detection.",
+    "doc_id": "2602.16109v1",
+    "gold_doc_ids": [
+      "2602.16109v1"
+    ],
+    "title": "Federated Graph AGI for Cross-Border Insider Threat Intelligence in Government Financial Schemes",
+    "answerable": true,
+    "question_id": "q_225"
+  },
+  {
+    "question": "What was the main focus of the study regarding generative artificial intelligence (GenAI) usage?",
+    "answer": "The main focus of the study was to investigate the usage of generative artificial intelligence (GenAI) by university students who study alongside their professional careers, specifically part-time students. It aimed to explore the intersectional use of GenAI between education and business, an area that has received little attention in previous literature.",
+    "doc_id": "2602.16307v1",
+    "gold_doc_ids": [
+      "2602.16307v1"
+    ],
+    "title": "Generative AI Usage of University Students: Navigating Between Education and Business",
+    "answerable": true,
+    "question_id": "q_226"
+  },
+  {
+    "question": "What is ChartEditBench and what specific aspects does it evaluate?",
+    "answer": "ChartEditBench is a benchmark for incremental, visually grounded chart editing via code. It evaluates sustained, context-aware editing by comprising 5,000 difficulty-controlled modification chains and a rigorously human-verified subset.",
+    "doc_id": "2602.15758v1",
+    "gold_doc_ids": [
+      "2602.15758v1"
+    ],
+    "title": "ChartEditBench: Evaluating Grounded Multi-Turn Chart Editing in Multimodal Language Models",
+    "answerable": true,
+    "question_id": "q_227"
+  },
+  {
+    "question": "Who are the keynote speakers at the upcoming ICML 2024 conference?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_228"
+  },
+  {
+    "question": "What ability does the proposed framework aim to enhance in large language models?",
+    "answer": "The proposed framework aims to enhance the interactive in-context learning ability of large language models, treating it as a distinct, trainable skill rather than an emergent property. This ability is crucial for models to adapt dynamically to their context based on corrective feedback.",
+    "doc_id": "2602.16066v1",
+    "gold_doc_ids": [
+      "2602.16066v1"
+    ],
+    "title": "Improving Interactive In-Context Learning from Natural Language Feedback",
+    "answerable": true,
+    "question_id": "q_229"
+  },
+  {
+    "question": "What issue arises during the recursive training of generative models according to the abstract?",
+    "answer": "During the recursive training of generative models, data contamination occurs as later models are trained on a mixture of human-generated data and AI-generated data from earlier versions. This recursive training process complicates the separation of naturally generated content from AI-generated material.",
+    "doc_id": "2602.16065v1",
+    "gold_doc_ids": [
+      "2602.16065v1"
+    ],
+    "title": "Can Generative Artificial Intelligence Survive Data Contamination? Theoretical Guarantees under Contaminated Recursive Training",
+    "answerable": true,
+    "question_id": "q_230"
+  },
+  {
+    "question": "What are the two strategies contrasted in the study for obtaining valid estimates of causal effects?",
+    "answer": "The two strategies contrasted are heuristic approaches and statistical calibration. Heuristic approaches aim to establish that simulated and observed human behavior are interchangeable, while statistical calibration combines auxiliary human data with statistical adjustments to account for discrepancies between observed and simulated responses.",
+    "doc_id": "2602.15785v1",
+    "gold_doc_ids": [
+      "2602.15785v1"
+    ],
+    "title": "This human study did not involve human subjects: Validating LLM simulations as behavioral evidence",
+    "answerable": true,
+    "question_id": "q_231"
+  },
+  {
+    "question": "What types of experimental scenarios were benchmarked using WPEM?",
+    "answer": "WPEM was benchmarked on standard reference patterns, including \\\\ce{PbSO4} and \\\\ce{Tb2BaCoO5}, and demonstrated generality across scenarios such as phase-resolved decomposition of a multiphase Ti--15Nb thin film and quantitative analysis of a \\\\ce{NaCl}--\\\\ce{Li2CO3} mixture. It also addressed separation of crystalline peaks from amorphous halos and automated refinement of a compositionally disordered solid solution.",
+    "doc_id": "2602.16372v1",
+    "gold_doc_ids": [
+      "2602.16372v1"
+    ],
+    "title": "AI-Driven Structure Refinement of X-ray Diffraction",
+    "answerable": true,
+    "question_id": "q_232"
+  },
+  {
+    "question": "What improvements does the MultiFaceted Learnable Index (MFLI) provide over prior methods according to the abstract?",
+    "answer": "MFLI improves recall on engagement tasks by up to 11.8%, cold-content delivery by up to 57.29%, and semantic relevance by 13.5%. It also enhances engagement, reduces popularity bias, and increases serving efficiency when deployed in the system.",
+    "doc_id": "2602.16124v1",
+    "gold_doc_ids": [
+      "2602.16124v1"
+    ],
+    "title": "Rethinking ANN-based Retrieval: Multifaceted Learnable Index for Large-scale Recommendation System",
+    "answerable": true,
+    "question_id": "q_233"
+  },
+  {
+    "question": "What types of tokenizers are compared in the study and what are their characteristics?",
+    "answer": "The study compares learnable and non-learnable tokenizers. The learnable tokenizer is based on a novel approach involving an autoencoder, while the non-learnable tokenizers are fixed sample-level strategies.",
+    "doc_id": "2602.16626v1",
+    "gold_doc_ids": [
+      "2602.16626v1"
+    ],
+    "title": "A Systematic Evaluation of Sample-Level Tokenization Strategies for MEG Foundation Models",
+    "answerable": true,
+    "question_id": "q_234"
+  },
+  {
+    "question": "What attributes were used to represent emotions in the proposed method for speech emotion recognition?",
+    "answer": "The proposed method used color attributes, specifically hue, saturation, and value, to represent emotions as continuous and interpretable scores.",
+    "doc_id": "2602.16256v1",
+    "gold_doc_ids": [
+      "2602.16256v1"
+    ],
+    "title": "Color-based Emotion Representation for Speech Emotion Recognition",
+    "answerable": true,
+    "question_id": "q_235"
+  },
+  {
+    "question": "What is the latest version number of the OpenAI API?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_236"
+  },
+  {
+    "question": "How many trainable parameters does CLIP-MHAdapter have, and what type of tasks did it achieve new state-of-the-art results on?",
+    "answer": "CLIP-MHAdapter has approximately 1.4 million trainable parameters and achieved new state-of-the-art results across eight attribute classification tasks on the Global StreetScapes dataset.",
+    "doc_id": "2602.16590v1",
+    "gold_doc_ids": [
+      "2602.16590v1"
+    ],
+    "title": "A Contrastive Learning Framework Empowered by Attention-based Feature Adaptation for Street-View Image Classification",
+    "answerable": true,
+    "question_id": "q_237"
+  },
+  {
+    "question": "What was the median word count of the prompts used by participants when interacting with the GPT model?",
+    "answer": "The median word count of the prompts used by participants was 16.2 words. Most participants employed concise prompts while interacting with the LLM-integrated BEMS.",
+    "doc_id": "2602.16140v1",
+    "gold_doc_ids": [
+      "2602.16140v1"
+    ],
+    "title": "Human-AI Collaboration in Large Language Model-Integrated Building Energy Management Systems: The Role of User Domain Knowledge and AI Literacy",
+    "answerable": true,
+    "question_id": "q_238"
+  },
+  {
+    "question": "What alternative approach does the paper emphasize for managing AI memory, and what advantage does it provide?",
+    "answer": "The paper emphasizes the 'store then on-demand extract' approach, which seeks to retain raw experiences and apply them flexibly to various tasks as needed. This approach avoids the loss of information that can occur in the extraction process and allows for a broader application of retained knowledge.",
+    "doc_id": "2602.16192v1",
+    "gold_doc_ids": [
+      "2602.16192v1"
+    ],
+    "title": "Revolutionizing Long-Term Memory in AI: New Horizons with High-Capacity and High-Speed Storage",
+    "answerable": true,
+    "question_id": "q_239"
+  },
+  {
+    "question": "What are the four persistent patterns in dataset documentation conceptualization identified in the study?",
+    "answer": "The four persistent patterns identified are unclear operationalizations of documentation's value, decontextualized designs, unaddressed labor demands, and a tendency to treat integration as future work.",
+    "doc_id": "2602.15968v1",
+    "gold_doc_ids": [
+      "2602.15968v1"
+    ],
+    "title": "From Reflection to Repair: A Scoping Review of Dataset Documentation Tools",
+    "answerable": true,
+    "question_id": "q_240"
+  },
+  {
+    "question": "What is the impact of the proposed MLC loss on multilingual safety and model utility?",
+    "answer": "The proposed MLC loss enhances multilingual safety with limited impact on general model utility. It allows for simultaneous alignment across multiple languages using only multilingual prompt variants without requiring additional supervision in low-resource languages.",
+    "doc_id": "2602.16660v1",
+    "gold_doc_ids": [
+      "2602.16660v1"
+    ],
+    "title": "Align Once, Benefit Multilingually: Enforcing Multilingual Consistency for LLM Safety Alignment",
+    "answerable": true,
+    "question_id": "q_241"
+  },
+  {
+    "question": "What is the purpose of the Golden Set (GDS) in the Decision Quality Evaluation Framework at Pinterest?",
+    "answer": "The Golden Set (GDS) is curated by subject matter experts (SMEs) and serves as a ground truth benchmark for evaluating the quality of moderation decisions made by human agents and Large Language Models (LLMs).",
+    "doc_id": "2602.15809v1",
+    "gold_doc_ids": [
+      "2602.15809v1"
+    ],
+    "title": "Decision Quality Evaluation Framework at Pinterest",
+    "answerable": true,
+    "question_id": "q_242"
+  },
+  {
+    "question": "How does CAFE improve performance compared to non-causal methods under controlled covariate shifts?",
+    "answer": "CAFE reduces performance drop by approximately 4 times relative to a non-causal multi-agent baseline and produces more compact feature sets with more stable post-hoc attributions.",
+    "doc_id": "2602.16435v1",
+    "gold_doc_ids": [
+      "2602.16435v1"
+    ],
+    "title": "Causally-Guided Automated Feature Engineering with Multi-Agent Reinforcement Learning",
+    "answerable": true,
+    "question_id": "q_243"
+  },
+  {
+    "question": "What is the primary purpose of the ScenicRules benchmark introduced in the paper?",
+    "answer": "The primary purpose of the ScenicRules benchmark is to evaluate autonomous driving systems in stochastic environments under prioritized multi-objective specifications. It aims to address the lack of existing benchmarks that combine multi-objective prioritized rules with formal environment models.",
+    "doc_id": "2602.16073v1",
+    "gold_doc_ids": [
+      "2602.16073v1"
+    ],
+    "title": "ScenicRules: An Autonomous Driving Benchmark with Multi-Objective Specifications and Abstract Scenarios",
+    "answerable": true,
+    "question_id": "q_244"
+  },
+  {
+    "question": "What main elements does the proposed feedback-loop model capture in recommender systems?",
+    "answer": "The proposed feedback-loop model captures implicit feedback, periodic retraining, probabilistic adoption of recommendations, and heterogeneous recommender systems.",
+    "doc_id": "2602.16315v1",
+    "gold_doc_ids": [
+      "2602.16315v1"
+    ],
+    "title": "The Diversity Paradox revisited: Systemic Effects of Feedback Loops in Recommender Systems",
+    "answerable": true,
+    "question_id": "q_245"
+  },
+  {
+    "question": "Which AI systems have been banned in regulatory discussions in 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_246"
+  },
+  {
+    "question": "Which image classifiers were deployed on the embedded memory chip for the EMFI sensitivity analysis?",
+    "answer": "The image classifiers deployed were ResNet-18, ResNet-34, ResNet-50, and VGG-11.",
+    "doc_id": "2602.16309v1",
+    "gold_doc_ids": [
+      "2602.16309v1"
+    ],
+    "title": "The Weight of a Bit: EMFI Sensitivity Analysis of Embedded Deep Learning Models",
+    "answerable": true,
+    "question_id": "q_247"
+  },
+  {
+    "question": "What is the main limitation of existing approaches that rely on single judges or aggregate multiple judges in LLM evaluations?",
+    "answer": "The main limitation is that LLM judges vary substantially in performance across tasks and aspects, and their judgment probabilities may be biased and inconsistent. This inconsistency limits the effectiveness of direct probability-based ranking.",
+    "doc_id": "2602.16610v1",
+    "gold_doc_ids": [
+      "2602.16610v1"
+    ],
+    "title": "Who can we trust? LLM-as-a-jury for Comparative Assessment",
+    "answerable": true,
+    "question_id": "q_248"
+  },
+  {
+    "question": "What was the outcome of applying multitask learning in the research on color attribute regression and emotion classification?",
+    "answer": "The research demonstrated that multitask learning improved the performance of both color attribute regression and emotion classification tasks.",
+    "doc_id": "2602.16256v1",
+    "gold_doc_ids": [
+      "2602.16256v1"
+    ],
+    "title": "Color-based Emotion Representation for Speech Emotion Recognition",
+    "answerable": true,
+    "question_id": "q_249"
+  },
+  {
+    "question": "What new formalisation does the paper provide in terms of causal abstraction?",
+    "answer": "The paper provides a new formalisation of causal abstraction that unifies several notions in the literature, including constructive causal abstraction, Q-$\u03c4$ consistency, and abstractions based on interchange interventions, formalised in terms of category theory.",
+    "doc_id": "2602.16612v1",
+    "gold_doc_ids": [
+      "2602.16612v1"
+    ],
+    "title": "Causal and Compositional Abstraction",
+    "answerable": true,
+    "question_id": "q_250"
+  },
+  {
+    "question": "What is the name of the framework proposed in the research paper for explaining Transformer models?",
+    "answer": "The proposed framework is called the Context-Aware Layer-wise Integrated Gradients (CA-LIG) Framework. It computes layer-wise Integrated Gradients within each Transformer block and fuses these token-level attributions with class-specific attention gradients.",
+    "doc_id": "2602.16608v1",
+    "gold_doc_ids": [
+      "2602.16608v1"
+    ],
+    "title": "Explainable AI: Context-Aware Layer-Wise Integrated Gradients for Explaining Transformer Models",
+    "answerable": true,
+    "question_id": "q_251"
+  },
+  {
+    "question": "What is the proposed architecture for learning on Kolmogorov-Arnold Networks (KANs) called?",
+    "answer": "The proposed architecture for learning on Kolmogorov-Arnold Networks (KANs) is called WS-KAN. It is the first weight-space architecture that naturally accounts for the symmetry of KANs.",
+    "doc_id": "2602.16316v1",
+    "gold_doc_ids": [
+      "2602.16316v1"
+    ],
+    "title": "A Graph Meta-Network for Learning on Kolmogorov-Arnold Networks",
+    "answerable": true,
+    "question_id": "q_252"
+  },
+  {
+    "question": "What are some of the complex workflows that CE-MCP enables agents to consolidate into a single program?",
+    "answer": "CE-MCP enables agents to consolidate complex workflows such as SQL querying, file analysis, and multi-step data transformations into a single program. This capability enhances the execution within an isolated runtime environment.",
+    "doc_id": "2602.15945v1",
+    "gold_doc_ids": [
+      "2602.15945v1"
+    ],
+    "title": "From Tool Orchestration to Code Execution: A Study of MCP Design Choices",
+    "answerable": true,
+    "question_id": "q_253"
+  },
+  {
+    "question": "What is the latest policy change by the EU regarding AI regulations in 2024?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_254"
+  },
+  {
+    "question": "What is the main challenge addressed by the Graphon Mean-Field Subsampling framework in the context of multi-agent reinforcement learning?",
+    "answer": "The main challenge addressed is coordinating large populations of interacting agents, where the size of the joint state-action space scales exponentially with the number of agents. The framework aims to alleviate this burden while accommodating heterogeneous agent interactions.",
+    "doc_id": "2602.16196v1",
+    "gold_doc_ids": [
+      "2602.16196v1"
+    ],
+    "title": "Graphon Mean-Field Subsampling for Cooperative Heterogeneous Multi-Agent Reinforcement Learning",
+    "answerable": true,
+    "question_id": "q_255"
+  },
+  {
+    "question": "How much speedup does HAWX achieve in a layer-level search with two candidate approximate blocks for LeNet-5?",
+    "answer": "HAWX achieves over 23* speedup in a layer-level search with two candidate approximate blocks for LeNet-5, and more than (3*106)* speedup at the filter-level search.",
+    "doc_id": "2602.16336v1",
+    "gold_doc_ids": [
+      "2602.16336v1"
+    ],
+    "title": "HAWX: A Hardware-Aware FrameWork for Fast and Scalable ApproXimation of DNNs",
+    "answerable": true,
+    "question_id": "q_256"
+  },
+  {
+    "question": "How many participants are expected in the next AI hackathon?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_257"
+  },
+  {
+    "question": "What is the main contribution of the paper 'Towards Efficient Constraint Handling in Neural Solvers for Routing Problems'?",
+    "answer": "The main contribution of the paper is the introduction of Construct-and-Refine (CaR), an efficient constraint-handling framework for neural routing solvers that uses explicit learning-based feasibility refinement. This framework allows for better handling of complex constraints compared to previous methods.",
+    "doc_id": "2602.16012v1",
+    "gold_doc_ids": [
+      "2602.16012v1"
+    ],
+    "title": "Towards Efficient Constraint Handling in Neural Solvers for Routing Problems",
+    "answerable": true,
+    "question_id": "q_258"
+  },
+  {
+    "question": "What are the most cited papers in AI ethics published recently?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_259"
+  },
+  {
+    "question": "What two key components are introduced in the study to enhance Spatial AQA?",
+    "answer": "The study introduces a movement-centric spatial audio augmentation framework for generating training data and an end-to-end multimodal finetuning approach with a thinking mode. The thinking mode allows audio-language models to produce intermediate reasoning steps prior to answering questions.",
+    "doc_id": "2602.16334v1",
+    "gold_doc_ids": [
+      "2602.16334v1"
+    ],
+    "title": "Spatial Audio Question Answering and Reasoning on Dynamic Source Movements",
+    "answerable": true,
+    "question_id": "q_260"
+  },
+  {
+    "question": "What was the numerical success rate for the cell culture task in the LLM arm compared to the Internet arm?",
+    "answer": "In the LLM arm, the success rate for the cell culture task was 68.8%, while in the Internet arm it was 55.3%, with a P value of 0.059 indicating a numerically higher success rate for the LLM group.",
+    "doc_id": "2602.16703v1",
+    "gold_doc_ids": [
+      "2602.16703v1"
+    ],
+    "title": "Measuring Mid-2025 LLM-Assistance on Novice Performance in Biology",
+    "answerable": true,
+    "question_id": "q_261"
+  },
+  {
+    "question": "What is the main challenge addressed by the surrogate-based prevalence measurement framework in A/B testing?",
+    "answer": "The main challenge is the high cost and slow speed of repeatedly running expensive labeling for every experiment arm and segment, which is not feasible for large-scale measurement. The surrogate-based framework decouples this expensive labeling from per-experiment evaluation to provide a scalable solution.",
+    "doc_id": "2602.16111v1",
+    "gold_doc_ids": [
+      "2602.16111v1"
+    ],
+    "title": "Surrogate-Based Prevalence Measurement for Large-Scale A/B Testing",
+    "answerable": true,
+    "question_id": "q_262"
+  },
+  {
+    "question": "Which organization sponsored the most recent AAAI conference?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_263"
+  },
+  {
+    "question": "What is the main difference between permanent citizens' assemblies and one-off panels?",
+    "answer": "Permanent citizens' assemblies are ongoing deliberative bodies with panels that rotate over time, allowing for shifting participation across multiple rounds. In contrast, one-off panels represent the population in a single snapshot.",
+    "doc_id": "2602.16194v1",
+    "gold_doc_ids": [
+      "2602.16194v1"
+    ],
+    "title": "Temporal Panel Selection in Ongoing Citizens' Assemblies",
+    "answerable": true,
+    "question_id": "q_264"
+  },
+  {
+    "question": "What is the primary challenge addressed by the GlobeDiff algorithm in multi-agent systems?",
+    "answer": "The primary challenge addressed by the GlobeDiff algorithm is the issue of partial observability, which hinders effective coordination and decision-making in multi-agent systems.",
+    "doc_id": "2602.15776v1",
+    "gold_doc_ids": [
+      "2602.15776v1"
+    ],
+    "title": "GlobeDiff: State Diffusion Process for Partial Observability in Multi-Agent Systems",
+    "answerable": true,
+    "question_id": "q_265"
+  },
+  {
+    "question": "What key finding does the paper report about the relationship between model scale and annotation quality?",
+    "answer": "The paper finds that increased model scale does not guarantee improved annotation quality, as smaller, more task-aligned models often exhibit more consistent behavior than their larger counterparts.",
+    "doc_id": "2602.16241v1",
+    "gold_doc_ids": [
+      "2602.16241v1"
+    ],
+    "title": "Are LLMs Ready to Replace Bangla Annotators?",
+    "answerable": true,
+    "question_id": "q_266"
+  },
+  {
+    "question": "What findings were observed regarding the performance of tiny models compared to moderately sized SLMs within the Agent Skill framework?",
+    "answer": "Tiny models struggle with reliable skill selection, whereas moderately sized small language models (approximately 12B - 30B parameters) benefit substantially from the Agent Skill approach, leading to improved performance.",
+    "doc_id": "2602.16653v1",
+    "gold_doc_ids": [
+      "2602.16653v1"
+    ],
+    "title": "Agent Skill Framework: Perspectives on the Potential of Small Language Models in Industrial Environments",
+    "answerable": true,
+    "question_id": "q_267"
+  },
+  {
+    "question": "What was the outcome of the latest open-source AI license debate?",
+    "answer": "I don't have enough information in the provided documents to answer this question.",
+    "gold_doc_ids": [],
+    "title": null,
+    "answerable": false,
+    "question_id": "q_268"
+  },
+  {
+    "question": "What performance improvement was achieved through the transplant technique in the cross-generation setting?",
+    "answer": "In the cross-generation setting, transplanting activation-selected modules can improve the underperforming model significantly, reaching up to twice the target baseline and achieving gap-based recovery above 100%.",
+    "doc_id": "2602.16189v1",
+    "gold_doc_ids": [
+      "2602.16189v1"
+    ],
+    "title": "Beyond Learning: A Training-Free Alternative to Model Adaptation",
+    "answerable": true,
+    "question_id": "q_269"
+  },
+  {
+    "question": "What is the significance of the sample complexity and optimality gap achieved by the GMFS framework?",
+    "answer": "The GMFS framework achieves a sample complexity of poly(\u03ba) and an optimality gap of O(1/\u221a\u03ba), indicating that it can effectively approximate the graphon-weighted mean-field while maintaining performance as the number of agents grows. This contributes to its scalability in cooperative multi-agent reinforcement learning.",
+    "doc_id": "2602.16196v1",
+    "gold_doc_ids": [
+      "2602.16196v1"
+    ],
+    "title": "Graphon Mean-Field Subsampling for Cooperative Heterogeneous Multi-Agent Reinforcement Learning",
+    "answerable": true,
+    "question_id": "q_270"
+  },
+  {
+    "question": "What empirical results does GoldDiff achieve compared to full-scan baselines on the AFHQ dataset?",
+    "answer": "GoldDiff achieves a 71 times speedup on the AFHQ dataset while matching or outperforming the performance of full-scan baselines.",
+    "doc_id": "2602.16498v1",
+    "gold_doc_ids": [
+      "2602.16498v1"
+    ],
+    "title": "Fast and Scalable Analytical Diffusion",
+    "answerable": true,
+    "question_id": "q_271"
+  },
+  {
+    "question": "What are the main benefits of the GraphRAG pipeline as indicated by the evaluations?",
+    "answer": "GraphRAG achieves higher precision and interpretability compared to other methods, and it produces well-grounded, citation-reliable responses that have strong domain relevance, confirmed by expert validation.",
+    "doc_id": "2602.16650v1",
+    "gold_doc_ids": [
+      "2602.16650v1"
+    ],
+    "title": "Retrieval Augmented Generation of Literature-derived Polymer Knowledge: The Example of a Biodegradable Polymer Expert System",
+    "answerable": true,
+    "question_id": "q_272"
+  },
+  {
+    "question": "What is the main limitation in molecular dynamics (MD) mentioned in the abstract?",
+    "answer": "The main limitation in molecular dynamics (MD) mentioned in the abstract is the rare-event sampling problem, which has been a central challenge, particularly in biomolecular simulation.",
+    "doc_id": "2602.16634v1",
+    "gold_doc_ids": [
+      "2602.16634v1"
+    ],
+    "title": "Enhanced Diffusion Sampling: Efficient Rare Event Sampling and Free Energy Calculation with Diffusion Models",
+    "answerable": true,
+    "question_id": "q_273"
+  },
+  {
+    "question": "What is the primary cause of the trade-off between generative capabilities and understanding in multimodal models?",
+    "answer": "The primary cause of the trade-off is the potential conflict between generation and understanding, which creates a competitive dynamic within the model.",
+    "doc_id": "2602.15772v1",
+    "gold_doc_ids": [
+      "2602.15772v1"
+    ],
+    "title": "Understanding vs. Generation: Navigating Optimization Dilemma in Multimodal Models",
+    "answerable": true,
+    "question_id": "q_274"
+  },
+  {
+    "question": "What is the main advantage of Conditionally Additive Local Models (CALMs) over Generalized Additive Models (GAMs)?",
+    "answer": "CALMs balance the interpretability of GAMs with the accuracy of GA$^2$Ms by allowing multiple univariate shape functions per feature that are active in different regions of the input space. This approach captures interactions while maintaining local additivity.",
+    "doc_id": "2602.16503v1",
+    "gold_doc_ids": [
+      "2602.16503v1"
+    ],
+    "title": "Interpretability-by-Design with Accurate Locally Additive Models and Conditional Feature Effects",
+    "answerable": true,
+    "question_id": "q_275"
+  },
+  {
+    "question": "What are the two key mechanisms introduced in the Team-of-Thoughts framework to optimize performance?",
+    "answer": "The two key mechanisms are an orchestrator calibration scheme, which identifies models with superior coordination capabilities, and a self-assessment protocol, where tool agents profile their own domain expertise to account for variations in post-training skills.",
+    "doc_id": "2602.16485v1",
+    "gold_doc_ids": [
+      "2602.16485v1"
+    ],
+    "title": "Team of Thoughts: Efficient Test-time Scaling of Agentic Systems through Orchestrated Tool Calling",
+    "answerable": true,
+    "question_id": "q_276"
+  },
+  {
+    "question": "How much does core-guarding reduce disagreement in simulations with varying degrees of semantic divergence?",
+    "answer": "In simulations with varying degrees of semantic divergence, core-guarding reduces disagreement by 72-96%.",
+    "doc_id": "2602.16424v1",
+    "gold_doc_ids": [
+      "2602.16424v1"
+    ],
+    "title": "Verifiable Semantics for Agent-to-Agent Communication",
+    "answerable": true,
+    "question_id": "q_277"
+  },
+  {
+    "question": "What is the main issue with existing physics-informed neural network methods as described in the abstract?",
+    "answer": "Existing physics-informed neural network methods typically train with fixed coordinate system inputs, which can lead to geometric misalignment with localized high-frequency structures. This misalignment induces gradient stiffness and ill-conditioning that hinder convergence.",
+    "doc_id": "2602.16193v1",
+    "gold_doc_ids": [
+      "2602.16193v1"
+    ],
+    "title": "Rethinking Input Domains in Physics-Informed Neural Networks via Geometric Compactification Mappings",
+    "answerable": true,
+    "question_id": "q_278"
+  },
+  {
+    "question": "What factors influence the generalization error according to the findings of this research?",
+    "answer": "The research identifies three key factors that influence generalization error: information loss from irreversibility in the model, the maximum attainable loss value, and the generalized conditional entropy of features with respect to labels.",
+    "doc_id": "2602.16177v1",
+    "gold_doc_ids": [
+      "2602.16177v1"
+    ],
+    "title": "Conjugate Learning Theory: Uncovering the Mechanisms of Trainability and Generalization in Deep Neural Networks",
+    "answerable": true,
+    "question_id": "q_279"
+  },
+  {
+    "question": "What is the main limitation of traditional ANN-based retrieval as mentioned in the abstract?",
+    "answer": "The main limitation is that item embeddings and their indices are typically learned in separate stages, which can lead to suboptimal retrieval quality, particularly for newly created items. Additionally, even though ANN offers sublinear query time, it incurs substantial computation costs at industry scale as it must be run for every request.",
+    "doc_id": "2602.16124v1",
+    "gold_doc_ids": [
+      "2602.16124v1"
+    ],
+    "title": "Rethinking ANN-based Retrieval: Multifaceted Learnable Index for Large-scale Recommendation System",
+    "answerable": true,
+    "question_id": "q_280"
+  },
+  {
+    "question": "What are the primary benefits of the Agent Skill framework when applied to small language models?",
+    "answer": "The Agent Skill framework improves context engineering, reduces hallucinations, and boosts task accuracy when applied to small language models. These benefits are particularly relevant in industrial scenarios where using public APIs is not feasible.",
+    "doc_id": "2602.16653v1",
+    "gold_doc_ids": [
+      "2602.16653v1"
+    ],
+    "title": "Agent Skill Framework: Perspectives on the Potential of Small Language Models in Industrial Environments",
+    "answerable": true,
+    "question_id": "q_281"
+  },
+  {
+    "question": "What are the major findings from the experiments conducted on various LLMs using IndicEval?",
+    "answer": "The experiments revealed three major findings: CoT prompting improves reasoning accuracy, significant cross-model performance disparities exist in high-complexity examinations, and there is a critical challenge in multilingual performance, with accuracy in Hindi dropping compared to English, especially under Zero-Shot conditions.",
+    "doc_id": "2602.16467v1",
+    "gold_doc_ids": [
+      "2602.16467v1"
+    ],
+    "title": "IndicEval: A Bilingual Indian Educational Evaluation Framework for Large Language Models",
+    "answerable": true,
+    "question_id": "q_282"
   }
 ]

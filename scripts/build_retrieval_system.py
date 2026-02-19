@@ -23,7 +23,6 @@ from data.loader import ArXivLoader
 from data.chunking import TextChunker
 from retrieval.embeddings import EmbeddingModel
 from retrieval.indexing import VectorIndex
-from retrieval.retriever import Retriever
 from utils import config as config_utils
 
 # Set up logging
@@ -167,7 +166,7 @@ def build_retrieval_system(config: Dict[str, Any], max_docs: int = None, force_r
     logger.info(f"="*60)
 
     # Setup paths
-    project_root = Path(__file__).parent.parent.parent
+    project_root = Path(__file__).parent.parent
     data_dir = project_root / config['data']['data_dir']
     processed_dir = project_root / "data" / "processed"
     processed_dir.mkdir(parents=True, exist_ok=True)
@@ -275,36 +274,6 @@ def build_retrieval_system(config: Dict[str, Any], max_docs: int = None, force_r
 
     # Save index
     vector_index.save(str(index_file))
-
-    # 5. Test retrieval with sample queries
-    logger.info("\n[Step 5/5] Testing retrieval with sample queries...")
-    retrieval_config = config_utils.get_retrieval_config(config)
-    retriever = Retriever(
-        embedding_model=embedding_model,
-        vector_index=vector_index,
-        config=retrieval_config,
-        chunks=chunks
-    )
-
-    # Sample queries
-    sample_queries = [
-        "deep learning neural networks",
-        "natural language processing transformers",
-        "computer vision image classification",
-    ]
-
-    logger.info("\nSample Retrieval Results:")
-    logger.info("-" * 60)
-
-    for query in sample_queries:
-        result = retriever.retrieve(query)
-        logger.info(f"\nQuery: '{query}'")
-        logger.info(f"Retrieved {result.num_results} documents in {result.latency_ms:.2f}ms")
-        logger.info(f"Top 3 results:")
-
-        for i, (doc, dist) in enumerate(zip(result.documents[:3], result.distances[:3])):
-            title = doc.get('original_doc', {}).get('title', 'N/A')
-            logger.info(f"  {i+1}. [score={dist:.3f}] {title[:80]}...")
 
     logger.info("\n" + "="*60)
     logger.info("Retrieval system build complete!")

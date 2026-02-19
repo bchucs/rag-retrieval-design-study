@@ -39,7 +39,10 @@ class ArXivLoader:
         """
         if self.cache_file.exists() and not force_reload:
             logger.info(f"Loading cached corpus from {self.cache_file}")
-            return self._load_from_cache()
+            cached = self._load_from_cache()
+            if self.max_docs is None or len(cached) >= self.max_docs:
+                return cached
+            logger.info(f"Cache has {len(cached)} docs but {self.max_docs} requested, re-downloading...")
 
         logger.info("Downloading arXiv papers using arXiv API...")
         documents = self._download_and_process()
@@ -124,6 +127,8 @@ class ArXivLoader:
         """
         with open(self.cache_file, 'r', encoding='utf-8') as f:
             documents = json.load(f)
+        if self.max_docs is not None:
+            documents = documents[:self.max_docs]
         logger.info(f"Loaded {len(documents)} documents from cache")
         return documents
 

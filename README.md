@@ -4,174 +4,178 @@ A research-focused project studying how retrieval pipeline design choices affect
 
 ## Research Question
 
-> How do retrieval pipeline design choices (chunking strategies, top-k selection, indexing methods) affect answer quality, latency, and hallucination rates in RAG systems?
+> How do retrieval pipeline design choices (top-k selection, distance thresholds, indexing methods) affect answer quality, latency, and hallucination rates in RAG systems?
 
-## Project Overview
+## Overview
 
-This project conducts **controlled experiments** to understand the tradeoffs between different retrieval design decisions in RAG systems. By fixing the dataset, embedding model, and LLM, we isolate the impact of retrieval parameters.
+Controlled experiments isolate the impact of retrieval parameters by fixing the dataset, embedding model, and LLM across all runs.
 
 ### Fixed Components
-- **Dataset**: arXiv Computer Science papers/abstracts
-- **Embedding Model**: sentence-transformers/multi-qa-MiniLM-L6-cos-v1 (optimized for Q&A)
-- **LLM**: GPT-4o-mini
+| Component | Value |
+|---|---|
+| Corpus | arXiv CS papers (cs.AI, cs.CL, cs.CV, cs.LG, cs.NE) — 5,000 documents |
+| Chunking | 512 tokens, no overlap, `cl100k_base` tokenizer |
+| Embedding model | `sentence-transformers/multi-qa-MiniLM-L6-cos-v1` (384-dim) |
+| LLM | `gpt-4o-mini`, temperature=0.0, max_tokens=500 |
+| Evaluation set | 283 questions (225 answerable, 58 unanswerable) |
 
-**Note**: All model configurations are centralized in `experiments/configs/baseline.yaml`. Update this file to change models across all scripts.
+### Experiments
+| | Variable | Configs |
+|---|---|---|
+| **Exp 1** | Retrieval quantity (`top_k`) | 1, 3, 5, 10, 20 |
+| **Exp 2** | Similarity filtering (`distance_threshold`) | none, 0.3, 0.5, 0.7 |
+| **Exp 3** | Index type | flat, IVF-conservative, IVF-balanced, IVF-aggressive |
 
-### Variable Components (Experiments)
-1. **Chunking strategies**: chunk size (256/512/1024 tokens), overlap vs no overlap
-2. **Top-k selection**: top-k values (3/5/10), distance thresholds
-3. **Indexing methods**: flat index, IVF clustering
+---
 
 ## Project Structure
 
 ```
 .
-├── src/                       # Source code
-│   ├── data/                  # Data loading and chunking
-│   ├── retrieval/             # Embedding, indexing, retrieval
-│   ├── generation/            # LLM interface
-│   ├── evaluation/            # Metrics and evaluation harness
-│   └── utils/                 # Logging and utilities
-├── experiments/               # Experiment configurations and scripts
-│   ├── configs/               # YAML configuration files
-│   └── scripts/               # Experiment runner scripts
-├── data/                      # Data storage
-│   ├── raw/                   # Original arXiv data
-│   ├── processed/             # Processed embeddings and indexes
-│   └── questions/             # Evaluation question sets
-├── results/                   # Experiment results (CSV)
-├── notebooks/                 # Analysis notebooks
-└── tests/                     # Unit tests
+├── src/                          # Source modules
+│   ├── rag_pipeline.py           # End-to-end RAG orchestration
+│   ├── data/
+│   │   ├── loader.py             # ArXiv corpus loader (API + caching)
+│   │   └── chunking.py           # Token-based text chunking
+│   ├── retrieval/
+│   │   ├── embeddings.py         # SentenceTransformers wrapper
+│   │   ├── indexing.py           # FAISS flat/IVF index builder
+│   │   └── retriever.py          # Query embedding + vector search
+│   ├── generation/
+│   │   └── llm.py                # OpenAI GPT interface
+│   ├── evaluation/
+│   │   ├── metrics.py            # Recall, correctness, hallucination, abstention
+│   │   └── harness.py            # Evaluation orchestration + CSV export
+│   └── utils/
+│       └── config.py             # YAML config loading + factory functions
+│
+├── experiments/
+│   ├── configs/
+│   │   ├── baseline.yaml         # Reference config (top_k=5, flat index)
+│   │   ├── template.yaml         # Documented template with all options
+│   │   ├── exp1/                 # top_k variants (1, 3, 5, 10, 20)
+│   │   ├── exp2/                 # distance_threshold variants
+│   │   └── exp3/                 # indexing strategy variants
+│   └── scripts/
+│       └── run_evaluation.py     # Evaluation runner for a single config
+│
+├── scripts/
+│   ├── build_retrieval_system.py # Build chunks, embeddings, and FAISS index
+│   ├── generate_questions.py     # LLM-based eval question generation
+│   └── run_all_experiments.sh    # Batch runner for all configs
+│
+├── data/
+│   ├── raw/
+│   │   └── arxiv_cs_corpus.json  # Cached arXiv corpus
+│   ├── processed/
+│   │   ├── baseline_chunks.json       # Chunked documents
+│   │   ├── baseline_metadata.json     # Artifact metadata + hash
+│   │   ├── baseline_embeddings.npy    # Precomputed embeddings
+│   │   └── baseline_index.faiss       # FAISS flat index
+│   └── questions/
+│       └── eval_questions.json        # 283 evaluation questions
+│
+├── results/                      # Experiment output CSVs
+│   └── logs/                     # Per-experiment run logs
+└── notebooks/                    # Analysis notebooks
 ```
+
+---
 
 ## Setup
 
-### 1. Environment Setup
+### 1. Install dependencies
 
 ```bash
-# Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Environment Variables
-
-Create a `.env` file with your API keys:
+### 2. Configure API keys
 
 ```bash
+# .env
 OPENAI_API_KEY=your_openai_api_key_here
 ```
 
-### 3. Download Data
+---
+
+## Workflow
+
+### Step 1 — Build retrieval artifacts
+
+Downloads the arXiv corpus, chunks documents, generates embeddings, and builds the FAISS index. Artifacts are cached and reused across experiments that share the same chunking/embedding config.
 
 ```bash
-# TODO: Add data download instructions
-# For now, implement data loader in src/data/loader.py
+python scripts/build_retrieval_system.py
 ```
 
-## Running Experiments
+Outputs to `data/processed/`: `baseline_chunks.json`, `baseline_embeddings.npy`, `baseline_index.faiss`, `baseline_metadata.json`.
 
-### Baseline Experiment
+### Step 2 — Generate evaluation questions
+
+Uses GPT to generate factual questions from document abstracts. Produces answerable questions (with gold doc IDs and reference answers) and unanswerable questions.
 
 ```bash
-python experiments/scripts/run_baseline.py --config experiments/configs/baseline.yaml
+python scripts/generate_questions.py
 ```
 
-### Experiment 1: Chunking Strategies
+Outputs to `data/questions/eval_questions.json`.
 
+### Step 3 — Run experiments
+
+**Single config:**
 ```bash
-python experiments/scripts/run_experiment.py \
-    --base-config experiments/configs/baseline.yaml \
-    --experiment-config experiments/configs/experiment1_chunking.yaml
+python experiments/scripts/run_evaluation.py \
+    --config experiments/configs/exp1/exp1_topk_5.yaml
 ```
 
-### Experiment 2: Top-k and Distance Thresholds
-
+**All 13 configs in batch:**
 ```bash
-python experiments/scripts/run_experiment.py \
-    --base-config experiments/configs/baseline.yaml \
-    --experiment-config experiments/configs/experiment2_topk.yaml
+./scripts/run_all_experiments.sh
 ```
 
-### Experiment 3: Indexing Strategies
-
+**Options:**
 ```bash
-python experiments/scripts/run_experiment.py \
-    --base-config experiments/configs/baseline.yaml \
-    --experiment-config experiments/configs/experiment3_indexing.yaml
+# Limit questions (useful for smoke testing)
+./scripts/run_all_experiments.sh --num-questions 20
+
+# Run only one experiment group
+./scripts/run_all_experiments.sh --configs-dir experiments/configs/exp1
+
+# Preview commands without executing
+./scripts/run_all_experiments.sh --dry-run
 ```
 
-## Metrics
+Results are written to `results/<exp_name>_evaluation_<n>.csv`. Logs go to `results/logs/<exp_name>.log`.
 
-The evaluation harness measures:
+> **Note**: Exp 3 configs use experiment-specific FAISS indices (`{exp_name}_index.faiss`). Build these before running exp3: `python scripts/build_retrieval_system.py --config experiments/configs/exp3/<config>.yaml`
 
-- **Retrieval Recall**: Fraction of gold documents retrieved in top-k
-- **Answer Correctness**: 0-2 scale evaluation of answer quality
-- **Hallucination Rate**: Percentage of answers containing unsupported claims
-- **Latency**: Retrieval and generation time (milliseconds)
+---
+
+## Evaluation Metrics
+
+| Metric | Description |
+|---|---|
+| `retrieval_recall` | Fraction of gold documents retrieved in top-k |
+| `answer_correctness` | LLM-judged answer quality (0–2 scale) |
+| `has_hallucination` | Whether the answer contains unsupported claims |
+| `abstention_score` | For unanswerable questions: whether the model correctly declines (0 or 2) |
+| `retrieval_latency_ms` | Time to embed query and search index |
+| `generation_latency_ms` | Time to generate answer via LLM |
+| `total_latency_ms` | End-to-end latency |
+
+### Result CSV columns
+`question_id`, `question`, `config_name`, `answerable`, `retrieved_doc_ids`, `retrieval_recall`, `answer`, `reference_answer`, `answer_correctness`, `has_hallucination`, `abstention_score`, `retrieval_latency_ms`, `generation_latency_ms`, `total_latency_ms`
+
+---
 
 ## Results
-
-Results are saved as CSV files in the `results/` directory with the following columns:
-- question_id
-- config_name
-- retrieved_doc_ids
-- retrieval_recall
-- answer
-- answer_correctness
-- has_hallucination
-- retrieval_latency_ms
-- generation_latency_ms
-- total_latency_ms
-
-## Development
-
-### Running Tests
-
-```bash
-pytest tests/
-```
-
-### Code Formatting
-
-```bash
-black src/ experiments/
-flake8 src/ experiments/
-```
-
-## Implementation Roadmap
-
-- [ ] **Step 1**: Dataset loader and baseline retrieval
-- [ ] **Step 2**: End-to-end RAG pipeline
-- [ ] **Step 3**: Evaluation harness and metrics
-- [ ] **Step 4**: Experiment 1 - Chunking strategies
-- [ ] **Step 5**: Experiment 2 - Top-k and thresholds
-- [ ] **Step 6**: Experiment 3 - Indexing strategies
-- [ ] **Step 7**: Failure analysis
-- [ ] **Step 8**: Research writeup
-- [ ] **Step 9**: Repository cleanup
-
-## Key Findings
-
-_To be filled after experiments are complete_
-
-## Limitations
-
-_To be filled after experiments are complete_
-
-## Future Work
-
-_To be filled after experiments are complete_
-
-## License
-
-MIT License
+Ongoing
 
 ## References
 
-- Sentence Transformers: https://www.sbert.net/
-- FAISS: https://github.com/facebookresearch/faiss
-- arXiv Dataset: https://www.kaggle.com/Cornell-University/arxiv
+- [Sentence Transformers](https://www.sbert.net/)
+- [FAISS](https://github.com/facebookresearch/faiss)
+- [arXiv API](https://arxiv.org/help/api)

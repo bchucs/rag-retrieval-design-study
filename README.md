@@ -49,7 +49,34 @@ Controlled experiments isolate the impact of retrieval parameters by fixing the 
 - Abstention degrades above top_k=1 — more retrieved context makes the model more likely to attempt an answer on unanswerable questions
 - Total latency is flat up to top_k=10, then jumps 67% at top_k=20 due to larger context windows
 
-Exp 2 (distance thresholds) and Exp 3 (indexing strategies) pending.
+### Exp 2 — Similarity Threshold (distance_threshold)
+
+| Config | Recall (ans.) | Correctness (ans.) | Hallucination | Abstention (unans.) | Avg Docs | Total latency |
+|---|---|---|---|---|---|---|
+| threshold=none | 0.827 | 1.689 | 4.2% | 1.155 | 8.2 | 4,785ms |
+| threshold=0.3  | 0.822 | 1.680 | 4.9% | 1.172 | 7.8 | 3,552ms |
+| threshold=0.5  | 0.693 | 1.404 | 17.7% | 1.569 | 2.4 | 2,930ms |
+| threshold=0.7  | 0.147 | 0.347 | 66.4% | 1.741 | 0.1 | 1,845ms |
+
+*Correctness on 0–2 scale. Abstention max 2.0. 80 questions retrieved zero docs at threshold=0.5; 249/283 at threshold=0.7.*
+
+**Correctness distribution (answerable questions):**
+
+| Config | Score=0 (wrong) | Score=1 (partial) | Score=2 (correct) |
+|---|---|---|---|
+| threshold=none | 11.6% | 8.0% | 80.4% |
+| threshold=0.3  | 12.4% | 7.1% | 80.4% |
+| threshold=0.5  | 27.1% | 5.3% | 67.6% |
+| threshold=0.7  | 80.0% | 5.3% | 14.7% |
+
+**Findings:**
+- `none` and `0.3` are nearly equivalent in quality — the lenient threshold barely filters (8.2→7.8 avg docs) — but `0.3` cuts ~1.2s of latency with no meaningful quality penalty
+- `0.5` is the inflection point: recall drops to 0.693, hallucinations spike 4× (4.2%→17.7%), and 80 questions receive zero retrieved documents
+- `0.7` is effectively no retrieval — 249/283 questions retrieve zero docs, correctness collapses to 14.7% full-credit, and hallucination rate hits 66.4%
+- Abstention on unanswerable questions improves with stricter thresholds (model correctly declines more often when context is empty), but this is entirely offset by the collapse on answerable questions
+- Retrieval quality is the binding constraint: when relevant docs are filtered out, the LLM hallucinates rather than abstains
+
+Exp 3 (indexing strategies) pending.
 
 ---
 

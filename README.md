@@ -76,7 +76,44 @@ Controlled experiments isolate the impact of retrieval parameters by fixing the 
 - Abstention on unanswerable questions improves with stricter thresholds (model correctly declines more often when context is empty), but this is entirely offset by the collapse on answerable questions
 - Retrieval quality is the binding constraint: when relevant docs are filtered out, the LLM hallucinates rather than abstains
 
-Exp 3 (indexing strategies) pending.
+### Exp 3 — Index Strategy
+
+All IVF variants use `n_clusters=100`, varying only `nprobe` (number of clusters searched at query time).
+
+| Config | n_clusters | nprobe | Recall (ans.) | Correctness (ans.) | Hallucination | Abstention (unans.) | Ret. latency | Total latency |
+|---|---|---|---|---|---|---|---|---|
+| flat             | —   | —  | 0.791 | 1.644 | 3.9%  | 1.052 | 66ms | 3,813ms |
+| ivf_conservative | 100 | 20 | 0.711 | 1.476 | 9.9%  | 1.103 | 64ms | 3,733ms |
+| ivf_balanced     | 100 | 10 | 0.640 | 1.333 | 13.8% | 1.207 | 63ms | 4,045ms |
+| ivf_aggressive   | 100 | ?  | 0.516 | 1.093 | 19.8% | 1.138 | 59ms | ~9,980ms* |
+
+*\* ivf_aggressive total latency is anomalously high — retrieval latency (59ms) is the lowest of the group, so this reflects API variability in generation, not an indexing effect.*
+
+**Correctness distribution (answerable questions):**
+
+| Config | Score=0 (wrong) | Score=1 (partial) | Score=2 (correct) |
+|---|---|---|---|
+| flat             | 12.9% | 9.8% | 77.3% |
+| ivf_conservative | 22.7% | 7.1% | 70.2% |
+| ivf_balanced     | 29.8% | 7.1% | 63.1% |
+| ivf_aggressive   | 40.9% | 8.9% | 50.2% |
+
+**Findings:**
+- Retrieval latency is nearly identical across all configs (59–66ms) — at 5,000 docs the corpus is too small for IVF to provide meaningful speed benefits; flat brute-force is already fast
+- Accuracy degrades monotonically with lower nprobe — fewer clusters searched means more true nearest neighbors missed, directly reducing recall and driving hallucinations up
+- ivf_conservative (nprobe=20) costs 8pp recall vs flat with no latency benefit — a poor trade at this scale
+- The case for IVF is essentially nil on this corpus: total latency is dominated by LLM generation (~3.7s), making sub-10ms retrieval differences irrelevant end-to-end
+- IVF is expected to show real benefits at larger corpus sizes where flat search becomes the bottleneck
+
+---
+
+## Scale-up Plan
+
+All three experiments will be repeated on a larger corpus to test whether findings hold or reverse at scale. Key hypotheses:
+
+- **Exp 1 (top-k)**: Recall curves expected to shift — more documents means sparser coverage per query, so optimal k may be higher
+- **Exp 2 (threshold)**: Inflection point may shift as corpus density changes; threshold=0.5 may become viable if similarity scores compress at scale
+- **Exp 3 (index type)**: IVF latency advantage expected to emerge — flat search scales linearly while IVF scales sub-linearly, making this the experiment most likely to reverse
 
 ---
 

@@ -45,13 +45,7 @@ logs/
 *.ipynb_checkpoints
 
 # Data files (large corpus files)
-data/raw/*.json
-data/raw/*.csv
-data/raw/*.parquet
-data/processed/*.npy
-data/processed/*.pkl
-data/processed/*.h5
-data/processed/*.json
+data/
 
 # Model artifacts and indexes
 *.index

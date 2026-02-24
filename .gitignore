@@ -51,6 +51,7 @@ data/raw/*.parquet
 data/processed/*.npy
 data/processed/*.pkl
 data/processed/*.h5
+data/processed/*.json
 
 # Model artifacts and indexes
 *.index

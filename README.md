@@ -13,7 +13,7 @@ Controlled experiments isolate the impact of retrieval parameters by fixing the 
 ### Fixed Components
 | Component | Value |
 |---|---|
-| Corpus | arXiv CS papers (cs.AI, cs.CL, cs.CV, cs.LG, cs.NE) — 5,000 documents |
+| Corpus | arXiv CS papers (cs.AI, cs.CL, cs.CV, cs.LG, cs.NE) — 50,000 documents → 32,304 chunks |
 | Chunking | 512 tokens, no overlap, `cl100k_base` tokenizer |
 | Embedding model | `sentence-transformers/multi-qa-MiniLM-L6-cos-v1` (384-dim) |
 | LLM | `gpt-4o-mini`, temperature=0.0, max_tokens=500 |
@@ -30,90 +30,92 @@ Controlled experiments isolate the impact of retrieval parameters by fixing the 
 
 ## Results
 
-### Exp 1 — Top-k Retrieval (5,000-doc corpus, 283 questions)
+### Exp 1 — Top-k Retrieval (50,000-doc corpus, 283 questions)
 
-| Config | Recall | Miss% | Correctness | Hallucination | Abstention | Total latency |
+| Config | Recall | Miss% | Correctness | Hallucination | Abstention | Median latency |
 |---|---|---|---|---|---|---|
-| top_k=1  | 0.676 | 32.4% | 1.409 | 6.7% | 1.552 | 3,818ms |
-| top_k=3  | 0.760 | 24.0% | 1.564 | 3.9% | 1.069 | 3,959ms |
-| top_k=5  | 0.791 | 20.9% | 1.653 | 2.8% | 1.086 | 3,795ms |
-| top_k=10 | 0.827 | 17.3% | 1.684 | 4.6% | 1.155 | 4,217ms |
-| top_k=20 | 0.853 | 14.7% | 1.720 | 3.9% | 1.172 | 6,348ms |
+| top_k=1  | 0.498 | 50.2% | 1.160 | 13.8% | 1.603 | 3,303ms |
+| top_k=3  | 0.578 | 42.2% | 1.347 | 11.1% | 1.086 | 3,861ms |
+| top_k=5  | 0.631 | 36.9% | 1.427 | 10.2% | 1.155 | 3,995ms |
+| top_k=10 | 0.662 | 33.8% | 1.502 | 10.7% | 1.103 | 3,894ms |
+| top_k=20 | 0.711 | 28.9% | 1.596 | 9.3%  | 1.086 | 6,233ms |
 
-*Recall and Correctness are for answerable questions only. Abstention is for unanswerable questions (max 2.0). Miss% = fraction of answerable questions where the gold doc was not retrieved.*
+*Recall and Correctness are for answerable questions only. Abstention is for unanswerable questions (max 2.0). Miss% = fraction of answerable questions where the gold doc was not retrieved. Latency is median across all questions.*
 
 **Findings:**
-- Retrieval recall improves with higher k but with diminishing returns (+8.4pp, +3.1pp, +3.6pp, +2.6pp per step)
-- Answer correctness tracks recall tightly — generation quality is high; retrieval is the bottleneck
-- Hallucination is worst at top_k=1 (6.7%) and lowest at top_k=5 (2.8%); adding more context beyond k=5 slightly increases hallucination
-- Abstention degrades above top_k=1 — more retrieved context makes the model more likely to attempt an answer on unanswerable questions
-- Total latency is flat up to top_k=10, then jumps 67% at top_k=20 due to larger context windows
+- Recall is substantially lower across the board vs the 5k corpus — at 10× scale, top_k=20 (0.711) barely matches what top_k=3 achieved at 5k (0.760), confirming that optimal k must be higher at larger corpus sizes
+- Miss rate remains high even at top_k=20 (28.9%), suggesting the evaluation set's gold docs are genuinely harder to surface in a 50k document pool
+- Hallucination is worst at top_k=1 (13.8%) and improves monotonically with k, reaching 9.3% at top_k=20 — unlike the 5k run, there is no U-shaped pattern; more context continues to help throughout this range
+- Abstention on unanswerable questions is best at top_k=1 (1.603) and degrades with more context, consistent with the 5k findings
+- Latency is flat up to top_k=10 (3.3–4.0s), then jumps ~56% at top_k=20 due to larger context windows sent to the LLM
 
 ### Exp 2 — Similarity Threshold (distance_threshold)
 
-| Config | Recall (ans.) | Correctness (ans.) | Hallucination | Abstention (unans.) | Avg Docs | Total latency |
+| Config | Recall (ans.) | Correctness (ans.) | Hallucination | Abstention (unans.) | Avg Docs | Median latency |
 |---|---|---|---|---|---|---|
-| threshold=none | 0.827 | 1.689 | 4.2% | 1.155 | 8.2 | 4,785ms |
-| threshold=0.3  | 0.822 | 1.680 | 4.9% | 1.172 | 7.8 | 3,552ms |
-| threshold=0.5  | 0.693 | 1.404 | 17.7% | 1.569 | 2.4 | 2,930ms |
-| threshold=0.7  | 0.147 | 0.347 | 66.4% | 1.741 | 0.1 | 1,845ms |
+| threshold=none | 0.662 | 1.511 | 9.8%  | 1.121 | 8.3 | 4,763ms |
+| threshold=0.3  | 0.662 | 1.507 | 9.3%  | 1.121 | 8.3 | 4,193ms |
+| threshold=0.5  | 0.596 | 1.364 | 21.3% | 1.345 | 4.6 | 3,844ms |
+| threshold=0.7  | 0.133 | 0.360 | 81.3% | 1.707 | 0.2 | 1,449ms |
 
-*Correctness on 0–2 scale. Abstention max 2.0. 80 questions retrieved zero docs at threshold=0.5; 249/283 at threshold=0.7.*
+*Correctness on 0–2 scale. Abstention max 2.0. 51 questions retrieved zero docs at threshold=0.5; 244/283 at threshold=0.7.*
 
 **Correctness distribution (answerable questions):**
 
 | Config | Score=0 (wrong) | Score=1 (partial) | Score=2 (correct) |
 |---|---|---|---|
-| threshold=none | 11.6% | 8.0% | 80.4% |
-| threshold=0.3  | 12.4% | 7.1% | 80.4% |
-| threshold=0.5  | 27.1% | 5.3% | 67.6% |
-| threshold=0.7  | 80.0% | 5.3% | 14.7% |
+| threshold=none | 19.1% | 10.7% | 70.2% |
+| threshold=0.3  | 20.0% | 9.3%  | 70.7% |
+| threshold=0.5  | 27.1% | 9.3%  | 63.6% |
+| threshold=0.7  | 80.0% | 4.0%  | 16.0% |
 
 **Findings:**
-- `none` and `0.3` are nearly equivalent in quality — the lenient threshold barely filters (8.2→7.8 avg docs) — but `0.3` cuts ~1.2s of latency with no meaningful quality penalty
-- `0.5` is the inflection point: recall drops to 0.693, hallucinations spike 4× (4.2%→17.7%), and 80 questions receive zero retrieved documents
-- `0.7` is effectively no retrieval — 249/283 questions retrieve zero docs, correctness collapses to 14.7% full-credit, and hallucination rate hits 66.4%
-- Abstention on unanswerable questions improves with stricter thresholds (model correctly declines more often when context is empty), but this is entirely offset by the collapse on answerable questions
-- Retrieval quality is the binding constraint: when relevant docs are filtered out, the LLM hallucinates rather than abstains
+- `none` and `0.3` remain nearly equivalent in quality (both 0.662 recall, 70%+ full-credit answers) — the threshold barely filters at this corpus density (8.3 avg docs in both cases) — but `0.3` saves ~570ms of median latency
+- At 50k docs the full-credit rate drops to ~70% vs 80% at 5k, reflecting the lower baseline recall; the relative pattern across thresholds is preserved
+- `0.5` is again the inflection point: recall drops to 0.596, hallucinations more than double (9.8%→21.3%), and 51 questions receive zero retrieved documents
+- `0.7` is effectively no retrieval — 244/283 questions retrieve zero docs, correctness collapses to 16.0% full-credit, and hallucination hits 81.3% (worse than the 66.4% seen at 5k scale)
+- The 0.7 threshold becomes more catastrophic at 50k: with more documents, similarity scores compress and fewer docs clear the high bar, making the cliff steeper
+- Retrieval quality remains the binding constraint: when relevant docs are filtered out, the LLM hallucinates rather than abstains
 
 ### Exp 3 — Index Strategy
 
-All IVF variants use `n_clusters=100`, varying only `nprobe` (number of clusters searched at query time).
+IVF-conservative and IVF-balanced use `n_clusters=100`; IVF-aggressive uses `n_clusters=200`. All vary `nprobe` (number of clusters searched at query time).
 
-| Config | n_clusters | nprobe | Recall (ans.) | Correctness (ans.) | Hallucination | Abstention (unans.) | Ret. latency | Total latency |
+| Config | n_clusters | nprobe | Recall (ans.) | Correctness (ans.) | Hallucination | Abstention (unans.) | Ret. latency | Median latency |
 |---|---|---|---|---|---|---|---|---|
-| flat             | —   | —  | 0.791 | 1.644 | 3.9%  | 1.052 | 66ms | 3,813ms |
-| ivf_conservative | 100 | 20 | 0.711 | 1.476 | 9.9%  | 1.103 | 64ms | 3,733ms |
-| ivf_balanced     | 100 | 10 | 0.640 | 1.333 | 13.8% | 1.207 | 63ms | 4,045ms |
-| ivf_aggressive   | 100 | ?  | 0.516 | 1.093 | 19.8% | 1.138 | 59ms | ~9,980ms* |
-
-*\* ivf_aggressive total latency is anomalously high — retrieval latency (59ms) is the lowest of the group, so this reflects API variability in generation, not an indexing effect.*
+| flat             | —   | —  | 0.631 | 1.422 | 10.2% | 1.000 | 58ms | 3,505ms |
+| ivf_conservative | 100 | 20 | 0.542 | 1.267 | 16.4% | 1.121 | 52ms | 3,937ms |
+| ivf_balanced     | 100 | 10 | 0.453 | 1.089 | 24.9% | 1.155 | 47ms | 3,324ms |
+| ivf_aggressive   | 200 | 5  | 0.360 | 0.871 | 32.9% | 1.121 | 61ms | 3,789ms |
 
 **Correctness distribution (answerable questions):**
 
 | Config | Score=0 (wrong) | Score=1 (partial) | Score=2 (correct) |
 |---|---|---|---|
-| flat             | 12.9% | 9.8% | 77.3% |
-| ivf_conservative | 22.7% | 7.1% | 70.2% |
-| ivf_balanced     | 29.8% | 7.1% | 63.1% |
-| ivf_aggressive   | 40.9% | 8.9% | 50.2% |
+| flat             | 23.6% | 10.7% | 65.8% |
+| ivf_conservative | 31.1% | 11.1% | 57.8% |
+| ivf_balanced     | 39.1% | 12.9% | 48.0% |
+| ivf_aggressive   | 51.1% | 10.7% | 38.2% |
 
 **Findings:**
-- Retrieval latency is nearly identical across all configs (59–66ms) — at 5,000 docs the corpus is too small for IVF to provide meaningful speed benefits; flat brute-force is already fast
-- Accuracy degrades monotonically with lower nprobe — fewer clusters searched means more true nearest neighbors missed, directly reducing recall and driving hallucinations up
-- ivf_conservative (nprobe=20) costs 8pp recall vs flat with no latency benefit — a poor trade at this scale
-- The case for IVF is essentially nil on this corpus: total latency is dominated by LLM generation (~3.7s), making sub-10ms retrieval differences irrelevant end-to-end
-- IVF is expected to show real benefits at larger corpus sizes where flat search becomes the bottleneck
+- Retrieval latency is again nearly identical across configs (47–61ms) — even at 50k docs, retrieval is so fast that IVF provides no measurable latency advantage over flat brute-force
+- Accuracy degrades severely and monotonically with lower nprobe — the accuracy cost of IVF is much larger at 50k than at 5k, as the larger corpus amplifies approximation errors
+- ivf_conservative (nprobe=20) costs 8.9pp recall and 6.4pp full-credit answers vs flat, with zero latency benefit — a worse trade than at 5k scale
+- ivf_aggressive drops full-credit answers to 38.2% (vs 65.8% for flat), with hallucination tripling to 32.9% — an unacceptable quality loss for sub-millisecond savings
+- The case for IVF remains nil at this scale: end-to-end latency is dominated by LLM generation (~3.3–3.9s), making retrieval differences of <15ms irrelevant; flat indexing is the clear choice
+- The scale-up hypothesis — that IVF would show real latency benefits at 50k — did not materialize; the crossover point is likely at a much larger corpus (hundreds of thousands to millions of docs)
 
 ---
 
-## Scale-up Plan
+## Scale-up Results (5k → 50k)
 
-All three experiments will be repeated on a larger corpus to test whether findings hold or reverse at scale. Key hypotheses:
+All three experiments were repeated on a 50,000-document corpus (32,304 chunks) to test whether findings held or reversed at scale. Results above reflect the 50k run.
 
-- **Exp 1 (top-k)**: Recall curves expected to shift — more documents means sparser coverage per query, so optimal k may be higher
-- **Exp 2 (threshold)**: Inflection point may shift as corpus density changes; threshold=0.5 may become viable if similarity scores compress at scale
-- **Exp 3 (index type)**: IVF latency advantage expected to emerge — flat search scales linearly while IVF scales sub-linearly, making this the experiment most likely to reverse
+| Hypothesis | Outcome |
+|---|---|
+| Exp 1: optimal k shifts higher at scale | **Confirmed** — recall at top_k=20 (0.711) barely matches top_k=3 at 5k (0.760); miss rates remain 29–50% throughout |
+| Exp 2: threshold inflection point may shift | **Partially confirmed** — 0.5 threshold is slightly less catastrophic (51 vs 80 zero-doc questions), but hallucination still doubles; 0.7 becomes *worse* |
+| Exp 3: IVF latency advantage emerges at scale | **Not confirmed** — retrieval latency is still dominated by LLM generation at 50k; IVF accuracy loss is larger at scale with no speed benefit |
 
 ---
 

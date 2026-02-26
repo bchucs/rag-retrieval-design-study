@@ -1,4 +1,4 @@
-# Empirical Study of Retrieval Design Choices in RAG Systems
+# Empirical Analysis of Retrieval Design Choices in Retrieval-Augmented Generation Systems
 
 A research-focused project investigating how retrieval pipeline design choices influence answer quality, latency, and hallucination in Retrieval-Augmented Generation (RAG) systems.
 

@@ -106,7 +106,7 @@ IVF-conservative and IVF-balanced use `n_clusters=100`; IVF-aggressive uses `n_c
 - The scale-up hypothesis — that IVF would show real latency benefits at 50k — did not materialize; the crossover point is likely at a much larger corpus (hundreds of thousands to millions of docs)
 
 ---
-
+ 
 ## Scale-up Results (5k → 50k)
 
 All three experiments were repeated on a 50,000-document corpus (32,304 chunks) to test whether findings held or reversed at scale. Results above reflect the 50k run.

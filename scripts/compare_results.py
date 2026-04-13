@@ -34,22 +34,37 @@ def summarize(path: Path) -> dict:
 
     gen_lats = [float(r["generation_latency_ms"]) for r in rows
                 if r.get("generation_latency_ms") not in ("", None)]
-    hallu = sum(1 for r in rows if r.get("has_hallucination") == "True")
     recall_zero = sum(1 for r in ans if float(r["retrieval_recall"]) == 0)
 
-    return {
+    # Detect schema version by column names
+    is_v2 = "factual_correctness" in rows[0] if rows else False
+
+    summary = {
         "n":              len(rows),
         "n_ans":          len(ans),
         "n_unans":        len(unans),
         "recall_ans":     avg(ans,   "retrieval_recall"),
         "miss_pct":       recall_zero / len(ans) if ans else float("nan"),
-        "correctness_ans": avg(ans,  "answer_correctness"),
-        "hallu_rate":     hallu / len(rows),
         "abstention":     avg(unans, "abstention_score"),
         "retr_lat":       avg(rows,  "retrieval_latency_ms"),
         "gen_lat_median": statistics.median(gen_lats) if gen_lats else float("nan"),
         "total_lat":      avg(rows,  "total_latency_ms"),
+        "schema":         2 if is_v2 else 1,
     }
+
+    if is_v2:
+        summary["correctness_ans"] = avg(ans, "factual_correctness")
+        summary["faithfulness"]    = avg(ans, "faithfulness")
+        summary["ctx_precision"]   = avg(ans, "context_precision")
+        summary["hallu_rate"]      = None
+    else:
+        summary["correctness_ans"] = avg(ans, "answer_correctness")
+        hallu = sum(1 for r in rows if r.get("has_hallucination") == "True")
+        summary["hallu_rate"]      = hallu / len(rows) if rows else float("nan")
+        summary["faithfulness"]    = None
+        summary["ctx_precision"]   = None
+
+    return summary
 
 
 def find_latest(results_dir: Path, pattern: str) -> list[Path]:
@@ -74,23 +89,67 @@ def find_latest(results_dir: Path, pattern: str) -> list[Path]:
 def print_table(rows: list[tuple[str, dict]]) -> None:
     col_w = max(len(label) for label, _ in rows)
 
-    header = (
-        f"{'Config':<{col_w}}  {'N':>4}  {'Recall':>6}  {'Miss%':>5}  "
-        f"{'Correct':>7}  {'Hallu%':>6}  {'Abstain':>7}  "
-        f"{'RetrMs':>6}  {'GenMs(med)':>10}  {'TotalMs':>7}"
-    )
-    sep = "-" * len(header)
-    print(header)
-    print(sep)
+    # Detect if any rows use v2 schema
+    any_v2 = any(s["schema"] == 2 for _, s in rows)
+    any_v1 = any(s["schema"] == 1 for _, s in rows)
 
-    for label, s in rows:
-        miss = f"{s['miss_pct']*100:.1f}%"
-        hallu = f"{s['hallu_rate']*100:.1f}%"
-        print(
-            f"{label:<{col_w}}  {s['n']:>4}  {s['recall_ans']:>6.3f}  {miss:>5}  "
-            f"{s['correctness_ans']:>7.3f}  {hallu:>6}  {s['abstention']:>7.3f}  "
-            f"{s['retr_lat']:>6.0f}  {s['gen_lat_median']:>10.0f}  {s['total_lat']:>7.0f}"
+    if any_v2 and not any_v1:
+        # Pure v2: show ragas metrics
+        header = (
+            f"{'Config':<{col_w}}  {'N':>4}  {'Recall':>6}  {'Miss%':>5}  "
+            f"{'Correct':>7}  {'Faith':>6}  {'CtxPrec':>7}  {'Abstain':>7}  "
+            f"{'RetrMs':>6}  {'GenMs(med)':>10}  {'TotalMs':>7}"
         )
+        sep = "-" * len(header)
+        print(header)
+        print(sep)
+        for label, s in rows:
+            miss = f"{s['miss_pct']*100:.1f}%"
+            faith = f"{s['faithfulness']:.3f}" if s["faithfulness"] is not None else "   -  "
+            ctx_p = f"{s['ctx_precision']:.3f}" if s["ctx_precision"] is not None else "     - "
+            print(
+                f"{label:<{col_w}}  {s['n']:>4}  {s['recall_ans']:>6.3f}  {miss:>5}  "
+                f"{s['correctness_ans']:>7.3f}  {faith:>6}  {ctx_p:>7}  {s['abstention']:>7.3f}  "
+                f"{s['retr_lat']:>6.0f}  {s['gen_lat_median']:>10.0f}  {s['total_lat']:>7.0f}"
+            )
+    elif any_v1 and not any_v2:
+        # Pure v1: show legacy metrics
+        header = (
+            f"{'Config':<{col_w}}  {'N':>4}  {'Recall':>6}  {'Miss%':>5}  "
+            f"{'Correct':>7}  {'Hallu%':>6}  {'Abstain':>7}  "
+            f"{'RetrMs':>6}  {'GenMs(med)':>10}  {'TotalMs':>7}"
+        )
+        sep = "-" * len(header)
+        print(header)
+        print(sep)
+        for label, s in rows:
+            miss = f"{s['miss_pct']*100:.1f}%"
+            hallu = f"{s['hallu_rate']*100:.1f}%"
+            print(
+                f"{label:<{col_w}}  {s['n']:>4}  {s['recall_ans']:>6.3f}  {miss:>5}  "
+                f"{s['correctness_ans']:>7.3f}  {hallu:>6}  {s['abstention']:>7.3f}  "
+                f"{s['retr_lat']:>6.0f}  {s['gen_lat_median']:>10.0f}  {s['total_lat']:>7.0f}"
+            )
+    else:
+        # Mixed v1+v2: show all columns, dashes for unavailable
+        header = (
+            f"{'Config':<{col_w}}  {'N':>4}  {'Recall':>6}  {'Miss%':>5}  "
+            f"{'Correct':>7}  {'Hallu%':>6}  {'Faith':>6}  {'CtxPrec':>7}  {'Abstain':>7}  "
+            f"{'RetrMs':>6}  {'GenMs(med)':>10}  {'TotalMs':>7}"
+        )
+        sep = "-" * len(header)
+        print(header)
+        print(sep)
+        for label, s in rows:
+            miss = f"{s['miss_pct']*100:.1f}%"
+            hallu = f"{s['hallu_rate']*100:.1f}%" if s["hallu_rate"] is not None else "    - "
+            faith = f"{s['faithfulness']:.3f}" if s["faithfulness"] is not None else "   -  "
+            ctx_p = f"{s['ctx_precision']:.3f}" if s["ctx_precision"] is not None else "     - "
+            print(
+                f"{label:<{col_w}}  {s['n']:>4}  {s['recall_ans']:>6.3f}  {miss:>5}  "
+                f"{s['correctness_ans']:>7.3f}  {hallu:>6}  {faith:>6}  {ctx_p:>7}  {s['abstention']:>7.3f}  "
+                f"{s['retr_lat']:>6.0f}  {s['gen_lat_median']:>10.0f}  {s['total_lat']:>7.0f}"
+            )
 
 
 def main():
